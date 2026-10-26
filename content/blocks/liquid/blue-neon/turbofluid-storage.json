@@ -1,0 +1,22 @@
+type: liquidRouter
+name: Turbofluid liquid container
+floating: true 
+size: 2
+squareSprite: false
+health: 500
+solid: false
+connectedPower: false
+consumesPower: false
+research: {
+	parent: ice-liquid-router 
+	requirements: [
+		{item: ice, amount: 1000}
+		{item: ice_cube, amount: 250}
+	]
+}
+requirements: [
+	{item: ice, amount: 100}
+	{item: ice_cube, amount: 25}
+]
+category: liquid
+liquidCapacity: 2000

@@ -1,0 +1,14 @@
+type: "overflowGate",
+name: "Tutorial overflow gate",
+size: 1,
+health: 120, 
+research: {
+	parent: "tutorial_router", 
+	requirements: [
+		{item: tutorial_item, amount: 25}
+	]
+}, 
+requirements: [
+	{item: tutorial_item, amount: 5}
+],
+speed: 0.04

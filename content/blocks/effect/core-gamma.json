@@ -1,0 +1,31 @@
+type: CoreBlock
+name: "Сore [Gamma]"
+hasItem: true
+itemCapacity: 10000
+alwaysUnlocked: true 
+health: 6000
+size: 5
+unitCapModifier: 25
+research: {
+	planet: vanilium
+	root: true
+	requiresUnlock: true
+	parent: core-alpha
+	requirements: [
+		{item: vanil, amount: 12500}
+		{item: uranium, amount: 12500}
+		{item: plutonium, amount: 5000}
+		{item: xenon, amount: 3750}
+		{item: cesium, amount: 1500}
+	]
+}
+requirements: [
+	{item: vanil, amount: 3500}
+	{item: uranium, amount: 3000}
+	{item: plutonium, amount: 2500}
+	{item: xenon, amount: 1750}
+	{item: cesium, amount: 1250}
+]
+buildTime: 3000
+unitType: proton 
+category: effect 

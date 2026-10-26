@@ -1,0 +1,28 @@
+type: BeamDrill
+name: Stone Bore
+category: production
+description: Drills walls to mine the ores
+details: It's a tutorial item so you can use it in your mods
+tier: 1
+drillTime: 240
+size: 2
+range: 3
+hasPower: true
+consumesPower: false
+itemCapacity: 10
+color: 000000
+requirements: [
+	{item: tutorial_item, amount: 25}
+]
+research: {
+	parent: tutorial-core
+	requirements: [
+		{item: tutorial_item, amount: 25}
+	]
+	objectives: [
+	{
+		type: OnSector
+		preset: noralis
+	}
+	]
+}

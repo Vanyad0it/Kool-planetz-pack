@@ -1,0 +1,13 @@
+type: junction
+name: Vanil junction
+size: 1
+health: 120
+research: {
+	parent: vanil_router 
+	requirements: [
+		{item: vanil, amount: 30}
+	]
+}
+requirements: [
+	{item: vanil, amount: 3}
+]

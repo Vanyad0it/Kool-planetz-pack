@@ -1,0 +1,19 @@
+type: ItemBridge
+name: Vanil bridge
+description: A bridge that can transport items above structures. Quite useful.
+health: 100
+range: 5
+transportTime: 5
+hasPower: false
+requirements: [
+	{item: vanil, amount: 8}
+	{item: uranium, amount: 4}
+] 
+category: distribution
+research: {
+	parent:vanil_conveyor
+	requirements: [
+		{item: vanil, amount: 100}
+		{item: uranium, amount: 50}
+	]
+}

@@ -1,0 +1,32 @@
+type: pump
+name: Turbofluid Pump
+floating: true 
+squareSprite: false
+size: 2
+health: 150
+connectedPower: false
+consumesPower: true
+consumes: {
+	power: 2
+}
+research: {
+	parent: ice-drill 
+	requirements: [
+		{item: ice, amount: 1000}
+		{item: xenonp, amount: 480}
+	]
+	objectives: [
+	vacuum-pipe
+	{
+		type: SectorComplete
+		preset: lakeTestSector
+	}
+	]
+}
+requirements: [
+	{item: ice, amount: 20}
+	{item: xenonp, amount: 12}
+]
+pumpAmount: 0.1
+category: liquid  
+liquidCapacity: 60

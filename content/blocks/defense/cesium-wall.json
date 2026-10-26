@@ -1,0 +1,16 @@
+type: wall
+name: Cesium wall
+description: "POV: Vanilium wall, but [orange]Orange[white]."
+size: 1
+health: 1000
+absorbLasers: true
+category: defense
+research: {
+	parent: vanilium-wall-large 
+	requirements: [
+		{item: cesium, amount: 30}
+	]
+}
+requirements: [
+	{item: cesium, amount: 5}
+] 

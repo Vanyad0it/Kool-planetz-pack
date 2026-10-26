@@ -1,0 +1,24 @@
+type: ItemBridge
+name: Iced bridge
+squareSprite: false
+description: This bridge is so long because it is designed to reach islands.
+health: 100
+range: 10
+transportTime: 25
+hasPower: false
+requirements: [
+	{item: ice, amount: 15}
+] 
+category: distribution
+research: {
+	parent: ice_router
+	objectives: [
+	{
+		type: OnSector
+		preset: lakeTestSector
+	}
+	]
+	requirements: [
+		{item: ice, amount: 250}
+	]
+}

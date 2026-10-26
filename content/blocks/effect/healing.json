@@ -1,0 +1,83 @@
+type: LiquidTurret
+name: Healing spectre
+description: Heals nearby buildings by consuming power
+size: 2
+range: 100
+health: 100
+rotateSpeed: 2
+reload: 70
+shootSound: Orionshoots
+squareSprite: true
+category: effect
+targetHealing: true
+targetGround: false
+targetAir: false
+playerControllable: true
+shootY: 0
+recoil: 2
+shoot: {
+	type: shootPattern
+	shots: 1
+	shotDelay: 0
+}
+shootEffect: {
+	type: ParticleEffect
+	region: cool-planets-pack-CIRCLE
+	colorFrom: ffaaaa
+	colorTo: ff000000
+	sizeFrom: 5
+	sizeTo: 0
+	lifetime: 50
+	cone: 10
+	length: 50
+	particles: 20
+}
+hitEffect: nont
+despawnEffect: none
+ammoTypes: {
+	magma: {
+		type: LiquidBulletType
+		liquid: magma
+		healAmount: 50
+		collidesTeam: true
+		length: 8
+		width: 8
+		lifetime: 60
+		frontColor: ffaaaa
+		backColor: ffaaaa
+	}
+}
+requirements: [
+ 	{item: tutorial_item, amount: 260}
+	{item: iron, amount: 100}
+]
+research: {
+	parent: stone-wall
+	requirements: [
+ 		{item: tutorial_item, amount: 2500}
+		{item: iron, amount: 1500}
+	]
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -sideL
+progress: warmup
+
+moveX: -1
+moveY: -1
+moveRot: 20
+}
+{
+type: RegionPart
+suffix: -sideR
+progress: warmup
+
+moveX: 1
+moveY: -1
+moveRot: -20
+}
+]
+}

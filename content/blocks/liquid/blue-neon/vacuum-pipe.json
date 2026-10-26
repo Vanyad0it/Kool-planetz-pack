@@ -1,0 +1,28 @@
+type: conduit
+name: Vacuum Thermos Pipe
+floating: true
+health: 50
+size: 1
+connectedPower: false
+consumesPower: false
+research: {
+	parent: ice_duct
+	requirements: [
+		{item: ice, amount: 500}
+	]
+	objectives: [
+	{
+		type: SectorComplete
+		preset: lakeTestSector
+	}
+	]
+}
+bridgeReplacement: ice-liquid-bridge
+junctionReplacement: ice-liquid-junction
+requirements: [
+	{item: ice, amount: 2}
+]
+moveSpeed: 10
+liquidPressure: 10
+liquidCapacity: 10 
+category: liquid

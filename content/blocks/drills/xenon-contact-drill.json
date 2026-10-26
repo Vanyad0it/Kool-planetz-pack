@@ -1,0 +1,59 @@
+type: AttributeCrafter
+name: Xenon Contact Drill
+description: "Short name: XCD. Only mines xenon by mining floors. Works with other tiles but less effective"
+size: 3
+health: 280
+mineTier: 3
+drillTime: 280
+hasPower: true
+hasLiquids: true
+consumes: {
+	power: 1
+	liquids: {
+		liquid: water
+		amount: 0.1
+		optional: false
+		update: true
+	}
+}
+outputItem: {item: "xenonp", amount: 1}
+customMineEfficiency: true
+attribute: water
+baseEfficiency: 0.0
+minEfficiency: 0.1
+boostScale: 0.112
+requirements: [
+	{item: ice, amount: 100}
+	{item: ice_cube, amount: 75}
+]
+category: production
+research: {
+	parent: core-degree
+	requirements: [
+		{item: ice, amount: 1000}
+		{item: ice_cube, amount: 750}
+	]
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawRegion
+suffix: -rotator
+spinPart: true
+rotateSpeed: 1.5
+}
+{
+type: DrawRegion
+suffix: -rotator-top
+}
+{
+type: DrawLiquidTile
+suffix: -liquid
+drawLiquid: water
+}
+]
+}

@@ -1,0 +1,14 @@
+type: sorter
+name: Stone inverted sorter
+size: 1
+invert: true
+health: 120
+research: {
+	parent: tutorial_sorter 
+	requirements: [
+		{item: tutorial_item, amount: 50}
+	]
+}
+requirements: [
+	{item: tutorial_item, amount: 5}
+]

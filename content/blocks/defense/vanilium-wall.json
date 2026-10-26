@@ -1,0 +1,15 @@
+type: wall
+name: Vanilium wall
+description: Protects you no matter what
+size: 1
+health: 500
+category: defense
+research: {
+	parent: core-alpha 
+	requirements: [
+		{item: vanil, amount: 30}
+	]
+}
+requirements: [
+	{item: vanil, amount: 5}
+] 

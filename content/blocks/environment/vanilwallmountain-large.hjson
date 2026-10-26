@@ -1,0 +1,5 @@
+variants: 2
+size: 2
+type: StaticWall
+name: Big vanil static wall
+color: b0a77b
