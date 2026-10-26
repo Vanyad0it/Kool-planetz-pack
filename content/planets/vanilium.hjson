@@ -1,0 +1,74 @@
+generator: PlanetGenerator
+name: Vanillum
+parent: starland
+solarSystem: starland
+iconColor: fffacd
+orbitRadius: 50
+orbitOffset: 1
+hasAtmosphere: true
+updateLighting: false
+atmosphereRadIn: 0.01
+atmosphereRadOut: 0.3
+atmosphereColor: ffaa80
+drawOrbit: true
+accessible: true
+alwaysUnlocked: true
+defaultCore: core-alpha
+sectorSeed: 69
+startSector: 1
+sectorSize: 1
+clearSectorOnLose: true
+allowSectorInvasion: false
+allowLaunchToNumbered: false
+radius: 1
+hiddenItems: [
+        "copper",
+        "lead",
+        "scrap",
+        "graphite",
+        "coal",
+        "titanium",
+        "thorium",
+        "silicon",
+        "plastanium",
+        "phase-fabric",
+        "surge-alloy",
+        "spore-pod",
+        "sand",
+        "blast-compound",
+        "pyratite",
+        "metaglass",
+        "beryllium",
+        "oxide",
+        "tungsten",
+        "carbide",
+        "fissile-matter",
+        "dormant-cyst"
+]
+cloudMesh: {
+	type: HexSkyMesh
+	planet: vanilium
+	seed: 1
+	speed: 1
+	radius: 0.07
+	divisions: 3
+	color: aaaaaa
+	octaves: 4
+	persistence: 0.4
+	scl: 2
+	thresh: 0.4
+}
+mesh: {
+	type: NoiseMesh
+	planet: vanilium
+	seed: 69
+	color1: fffacd
+	color2: d0ff00
+	color3: ffaaaa
+	divisions: 3
+	radius: 0.8
+	octaves: 3
+	persistence: 0.6
+	scale: 2
+	mag: 2
+}

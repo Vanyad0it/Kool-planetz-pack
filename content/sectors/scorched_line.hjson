@@ -1,0 +1,19 @@
+sector: 4
+planet: vanilium
+research: {
+        parent: river-side
+        objectives: [
+	vanil-generator
+	vanil-node
+	T2_refabricator
+	{
+		type: SectorComplete
+		preset: river-side
+	}
+	]
+}
+difficulty: 5
+alwaysUnlocked: false
+requiresUnlock: true
+overrideLaunchDefaults: true
+addStartingItems: true

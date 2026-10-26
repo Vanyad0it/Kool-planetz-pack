@@ -1,0 +1,12 @@
+type: material
+name: Oxygen
+description: Shii that you breathe
+flammability: 0.4
+explosiveness: 0
+radioactivity: 0
+charge: 0
+color: ffffff80
+alwaysUnlocked: false
+frames: 8
+frameTime: 6
+research: xenonp

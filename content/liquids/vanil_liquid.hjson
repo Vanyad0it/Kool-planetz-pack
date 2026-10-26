@@ -1,0 +1,10 @@
+type: Liquid
+name: "Liquified Vanil"
+description: "A simple liquid, that is can be used to cool some turrets and reactors"
+color: fceac2
+temperature: 0.45
+heatCapacity: 0.5
+viscosity: 0.2
+effect: slowed_by_vanil
+alwaysUnlocked: true
+research: "core-alpha"

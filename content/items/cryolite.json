@@ -1,0 +1,11 @@
+type: material,
+name: Cryolite,
+description: Cryo lite edition
+color: 80aaff
+flammability: 0
+explosiveness: 0.5
+radioactivity: 0
+charge: 0.85
+hardness: 2
+alwaysUnlocked: false
+research: ice_cube

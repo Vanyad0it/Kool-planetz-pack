@@ -1,0 +1,73 @@
+generator: PlanetGenerator
+name: polaris
+parent: starland
+solarSystem: starland
+iconColor: 3030ff
+orbitRadius: 75
+hasAtmosphere: true
+updateLighting: false
+atmosphereRadIn: 0.01
+atmosphereRadOut: 0.3
+atmosphereColor: 15eeff
+drawOrbit: true
+accessible: true
+alwaysUnlocked: true
+defaultCore: core-alpha
+sectorSeed: 69
+startSector: 1
+sectorSize: 1
+clearSectorOnLose: true
+allowSectorInvasion: false
+allowLaunchToNumbered: false
+radius: 1
+hiddenItems: [
+        "copper",
+        "lead",
+        "scrap",
+        "graphite",
+        "coal",
+        "titanium",
+        "thorium",
+        "silicon",
+        "plastanium",
+        "phase-fabric",
+        "surge-alloy",
+        "spore-pod",
+        "sand",
+        "blast-compound",
+        "pyratite",
+        "metaglass",
+        "beryllium",
+        "oxide",
+        "tungsten",
+        "carbide",
+        "fissile-matter",
+        "dormant-cyst"
+]
+cloudMesh: {
+	type: HexSkyMesh
+	planet: coldaris
+	seed: 5
+	speed: 10
+	radius: 0.01
+	divisions: 2
+	color: 8080ff
+	octaves: 5
+	persistence: 0.6
+	scale: 1
+	thresh: 0.5
+}
+mesh: {
+	type: NoiseMesh
+	planet: coldaris
+	seed: 69
+	color1: aaaaff
+	color2: 0000ff
+	color3: 15eeff
+	divisions: 2
+	radius: 0.9
+	octaves: 4
+	persistence: 0.2
+	scale: 1
+	mag: 0.5
+}

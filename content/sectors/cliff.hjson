@@ -1,0 +1,18 @@
+sector: 2
+planet: vanilium
+research: {
+        parent: landing_point
+        objectives: [
+	splash
+	{
+		type: SectorComplete
+		preset: landing_point
+	}
+	]
+}
+difficulty: 1
+icon: cliff-preview
+alwaysUnlocked: false
+requiresUnlock: true
+overrideLaunchDefaults: true
+addStartingItems: false

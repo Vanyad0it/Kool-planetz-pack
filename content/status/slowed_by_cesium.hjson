@@ -1,0 +1,19 @@
+name: Slowed by cesium
+description: Bro is NOT going anywhere
+speedMultiplier: 0.25
+effect: {
+	type: MultiEffect
+	effects:[
+	{
+		type: ParticleEffect,
+		sprite: cool-plantes-pack-STAR
+		colorFrom: 90e0f0
+		colorTo: 90e0f000
+		sizeFrom: 1
+		sizeTo: 0
+		particles: 2
+		length: 0
+		cone: 360
+	}
+	]
+}

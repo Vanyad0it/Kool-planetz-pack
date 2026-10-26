@@ -1,0 +1,23 @@
+name: Adrenalin
+description: Boosts units
+speedMultiplier: 1.5
+reloadMultiplier: 1.25
+damageMultiplier: 0.9
+healthMultiplier: 0.9
+effect: {
+	type: MultiEffect
+	effects:[
+	{
+		type: ParticleEffect
+		sprite: cool-planets-pack-CIRCLE
+		colorFrom: aaffaa
+		colorTo: aaffaa00
+		sizeFrom: 1
+		sizeTo: 5
+		lifetime: 20
+		particles: 7
+		length: 0
+		cone: 360
+	}
+	]
+}

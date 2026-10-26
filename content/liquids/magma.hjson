@@ -1,0 +1,11 @@
+type: Liquid
+name: Magma
+description: "It can boost turrets and drills by HEATING THEM!!! BY HEATING!!!!"
+details: "Nuke the whole generation. If they were up to me, I would drop an atomic bomb on a whole generation."
+color: ff6060
+temperature: 7
+heatCapacity: 0.25
+viscosity: 0.6
+effect: melting
+alwaysUnlocked: true
+research: "tutorial_item"

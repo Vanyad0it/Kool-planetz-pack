@@ -1,0 +1,18 @@
+name: Spectral Burn
+description: You will burn... I'm serious right now.
+damage: 0.4
+effect: {
+	type: MultiEffect
+	effects: [
+	{
+	type: ParticleEffect
+	colorFrom: ffea63
+	colorTo: ffffff
+	sizeFrom: 1
+	sizeTo: 2
+	particles: 15
+	length: 0
+	cone: 360
+	}
+	]
+}

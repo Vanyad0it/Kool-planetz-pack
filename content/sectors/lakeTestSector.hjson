@@ -1,0 +1,11 @@
+planet: neon-blue
+sector: 1
+research: {
+    parent: core-degree
+}
+difficulty: 2
+alwaysUnlocked: true
+captureWave: 20
+overrideLaunchDefaults: true
+addStartingItems: false
+startSector: true

@@ -1,0 +1,19 @@
+name: Slowed by xenon
+description: Well...
+speedMultiplier: 0.5
+effect: {
+	type: MultiEffect
+	effects:[
+	{
+		type: ParticleEffect
+		sprite: cool-plantes-pack-CIRCLE
+		colorFrom: aaaaff
+		colorTo: ffffff
+		sizeFrom: 1
+		sizeTo: 0
+		particles: 2
+		length: 0
+		cone: 360
+	}
+	]
+}

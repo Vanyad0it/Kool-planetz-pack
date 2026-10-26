@@ -1,0 +1,10 @@
+type: material
+name: Ice Shards
+description: Just frozen water
+color: aaffff
+flammability: 0
+explosiveness: 0.1
+radioactivity: 0
+charge: 0
+hardness: 0.1
+research: core-degree

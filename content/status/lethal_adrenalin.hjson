@@ -1,0 +1,23 @@
+name: Lethal adrenalin
+description: do NOT come close to enemies bro
+speedMultiplier: 5
+reloadMultiplier: 5
+damageMultiplier: 1
+healthMultiplier: 0.01
+effect: {
+	type: MultiEffect
+	effects:[
+	{
+		type: ParticleEffect
+		sprite: cool-planets-pack-!
+		colorFrom: ffaa00
+		colorTo: ffaa00
+		sizeFrom: 1
+		sizeTo: 5
+		lifetime: 20
+		particles: 3
+		length: 0
+		cone: 360
+	}
+	]
+}

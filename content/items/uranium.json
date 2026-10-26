@@ -1,0 +1,12 @@
+type: material
+name: uranium
+description: Not safe but not dangerous. Still keep an eye on it 
+color: f3f700
+hardness: 1
+flammability: 0.2
+explosiveness: 0.4
+radioactivity: 0.9
+charge: 0
+research: vanil
+alwaysUnlocked: false
+radioactivity: 1

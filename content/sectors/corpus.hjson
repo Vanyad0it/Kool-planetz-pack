@@ -1,0 +1,18 @@
+sector: 2
+planet: neon-blue
+research: {
+        parent: lakeTestSector
+        objectives: [
+	splash
+	{
+		type: SectorComplete
+		preset: lakeTestSector
+	}
+	]
+}
+difficulty: 1
+icon: cliff-preview
+alwaysUnlocked: false
+requiresUnlock: true
+overrideLaunchDefaults: true
+addStartingItems: false

@@ -1,0 +1,10 @@
+type: "material",
+name: "Ice cube",
+description: "Heh ice cube lil 'OI",
+color: 3030ff,
+flammability: 0,
+explosiveness: 0.1,
+radioactivity: 0,
+charge: 0
+alwaysUnlocked: false
+research: ice

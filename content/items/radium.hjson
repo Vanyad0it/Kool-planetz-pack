@@ -1,0 +1,12 @@
+type: material
+name: Radium
+description: "[red]VERY [yellow]radioactive!!!",
+color: 82ff8a
+flammability: 0.6
+explosiveness: 0.4
+radioactivity: 5
+charge: 0
+alwaysUnlocked: false
+frames: 7
+frameTime: 8
+research: cesium

@@ -1,0 +1,19 @@
+planet: vanilium
+sector: 3
+research: {
+	parent: cliff
+	objectives: [
+	{
+		type: SectorComplete
+		preset: cliff
+	}
+	]
+}
+difficulty: 6
+icon: river-side-preview
+alwaysUnlocked: false
+requiresUnlock: true
+captureWave: 20
+overrideLaunchDefaults: true
+addStartingItems: true
+startSector: false

@@ -1,0 +1,21 @@
+name: Radium radiation
+description: Didn't I told you it was radioactive?
+damage: 1
+speedMultiplier: 2
+reloadMultiplier: 1.1
+effect: {
+	type: MultiEffect
+	effects:[
+	{
+	type: ParticleEffect
+	region: cool-planets-pack-STAR2
+	colorFrom: aaffaa
+	colorTo: ffffff00
+	sizeFrom: 1
+	sizeTo: 2
+	particles: 15
+	length: 0
+	cone: 360
+	}
+	]
+}

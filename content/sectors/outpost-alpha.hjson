@@ -1,0 +1,19 @@
+sector: 6
+planet: vanilium
+research: {
+        parent: cesium-pathV1
+        objectives: [
+	orbit
+	T2_refabricator
+	cesium
+	{
+		type: SectorComplete
+		preset: cesium-pathV1
+	}
+	]
+}
+difficulty: 7
+alwaysUnlocked: false
+requiresUnlock: true
+overrideLaunchDefaults: true
+addStartingItems: false

@@ -1,0 +1,10 @@
+type: Liquid
+name: "Liquified Cesium"
+description: "Lowk looks like shrimp crying"
+color: ff9a63
+temperature: 0.3
+heatCapacity: 1
+viscosity: 0.7
+effect: cesium_colapse
+alwaysUnlocked: false
+research: "vanil_liquid"

@@ -1,0 +1,11 @@
+type: material
+name: Plutonium
+description: used in some reactors and tech tree
+color: 525252
+flammability: 0.6
+explosiveness: 1
+radioactivity: 1.25
+charge: 0
+research: uranium
+alwaysUnlocked: false
+radioactivity: 0.7

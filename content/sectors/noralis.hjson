@@ -1,0 +1,11 @@
+planet: nora
+sector: 3
+research: {
+	parent: tutorial-core
+}
+difficulty: 1
+alwaysUnlocked: true
+captureWave: 20
+overrideLaunchDefaults: true
+addStartingItems: false
+startSector: true

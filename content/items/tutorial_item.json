@@ -1,0 +1,12 @@
+type: material
+name: Rock
+description: rock. Very usefull
+details: Rename this resource however you want (but i honestly prefer 'Tungsten')
+color: 808080
+hardness: 1
+flammability: 0
+explosiveness: 0
+radioactivity: 0
+charge: 0
+alwaysUnlocked: true
+research: tutorial-core

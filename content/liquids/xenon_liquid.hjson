@@ -1,0 +1,11 @@
+type: Liquid
+name: Liquified xenon
+description: It's really cold one tho
+color: aaaaff
+gas: true
+temperature: 0
+heatCapacity: 1.25
+viscosity: 0.2
+effect: confused
+alwaysUnlocked: false
+research: vanil_liquid

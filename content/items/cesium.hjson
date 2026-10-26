@@ -1,0 +1,12 @@
+type: material
+name: Cesium
+description: Easy to heat up to liquid
+details: please keep it safe
+color: ffaa00
+flammability: 0.9
+explosiveness: 1.76
+radioactivity: 0.25
+charge: 0
+hardness: 2
+alwaysUnlocked: false
+research: xenon

@@ -1,0 +1,11 @@
+type: material
+name: vanil
+description: Main recource in this planet
+color: f2dfae
+hardness: 1
+flammability: 0.3
+explosiveness: 0.7
+radioactivity: 0
+charge: 0.01
+alwaysUnlocked: true
+research: core-alpha

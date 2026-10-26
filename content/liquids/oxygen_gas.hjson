@@ -1,0 +1,11 @@
+type: Liquid
+name: Oxygen
+description: Smell this
+color: ffffff
+gas: true
+temperature: 0.5
+heatCapacity: 0.5
+viscosity: 0
+status: oxygenized
+alwaysUnlocked: true
+research: core-degree

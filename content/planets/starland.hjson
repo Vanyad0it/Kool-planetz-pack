@@ -1,0 +1,29 @@
+type: sun
+name: starland
+mesh: {
+	type: SunMesh
+	divisions: 3
+	octaves: 3
+	persistence: 1
+	scl: 0.1
+	pow: 1
+	mag: 1
+	colorScale: 1
+	colors: [
+		15eeff
+		aaaaff
+		ffffff
+	]
+}
+parent: sun
+solarSystem: starland
+orbitRadius: 1000
+accessible: false
+radius: 5
+visible: true
+hasAtmosphere: false
+bloom: true
+drawOrbit: false
+tidalLock: false
+iconColor: 15aaff
+icon: planet

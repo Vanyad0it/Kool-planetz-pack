@@ -1,0 +1,10 @@
+type: material
+name: Frozen xenon
+description: Bruh
+flammability: 0
+explosiveness: 0
+radioactivity: 0
+charge: 0
+color: 15eeff
+alwaysUnlocked: false
+research: ice_cube

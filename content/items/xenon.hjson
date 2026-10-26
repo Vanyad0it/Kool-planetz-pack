@@ -1,0 +1,13 @@
+type: material
+name: Xenon
+description: "It's seadled inside a container so it won't evaporate. 32% sure"
+details: "i don't reccomend licking it btw"
+flammability: 0
+explosiveness: 0
+radioactivity: 0
+charge: 0
+color: 15eeff
+alwaysUnlocked: false
+frames: 5
+frameTime: 8
+research: uranium

@@ -1,0 +1,20 @@
+sector: 5
+planet: vanilium
+research: {
+	parent: scorched_line
+	objectives: [
+	vanil-generator
+	vanil-node
+	battery_small
+	vanilium-wall-large
+	{
+		type: SectorComplete
+		preset: scorched_line
+	}
+	]
+}
+difficulty: 5
+alwaysUnlocked: false
+requiresUnlock: true
+overrideLaunchDefaults: true
+addStartingItems: true

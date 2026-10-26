@@ -1,0 +1,17 @@
+sector: 8
+planet: vanilium
+research: {
+        parent: cesium_pathV1
+        objectives: [
+	splash
+	{
+		type: SectorComplete
+		preset: cesium-pathV1
+	}
+	]
+}
+difficulty: 10
+alwaysUnlocked: false
+requiresUnlock: true
+overrideLaunchDefaults: true
+addStartingItems: true

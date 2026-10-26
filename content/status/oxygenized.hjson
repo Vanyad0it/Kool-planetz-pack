@@ -1,0 +1,17 @@
+name: Oxygenized
+description: Nawals nawals swimming in the ocean
+speedMultiplier: 0.8
+reloadMultiplier: 0.9
+damageMultiplier: 1.1
+effect: {
+	type: ParticleEffect
+	sprite: cool-planets-pack-CIRCLE
+	colorFrom: ffffff
+	colorTo: ffffff00
+	sizeFrom: 3
+	sizeTo: 1
+	lifetime: 20
+	particles: 2
+	length: 0
+	cone: 360
+}

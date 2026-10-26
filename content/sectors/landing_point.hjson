@@ -1,0 +1,12 @@
+planet: vanilium
+sector: 1
+research: {
+	parent: core-alpha
+}
+difficulty: 1
+region: cool-planets-pack-landing_point-preview
+alwaysUnlocked: true
+captureWave: 16
+overrideLaunchDefaults: true
+addStartingItems: false
+startSector: true

@@ -1,0 +1,58 @@
+generator: PlanetGenerator
+name: "nora [red]WORK IN PROGRESS!!![white]" //not notva
+parent: vanilium
+solarSystem: starland
+orbitSpacing: 1
+iconColor: 808080
+orbitRadius: 10
+hasAtmosphere: false
+updateLighting: false
+drawOrbit: true
+accessible: true
+alwaysUnlocked: true
+defaultCore: tutorial-core
+sectorSeed: 69
+startSector: 1
+sectorSize: 2
+clearSectorOnLose: true
+allowSectorInvasion: false
+allowLaunchToNumbered: false
+radius: 0.5
+hiddenItems: [
+        "copper",
+        "lead",
+        "scrap",
+        "graphite",
+        "coal",
+        "titanium",
+        "thorium",
+        "silicon",
+        "plastanium",
+        "phase-fabric",
+        "surge-alloy",
+        "spore-pod",
+        "sand",
+        "blast-compound",
+        "pyratite",
+        "metaglass",
+        "beryllium",
+        "oxide",
+        "tungsten",
+        "carbide",
+        "fissile-matter",
+        "dormant-cyst"
+]
+mesh: {
+	type: NoiseMesh
+	planet: nora
+	seed: 69
+	color1: aaaaaa
+	color2: 505050
+	color3: 696254
+	divisions: 1
+	radius: 0.5
+	octaves: 1
+	persistence: 0.1
+	scale: 1
+	mag: 3
+}
