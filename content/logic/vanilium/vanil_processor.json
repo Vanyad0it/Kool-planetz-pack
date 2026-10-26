@@ -1,0 +1,31 @@
+type: LogicBlock
+name: Vanil processor
+description: Can do simple commands, but its very slow
+details: I honestly reccomend using more powerful version of it
+health: 200
+size: 1
+range: 75
+buildTime: 150
+category: logic
+requirements: [
+	{item: vanil, amount: 100}
+	{item: uranium, amount: 50}
+	{item: plutonium, amount: 75}
+]
+research: {
+	parent: core-alpha
+	objectives: [
+	{
+		type: SectorComplete
+		preset: river-side
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 500}
+		{item: uranium, amount: 200}
+		{item: plutonium, amount: 300}
+	]
+}
+instructionsPerTick: 1
+planet: Vanilium
+root: true

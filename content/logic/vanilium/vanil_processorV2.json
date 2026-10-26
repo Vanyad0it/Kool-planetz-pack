@@ -1,0 +1,44 @@
+type: LogicBlock
+name: Huge Vanil Processor Block
+description: "It's big and consumes liquified vanil as a boost... but it's worth it because xenon is definetly better"
+details: size DOES matter in some situations
+health: 1000
+size: 2
+range: 125
+buildTime: 300
+category: logic
+requirements: [
+	{item: vanil, amount: 250}
+	{item: uranium, amount: 200}
+	{item: plutonium, amount: 150}
+	{item: xenon, amount: 100}
+]
+research: {
+	parent: vanil_processor
+	objectives: [
+	{
+		type: OnSector
+		preset: cesium-pathV1
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 2500}
+		{item: uranium, amount: 2000}
+		{item: plutonium, amount: 1500}
+		{item: xenon, amount: 1000}
+	]
+}
+phaseRangeBoost: 50
+phaseBoost: 2
+liquidBoostIntensity: 2
+consumes: {
+	liquid: {
+		liquid: vanil_liquid
+		amount: 0.5
+		optional: true
+		booster: true
+	}
+}
+instructionsPerTick: 10
+planet: Vanilium
+root: true
