@@ -1,0 +1,25 @@
+type: ItemBridge
+name: "Iron Bridge"
+description: Bridge can transport items above obstacles, but it's limited.
+details: It's a tutorial itm so you can copy it
+health: 50
+range: 4
+transportTime: 8
+hasPower: false
+requirements: [
+	{item: tutorial_item, amount: 100}
+] 
+category: distribution
+research: {
+	parent: tutorial_router
+	requirements: [
+		{item: tutorial_item, amount: 10}
+	]
+	objectives: [
+	{
+		type: SectorComplete:
+		preset: cliff
+	}
+	]
+
+}

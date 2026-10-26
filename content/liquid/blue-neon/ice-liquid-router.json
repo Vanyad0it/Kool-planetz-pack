@@ -1,0 +1,20 @@
+type: liquidRouter
+name: Vacuum liquid Router
+floating: true
+size: 1
+squareSprite: false
+health: 120
+solid: false
+connectedPower: false
+consumesPower: false
+research: {
+	parent: ice-liquid-junction 
+	requirements: [
+		{item: ice, amount: 10}
+	]
+}
+requirements: [
+	{item: ice, amount: 2}
+]
+category: liquid
+liquidCapacity: 20

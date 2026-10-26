@@ -1,0 +1,7 @@
+type: Floor
+name: Polaris defauls floor
+color: aaaaff
+variants: 2
+attributes: {
+	water: 0.1
+}

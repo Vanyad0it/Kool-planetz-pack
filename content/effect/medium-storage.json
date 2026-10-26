@@ -1,0 +1,25 @@
+type: StorageBlock
+name: Medium container
+description: "Same as small version, but can store [green]more [white]recourses."
+health: 500
+size: 2
+buildTime: 90
+requirements:[
+	{item: vanil, amount: 150}
+	{item: plutonium, amount: 50}	
+]
+research: {
+	parent: small-storage
+	requirements: [
+		{item: vanil, amount: 1500}
+		{item: plutonium, amount: 500}
+	]
+	objectives: [
+	{
+		type: SectorComplete
+		preset: scorched_line
+	}
+	]
+}
+itemCapacity: 100
+category: effect

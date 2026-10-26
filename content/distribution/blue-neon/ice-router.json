@@ -1,0 +1,18 @@
+type: Router
+name: Ice router
+description: Spread resources on 3 lines
+health: 15
+size: 1
+speed: 0.1
+squareSprite: false
+requirements:[
+	{item: ice, amount: 2}
+]
+connectedPower: false
+consumesPower: false
+research: {
+	parent: ice_duct
+	requirements: [
+		{item: ice, amount: 25}
+	]
+}

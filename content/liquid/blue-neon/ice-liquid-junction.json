@@ -1,0 +1,20 @@
+type: liquidJunction
+name: Vacuum Liquid Junction
+floating: true
+squareSprite: false
+connectedPower: false
+consumesPower: false
+research: {
+	parent: vacuum_pipe 
+	requirements: [
+		{item: ice, amount: 10}
+	]
+}
+size: 1
+health: 120
+category: liquid
+requirements: [
+	{item: ice, amount: 2}
+]
+solid: false 
+   

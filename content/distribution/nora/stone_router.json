@@ -1,0 +1,17 @@
+type: "Router"
+name: "Tutorial router"
+description: "Spread resources on 3 lines"
+health: 15
+size:1
+speed: 0.09
+requirements:[
+	{"item": "tutorial_item", "amount": 2}
+],
+connectedPower: false
+consumesPower: false
+research: {
+	parent: "tutorial_junction"
+	requirements:[
+		{"item": "tutorial_item", "amount": 20}
+	]
+}

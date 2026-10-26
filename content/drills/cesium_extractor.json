@@ -1,0 +1,62 @@
+type: AttributeCrafter
+name: Cesium extrator
+description: Can only extract cesium out of thin floor.
+size: 2
+health: 280
+mineTier: 3
+drillTime: 280
+hasPower: true
+hasLiquids: true
+squareSprite: false
+consumes: {
+	power: 1.5
+}
+outputLiquid: {liquid: "cesium_liquid", amount: 0.166}
+customMineEfficiency: true
+attribute: water
+baseEfficiency: 0.0
+minEfficiency: 0.1
+boostScale: 0.25
+requirements: [
+	{item: vanil, amount: 125}
+	{item: xenon, amount: 50}
+]
+category: production
+research: {
+	parent: xenonized-drill
+	requirements: [
+		{item: vanil, amount: 1250}
+		{item: xenon, amount: 500}
+	]
+	objectives: [
+	cesium_liquid
+	liquid-extractor
+	{
+		type: OnSector
+		preset: the-oceat
+	}
+	]
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawRegion
+suffix: -rotator
+spinPart: true
+rotateSpeed: 4
+}
+{
+type: DrawRegion
+suffix: -rotator-top
+}
+{
+type: DrawLiquidTile
+suffix: -liquid
+drawLiquid: water
+}
+]
+}

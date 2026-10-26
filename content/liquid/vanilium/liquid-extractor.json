@@ -1,0 +1,27 @@
+type: pump
+name: Liquid Extractor
+floating: true 
+squareSprite: false
+size: 2
+health: 150
+connectedPower: false
+consumesPower: false
+research: {
+	parent: vanil-drill 
+	requirements: [
+		{item: vanil, amount: 1000}
+		{item: uranium, amount: 480} 
+		{item: plutonium, amount: 200}
+	]
+	objectives: [
+	liquid_pipe
+	]
+}
+requirements: [
+	{item: vanil, amount: 20}
+	{item: uranium, amount: 12}
+	{item: plutonium, amount: 5}
+]
+pumpAmount: 0.25
+category: liquid  
+liquidCapacity: 60

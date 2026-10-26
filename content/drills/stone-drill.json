@@ -1,0 +1,42 @@
+type: drill
+name: Stone Drill
+category: production
+description: Drills floor to mine the ores
+details: It's a tutorial item so you can use it in your mods
+tier: 1
+drillTime: 600
+size: 2
+itemCapacity: 10
+consumes: {
+	liquid:	{
+		liquid: magma
+		amount: 0.1
+		optional: true
+		booster: true
+	}
+}
+liquidBoostIntensity: 1.9
+drillEffect: {
+	type: ParticleEffect
+	region: cool-planets-pack-STAR
+	sizeFrom: 2
+	sizeTo: 0
+	colorFrom: 606060 
+	colorTo: ffffff
+	particles: 5
+}
+requirements: [
+	{item: tutorial_item, amount: 25}
+]
+research: {
+	parent: stone-bore
+	requirements: [
+		{item: tutorial_item, amount: 100}
+	]
+	objectives: [
+	{
+		type: OnSector
+		preset: cliff
+	}
+	]
+}
