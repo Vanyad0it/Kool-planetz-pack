@@ -1,0 +1,128 @@
+type: flying
+name: Photon
+description: "IMMA FIRING MY LAZUR!!!!!!!!!!!!!!!!
+Class: [purple]Air [white]|| [yellow]Core"
+health: 250
+flying: true
+targetAir: true
+outlineColor: 303030
+hitSize: 12
+speed: 4.0
+range: 100
+engineSize: 3
+engineOffset: 8
+mineTier: 1
+itemCapacity: 40
+trailLength: 10
+mineSpeed: 5
+coreUnitDock: true
+buildSpeed: 0.75
+research: {
+	parent: orion
+	alwaysUnlocked: false
+	objectives: [
+	core-beta
+	]
+}
+weapons: [
+{
+name: photon-lazer
+x: 0
+y: 0
+top: true
+parentizeEffects: true
+reload: 185
+shake: 10
+recoil: 0
+shootY: 10.2
+ejectEffect: none
+rotateSpeed: 0.5
+rotate: false
+alternate: false
+mirror: false
+shots: 1
+cooldownTime: 200
+recoil: 0
+shake: 0.1
+shootCone: 20
+cooldownTime: 145
+heatColor: e34432
+shootSound: beamMeltdown
+chargeTime: 150
+chargeSound: chargeVela
+continuous: true
+shoot: {
+	shots: 1
+	shotDelay: 150
+	autoTarget: true
+}
+ejectEffect: {
+	type: MultiEffect
+	effects:[
+	{
+	type: ParticleEffect
+	colorFrom: e0dc80
+	colorTo: e0dc80
+	lightColor: 122424
+	sizeFrom: 1
+	sizeTo: 0
+	particles: 2
+	cone: 5
+	}
+	]
+}
+bullet: {
+	type: ContinuousLaserBulletType
+	damage: 2.5
+	width: 5
+	length: 100
+	drawSize: 250
+	lifetime: 170
+	buildingDamageMultiplier: -0.01
+	healMultiplier: 0.25 
+	shake: 0.25
+	statusDuration: 100
+	despawnEffect: smokeCloud
+	smokeEffect: smokeCloud
+	largeHit: true
+	colors: [8f845b60, b0a060aa, fff0bb, ffffff]
+	hitEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ExplosionEffect
+		waveLife: 12
+		waveStroke: 1
+		waveRadBase: 0
+		waveRad: 5
+		waveColor: ffffff
+		smokes: 0
+		sparkLen: 1.5
+		sparkStroke: 2
+		sparkColor: ffffff
+		}
+		]
+	}
+	despawnEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ExplosionEffect
+		waveLife: 12
+		waveStroke: 1
+		waveRadBase: 0
+		waveRad: 5
+		waveColor: ffffff
+		smokes: 0
+		sparkLen: 1.5
+		sparkStroke: 2
+		sparkColor: ffffff
+		}
+		]
+	}
+}
+}
+]
+immunities: [
+	"spectral_burn"
+]

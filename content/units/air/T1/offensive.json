@@ -1,0 +1,89 @@
+type: flying
+name: Offensiver
+description: "Just annoying fly
+class: [purple]Air [white]|| [red]Attack",
+health: 100
+flying: true
+speed: 5
+rotateSpeed: 5
+faceTarget: false
+circleTarget: true
+hitSize: 8
+engineSize: 3
+engineOffset: 8
+range: 175
+itemCapacity: 10
+coreUnitDock: false
+research: {
+	parent: fly_fabric
+	requirements: [
+		{item: vanil, amount: 1500}
+		{item: uranium, amount: 300}
+		{item: plutonium, amount: 150}
+	]
+}
+weapons: [{
+x: 0
+y: 1.25
+rotate: false
+inaccuracy: 1
+reload: 30
+shootSound: shootSalvo
+shoot: {
+	shots: 3
+	shotDelay: 5
+	autoTarget: true
+	}
+ejectEffect: {
+	type: MultiEffect
+	effects:[
+	{
+	type: ParticleEffect
+	colorFrom: 66fa6e
+	colorTo: 66fa6e
+	lightColor: 66fa6e
+	sizeFrom: 1
+	sizeTo: 0
+	particles: 2
+	cone: 5
+	}
+	]
+}
+bullet:{ 
+	type: BasicBulletType
+	damage: 10
+	healAmount: 1
+	speed: 5
+	height: 20
+	width: 10
+	weaveMag: 0
+	weaveScale: 0
+	trailLength: 4
+	trailWidth: 2
+	shrinkX: 0
+	shrinkY: 0
+	collidesTeam: true
+	backColor: aaffaa
+	trailColor: aaffaa
+	frontColor: aaffaa
+	hitEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ExplosionEffect
+		waveLife: 12
+		waveStroke: 1
+		waveRadBase: 0
+		waveRad: 5
+		waveColor: FFFFFF
+		smokes: 0
+		sparkLen: 1.5
+		sparkStroke: 2
+		sparkColor: FFFFFF
+		}
+		]
+	}
+	despawnEffect: none
+} 
+} 
+]

@@ -1,0 +1,77 @@
+type: flying
+name: Proton
+description: "The missile knows where it is at all times. It knows this because it knows where it ISN'T at all time
+Class: [green]Air [white]|| [yellow]Core"
+health: 250
+flying: true
+targetAir: true
+outlineColor: 303030
+speed: 4.0
+range: 200
+hitSize: 13
+engineSize: 4
+engineOffset: -1
+mineTier: 2
+mineSpeed: 6
+itemCapacity: 50
+trailLength: 15
+coreUnitDock: true
+buildSpeed: 2
+research: {
+	parent: photon
+	alwaysUnlocked: false
+	objectives: [
+	core-gamma
+	]
+}
+weapons: [
+{
+name: proton-launcher
+x: 0
+y: 1
+mirror: false
+rotate: false
+inaccuracy: 0
+reload: 70
+recoil: 0
+shootSound: RocketLaunches
+shoot: {
+	shots: 1
+	shotDelay: 0
+	autoTarget: true
+}
+ejectEffect: none
+parts: [
+{
+type: RegionPart
+suffix: -shootR
+mirror: false
+under: false
+x: 0
+y: -1.5
+
+moveX: 8
+moveY: -2
+moveRot: 20
+}
+{
+type: RegionPart
+suffix: -shootL
+mirror: false
+under: fasle
+x: 0
+y: -1.5
+
+moveX: -8
+moveY: -2
+moveRot: -20
+}
+]
+bullet: { 
+	maxRange: 100
+	colors: [00eeff, 00eeff, ffffff]
+	type: LaserBulletType
+	spawnUnit: proton_rocket
+	}
+}
+]

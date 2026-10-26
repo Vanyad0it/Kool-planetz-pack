@@ -1,0 +1,95 @@
+type: mech
+name: Tetator
+description: "Same as Exponenciator, but more agressive.
+Can't fly cuz 'DIS BIGGAS MECH IS HEAVIER THAN ...
+Class: [blue]Mech [white]|| [red]Attack",
+rotateSpeed: 1
+hitSize: 27
+speed: 0.5
+range: 300
+itemCapacity: 250
+health: 5000
+mechFrontSway: 0.5
+mechSideSway: 1
+buildSpeed: 0.25
+flying: false
+armor: 6
+outlineColor: 303030
+stepSound: mechStep
+research: {
+	parent: exponentiator
+	requirements: [
+		{item: vanil, amount: 25000}
+		{item: uranium, amount: 15000}
+		{item: plutonium, amount: 15000}
+		{item: cesium, amount: 25000}
+	]
+}
+weapons: [
+{
+name: ripple-launcher
+top: false
+x: 25
+shootY: 20
+y: 0
+reload: 70
+inaccuracy: 15
+recoil: 10
+shoot: {
+	type: ShootPattern 
+	shots: 4
+	shotDelay: 0
+}
+mirror: true
+shootSound: shootArtillerySapBig
+bullet: {
+	type: BasicBulletType
+	damage: 175
+	lifetime: 100
+	speed: 3
+	height: 20
+	width: 10
+	collidesAir: false
+	frontColor: ffffff
+	backColor: ffc157 
+	status: cesium_colapse 
+	splashDamage: 100
+	splashDamageRadius: 50
+	pierce: true   
+	pierceCap: 1
+	shootEffect: {
+		type: ParticleEffect 
+		line: true 
+		sizeFrom: 3
+		sizeTo: 0
+		colorFrom: ffffff 
+		colorTo: c2c7f0
+		lifetime: 20
+		particles: 3
+		cone: 180
+	}
+	hitEffect: {
+		type: ParticleEffect 
+		line: true
+		sizeFrom: 3
+		sizeTo: 0
+		colorFrom: ffffff 
+		colorTo: c2c7f0
+		lifetime: 20
+		particles: 5
+		cone: 360
+	}
+	despawnEffect: {
+		type: ParticleEffect 
+		line: true
+		sizeFrom: 3
+		sizeTo: 0
+		colorFrom: ffffff 
+		colorTo: c2c7f0
+		lifetime: 20
+		particles: 4
+		cone: 360
+	}
+}
+}
+]

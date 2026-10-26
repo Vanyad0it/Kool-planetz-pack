@@ -1,0 +1,69 @@
+type: tank,
+name: "Delta",
+description: "Fast shooting tank
+Class: [orange]Tank [white]|| [red]Attack"
+omniMovement: false
+rotateSpeed: 3
+health: 200
+armor: 3
+speed: 0.8
+hitSize: 10
+rotate: false
+faceTarget: false
+buildSpeed: 0
+itemCapacity: 0
+flying: false
+outlineColor: 303030
+treadPullOffset: 5
+research: {
+	parent: tank_fabric
+	requirements: [
+		{item: vanil, amount: 1500}
+		{item: plutonium, amount: 300}
+	]
+}
+weapons: [
+{
+name: delta-blaster
+top: true 
+x: 0
+shootX: 0
+shootY: 3
+y: -3
+reload: 25
+rotate: true
+rotateSpeed: 2
+shoot: {
+	type: ShootPattern 
+	shots: 1
+	shotDelay: 0
+}
+mirror: false
+shootSound: Blastershoots
+bullet: {
+	type: BasicBulletType
+	damage: 20
+	lifetime: 30
+	speed: 6
+	height: 15 
+	width: 10
+	frontColor: ffffff
+	backColor: 4fffb3
+	pierce: false
+	pierceCap: 1
+	shootEffect: {
+		type: ParticleEffect 
+		line: true
+		sizeFrom: 3
+		sizeTo: 0
+		colorFrom: ffffff 
+		colorTo: ffffff
+		lifetime: 20
+		particles: 5
+		cone: 180
+	}
+	hitEffect: none 
+	despawnEffect: none
+}
+}
+]

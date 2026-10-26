@@ -1,0 +1,92 @@
+type: legs
+name: Point
+description: Arachnophopia alert
+speed: 0.75
+rotateSpeed: 1.5
+health: 175
+armor: 1
+hitSize: 10
+legCount: 4
+legLength: 11
+legForwardSides: 0.5
+legMoveSpace: 1
+hovering: true
+outlineColor: 303030
+inaccuracy: 1
+buildSpeed: 0.25
+buildRange: 30
+research: {
+	parent: adder
+	requirements: [
+		{item: vanil, amount: 500}
+		{item: plutonium, amount: 250}
+		{item: xenon, amount: 100}
+	]
+	objectives: [
+	plutonium_payloader
+	orbit
+	{
+		type: SectorComplete
+		preset: river-side
+	}
+	]
+}
+weapons: [
+{
+name: point-weapon
+x: 0
+shootY: 5
+y: 1
+reload: 70
+mirror: false
+rotate: false
+shootCone: 10
+shootSound: shootDuo
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-STAR2
+	damage: 25
+	speed: 2
+	lifetime: 100
+	width: 8
+	height: 5
+	shrinkX: 0
+	shrinkY: 0
+	frontColor: f7dfb0
+	backColor: f7dfb0
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		sizeFrom: 0
+		sizeTo: 3
+		colorFrom: f7dfb0 
+		colorTo: f7dfb000
+		lifetime: 10
+		particles: 1
+		length: 0
+	}
+	hitEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-STARh
+		sizeFrom: 0
+		sizeTo: 5
+		colorFrom: f7dfb0 
+		colorTo: f7dfb000
+		lifetime: 30
+		particles: 1
+		length: 0
+	}
+	despawnEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-STARh
+		sizeFrom: 0
+		sizeTo: 5
+		colorFrom: f7dfb0 
+		colorTo: f7dfb000
+		lifetime: 30
+		particles: 1
+		length: 0
+	} 
+}
+}
+]

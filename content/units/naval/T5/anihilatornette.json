@@ -1,0 +1,67 @@
+type: naval
+name: anihilatornette
+description: if you can destroy it, i guess bro
+speed: 0.125
+rotateSpeed: 0.25
+health: 20000
+armor: 25
+hitSize: 25
+targetAir: true
+weapons: [
+{
+name: dreadnette-artillery
+x: 0
+y: 5
+shootY: 2
+reload: 17.5
+mirror: true
+alternate: true
+rotate: true
+rotateSpeed: 1
+shootSound: shootArtillerySapBig
+recoil: 10
+shake: 3
+inaccuracy: 15
+shoot: {
+	type: shootPattern
+	shots: 4
+	shotDelay: 0
+}
+bullet: {
+	type: ArtilleryBulletType
+	sprite: cool-planets-pack-STAR
+	splashDamage: 250
+	healAmount: 25
+	splashDamageRadius: 100
+	speed: 5.5
+	lifetime: 50
+	width: 20
+	height: 20
+	shrinkX: 0
+	shrinkY: 0
+	collidesAir: false
+	frontColor: aaffaa
+	backColor: aaffaa
+	trailColor: aaffaa
+	hitSound: explosionTitan
+	status: radiumation
+	statusDuration: 60
+	hitEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		colorFrom: aaffaa
+		colorTo: 60ff6000
+		sizeFrom: 1
+		sizeTo: 100
+		lifetime: 70
+		cone: 0
+		length: 0	
+	}
+	despawnEffect: none
+}
+}
+]
+immunities: [
+	slowed_by_vanil
+	cesium_colapse
+]

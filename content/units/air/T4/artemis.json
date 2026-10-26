@@ -1,0 +1,184 @@
+type: flying
+name: Artemis
+description: "Bombs away! From Artemis they fall
+Class: [purple]Air [white]|| [red]Attack"
+health: 8000
+hitSize: 35
+flying: true
+TargetAir: true
+speed: 1.25
+rotateSpeed: 2
+faceTarget: false
+circleTarget: true
+range: 250
+engineSize: 3
+engineOffset: 10
+mineTier: 1
+mineSpeed: 3
+itemCapacity: 150
+buildBeamOffset: 5
+buildSpeed: 1
+buildRange: 500
+coreUnitDock: false
+outlineColor: 606060
+weapons: [
+{
+name: artemis-boom
+top: true
+x: 0
+y: 0
+rotate: false
+shootCone: 360
+inaccuracy: 0
+mirror: false
+reload: 60
+shootSound: shootQuad
+targetAir: false
+targetGround: true
+recoil: 0
+shoot: {
+	type: shootPattern
+	shots: 1
+	shotDelay: 0
+	autoTarget: true
+}
+bullet: {
+	type: BombBulletType
+	sprite: cool-planets-pack-STAR2
+	splashDamage: 200
+	healAmount: 50
+	splashDamageRadius: 100
+	speed: 0
+	lifetime: 60
+	height: 50
+	width: 50
+	shrinkX: 0.9
+	shrinkY: 0.9
+	spin: 2
+	frontColor: aaffaa
+	backColor: aaffaa
+	hitSound: explosionQuad
+	hitEffect: {
+		type: MultiEffect
+		effects: [
+		{
+			type: ParticleEffect
+			region: cool-planets-pack-CIRCLEh
+			colorFrom: aaffaa
+			colorTo: 60ff6000
+			sizeFrom: 1
+			sizeTo: 100
+			lifetime: 20
+			cone: 0
+			length: 0
+			particles: 1
+		}
+		{
+			type: ParticleEffect
+			region: cool-planets-pack-STAR
+			colorFrom: aaffaa60
+			colorTo: 60ff60
+			sizeFrom: 100
+			sizeTo: 0
+			lifetime: 60
+			cone: 0
+			length: 0
+			particles: 1
+		}
+		]
+	}
+	despawnEffect: none
+}
+}
+{
+name: artemis-anti-air
+top: true
+x: 18
+y: -20
+rotate: true
+rotateSpeed: 3
+inaccuracy: 5
+mirror: true
+alternate: true
+reload: 17.5
+shootSound: shootScatter
+targetAir: true
+targetGround: fasle
+shoot: {
+	type: shootPattern
+	shots: 2
+	shotDelay: 5
+	autoTarget: true
+}
+bullet: {
+	type: FlakBulletType
+	sprite: cool-planets-pack-CIRCLE
+	collidesAir: true
+	collidesGround: false
+	damage: 30
+	speed: 5
+	lifetime: 60
+	height: 4
+	width: 8
+	shrinkX: 0
+	shrinkY: -0.5
+	frontColor: aaffaa
+}
+}
+{
+name: artemis-anti-air2
+top: true
+x: 18
+y: -20
+rotate: true
+rotateSpeed: 3
+inaccuracy: 5
+mirror: true
+alternate: true
+reload: 17.5
+shootSound: shootScatter
+targetAir: true
+targetGround: fasle
+shoot: {
+	type: shootPattern
+	shots: 2
+	shotDelay: 5
+	firstShotDelay: 17.5
+	autoTarget: true
+}
+bullet: {
+	type: FlakBulletType
+	sprite: cool-planets-pack-CIRCLE
+	collidesAir: true
+	collidesGround: false
+	damage: 30
+	speed: 5
+	lifetime: 60
+	height: 4
+	width: 8
+	shrinkX: 0
+	shrinkY: -0.5
+	frontColor: aaffaa
+}
+}
+]
+abilities: [
+{
+	type: RepairFieldAbility
+	reload: 120
+	amount: 100
+	range: 150
+	activeEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		sizeFrom: 1
+		sizeTo: 150
+		colorFrom: aaffaa
+		colorTo: aaffaa00
+		lifetime: 100
+		length: 0
+		cone: 0
+		particles: 1
+	}
+}
+]

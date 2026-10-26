@@ -1,0 +1,114 @@
+type: flying
+name: Regenerator
+description: "Weakest unt ever. But has the most regen rate on its tier.
+Class: [purple]Air [white]|| [lime]Support"
+health: 50
+hitSize: 11
+flying: true
+TargetAir: false
+speed: 2.5
+rotateSpeed: 4
+engineSize: 0
+engineOffset: 0
+mineTier: 0
+mineSpeed: 0
+itemCapacity: 5
+buildSpeed: 0.1
+coreUnitDock: false
+inaccuracy: 0
+research: {
+	parent: support_fabric
+	requirements: [
+		{item: uranium, amount: 1000}
+		{item: xenon, amount: 500}
+	]
+}
+engines: [
+{
+x: 5
+y: -9
+rotation: -90
+radius: 2
+}
+{
+x: -5
+y: -9
+rotation: -90
+radius: 2
+}
+]
+weapons: [
+{
+x: 0
+shootY: 0
+y: 5
+reload: 70
+shoot: {
+	type: ShootPattern
+	shots: 1
+	shotDelay: 0
+}
+mirror: false
+shootSound: shootElude
+shootSoundVolume: 2
+bullet: {
+	type: MissileBulletType
+	sprite: cool-planets-pack-STAR
+	homingPower: 0.05
+	buildingDamageMultiplier: 0
+	damage: 5
+	healAmount: 50
+	speed: 1
+	lifetime: 70
+	height: 15 
+	width: 10
+	frontColor: aaffaa
+	backColor: aaffaa
+	trailColor: aaffaa
+	pierce: false
+	collidesAir: false
+	collidesGround: true
+	collidesTeam: true
+	shootEffect: {
+		type: ParticleEffect
+		sprite: cool-planets-pack-CIRCLEh
+		sizeFrom: 0
+		sizeTo: 5
+		colorFrom: aaffaa
+		colorTo: aaffaa00
+		lifetime: 10
+		length: 0
+	}
+	hitEffect: {
+		type: ParticleEffect
+		sprite: cool-planets-pack-CIRCLEh
+		sizeFrom: 0
+		sizeTo: 5
+		colorFrom: aaffaa
+		colorTo: aaffaa00
+		lifetime: 10
+		length: 0
+	}
+	despawnEffect: none
+}
+}
+]
+abilities: [
+{
+	type: RepairFieldAbility
+	radius: 75
+	amount: 5
+	reload: 60
+	activeEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		sizeFrom: 1
+		sizeTo: 75
+		colorFrom: 80ff80
+		colorTo: aaffaa00
+		lifetime: 40
+		particles: 1
+		length: 0
+	}
+}
+]

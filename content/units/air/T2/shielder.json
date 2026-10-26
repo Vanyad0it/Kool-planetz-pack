@@ -1,0 +1,50 @@
+type: flying
+name: Shielder
+description: "Stronk shield
+Class: [purple]Air [white]|| [lime]Support",
+health: 250
+hitSize: 20
+flying: true
+TargetAir: true
+speed: 1.5
+rotateSpeed: 1.5
+engineSize: 0
+engineOffset: 0
+mineTier: 1
+mineSpeed: 1
+itemCapacity: 10
+buildSpeed: 0.25
+coreUnitDock: false
+outlineColor: 606060
+research: {
+	parent: barricator
+	requirements: [
+		{item: vanil, amount: 5000}
+		{item: plutonium, amount: 2500}
+		{item: xenon, amount: 1750}
+	]
+}
+engines: [
+{
+x: 6
+y: -4.4
+rotation: -45
+radius: 2.5
+}
+{
+x: -6
+y: -4.4
+rotation: -45
+radius: 2.5
+}
+]
+abilities: [
+{
+	type: ForceFieldAbility
+	radius: 100
+	regen: 5
+	max: 1500
+	cooldown: 1000
+	sides: 8
+}
+]

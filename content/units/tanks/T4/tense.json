@@ -1,0 +1,97 @@
+type: tank
+name: Tensor
+description: "This is annoying because:
+1. Shoots fast
+2. High DPS
+3. High HP
+4. I said so
+5. I AM BULLETPROOOF!!!!
+Class: [orange]Tank [white]|| [red]Attack"
+omniMovement: false
+rotateSpeed: 1
+health: 7500
+armor: 7
+speed: 0.5
+range: 250
+hitSize: 30
+rotate: false
+faceTarget: false
+buildSpeed: 0
+itemCapacity: 75
+flying: false
+outlineColor: 303030
+treadPullOffset: 10
+faceTarget: false
+rotate: false
+treadRects: [
+{
+y: -80
+x: 100
+height: 100
+width: 25
+}
+{
+y: -80
+x: 30
+height: 100
+width: 25
+} 
+]
+research: [
+	parent: force
+	requirements:
+		{item: vanil, amount: 150}
+		{item: plutonium, amount: 30}
+]
+weapons: [
+{
+name: tensor-turret_gun
+top: true
+x: 0
+shootX: 15
+y: -3
+reload: 17.5
+inaccuracy: 0
+rotate: true
+rotateSpeed: 2
+shoot: {
+	type: ShootPattern 
+	shots: 1
+	shotDelay: 0
+}
+recoil: 15
+mirror: true,
+shootSound: shootArtillery
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-STAR
+	damage: 100,
+	lifetime: 35,
+	speed: 8,
+	height: 15, 
+	width: 15,
+	shrinkX: 0
+	shrinkY: 0
+	frontColor: ffaaaa, 
+	trailColor: ff9000, 
+	trailLength: 5
+	trailWidth: 2
+	pierce: true,   
+	pierceCap: 5,
+	fragSpread: 5
+	fragBullets: 10
+	fragOffsetMax: 0
+	fragVelocity: 5
+	fragRandomSpread: 0
+	fragBullet: {
+		type: BasicBulletType
+		speed: 3
+		damage: 50
+		collidesAir: false
+		}
+	shootEffect: none
+	hitEffect: none
+	despawnEffect: none
+}
+}
+]

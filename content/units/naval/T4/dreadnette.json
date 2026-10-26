@@ -1,0 +1,172 @@
+type: naval
+name: Dreadnette
+description: Boy.
+speed: 0.25
+rotateSpeed: 1
+health: 8500
+armor: 16
+hitSize: 28
+rotateSpeed: 1.1
+buildSpeed: 0.6
+buildRange: 80
+targetAir: true
+weapons: [
+{
+name: dreadnette-BEEG-cannon
+x: 0
+y: 5
+shootY: 2
+reload: 70
+mirror: false
+alternate: false
+rotate: true
+rotateSpeed: 1.5
+shootSound: shootArtillerySapBig
+recoil: 10
+shake: 3
+inaccuracy: 10
+parts: [
+{
+type: RegionPart
+suffix: -launcher
+mirror: false
+under: fasle
+progress: recoil
+
+moveX: 0
+moveY: 5
+moveRot: 0
+}
+]
+bullet: {
+	type: ArtilleryBulletType
+	sprite: cool-planets-pack-STAR
+	splashDamage: 250
+	healAmount: 25
+	splashDamageRadius: 100
+	speed: 5.5
+	lifetime: 50
+	width: 20
+	height: 20
+	shrinkX: 0
+	shrinkY: 0
+	collidesAir: false
+	frontColor: aaffaa
+	backColor: aaffaa
+	trailColor: aaffaa
+	hitSound: explosionQuad
+	status: radiumation
+	statusDuration: 60
+	hitEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		colorFrom: aaffaa
+		colorTo: 60ff6000
+		sizeFrom: 1
+		sizeTo: 100
+		lifetime: 70
+		cone: 0
+		length: 0	
+	}
+	despawnEffect: none
+}
+}
+{
+name: dreadnette-gun-go-pew-pew
+x: 10
+y: 2
+shootY: 5
+reload: 35
+mirror: true
+alternate: true
+rotate: true
+rotateSpeed: 2.5
+shootSound: shootDuo
+recoil: 2
+inaccuracy: 10
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-STAR2
+	damage: 65
+	speed: 6.5
+	lifetime: 35
+	width: 9
+	height: 12
+	collidesAir: false
+	frontColor: aaffaa
+	backColor: aaffaa
+}
+}
+{
+name: dreadnette-gun-go-pew-pew
+x: 11
+y: -7
+shootY: 5
+reload: 35
+mirror: true
+alternate: true
+rotate: true
+rotateSpeed: 2.5
+shootSound: shootDuo
+recoil: 2
+inaccuracy: 5
+shoot: {
+	type: shootPattern
+	shots: 1
+	firstShotDelay: 17.5
+}
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-STAR2
+	damage: 65
+	speed: 6.5
+	lifetime: 35
+	width: 9
+	height: 12
+	collidesAir: false
+	frontColor: aaffaa
+	backColor: aaffaa
+}
+}
+{
+name: dreadnette-anti-air
+x: 0
+shootX: 2.5
+y: -13
+shootY: 4
+reload: 12
+mirror: true
+alternate: true
+rotate: true
+rotateSpeed: 6.0
+shootSound: shootScatter
+recoil: 1.5
+inaccuracy: 20
+shoot: {
+	type: ShootPattern
+	shots: 2
+	shotDelay: 3
+}
+bullet: {
+	type: FlakBulletType
+	sprite: cool-planets-pack-CIRCLE
+	damage: 20
+	splashDamage: 15
+	splashDamageRadius: 18
+	speed: 8.0
+	lifetime: 25
+	width: 4
+	height: 2
+	shrinkX: 0
+	shrinkY: -1
+	collidesAir: true
+	collidesGround: false
+	frontColor: ffffff
+	backColor: ffffff
+}
+}
+]
+immunities: [
+	slowed_by_vanil
+	cesium_colapse
+]

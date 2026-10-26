@@ -1,0 +1,89 @@
+type: payload
+name: Electron
+description: "Yet another fast and annoying piece of...
+(now with splash bullets)
+Class: [purple]Air [white]|| [red]Attack",
+health: 250
+hitSize: 10
+flying: true
+TargetAir: true
+speed: 3.0
+range: 250
+engineSize: 3
+engineOffset: 10
+mineTier: 1
+mineSpeed: 3
+itemCapacity: 100
+allowedInPayloads: true
+pickupUnits: true
+payloadCapacity: 256
+buildBeamOffset: 5
+buildSpeed: 0.5
+buildRange: 100
+coreUnitDock: false
+outlineColor: 606060
+weapons: [
+{
+x: 0
+y: 5
+rotate: false
+inaccuracy: 0
+reload: 70
+shootSound: shootSpectre
+shoot: {
+	shots: 1
+	shotDelay: 0
+	autoTarget: true
+}
+ejectEffect: none
+bullet:{ 
+	type: BasicBulletType
+	sprite: cool-planets-pack-STAR
+	damage: 100
+	healAmount: 20
+	lifetime: 100
+	speed: 3
+	height: 10
+	width: 5
+	weaveMag: 0
+	weaveScale: 0
+	length: 15
+	width: 10
+	trailLength: 15
+	trailWidth: 2.5
+	backColor: aaffaa
+	trailColor: aaffaa
+	frontColor: aaffaa
+	collidesTeam: true
+	shrinkX: 0
+	shrinkY: 0
+	splashDamage: 10
+	splashDamageRadius: 25
+	hitSound: explosionTitan
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLE
+		sizeFrom: 1
+		sizeTo: 8
+		lifetime: 15
+		colorFrom: 80ff80
+		colorTo: 80ff8000
+		length: 0
+		spin: 0
+		particles: 1
+	}
+	hitEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		sizeFrom: 1
+		sizeTo: 25
+		lifetime: 70
+		colorFrom: 80ff80
+		colorTo: 80ff8000
+		length: 0
+		spin: 0
+		particles: 1
+	}
+}
+}
+]

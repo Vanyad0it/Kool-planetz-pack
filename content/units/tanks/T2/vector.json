@@ -1,0 +1,100 @@
+type: tank,
+name: "Vector",
+description: "Lightning bullets. Probably most annoying thing ever
+Class: [orange]Tank [white]|| [red]Attack"
+omniMovement: false
+rotateSpeed: 2
+health: 1000,
+armor: 7,
+speed: 0.5,
+range: 250
+hitSize: 15,
+rotate: false,
+faceTarget: false,
+buildSpeed: 0,
+itemCapacity: 25,
+flying: false,
+outlineColor: 303030,
+treadPullOffset: 10,
+research: [
+	parent: "delta",
+	requirements:
+		{"item": "vanil", "amount": 150},
+		{"item": "plutonium", "amount": 30}
+]
+weapons: [
+{
+	name: "vector-sniper",
+	top:true, 
+	x: 0,
+	shootX: 0,
+	y: -3,
+	reload: 70,
+	inaccuracy: 0
+	rotate: true,
+	rotateSpeed: 2,
+	shoot: {
+		type: "ShootHelix", 
+		shots: 1,
+		shotDelay: 0,
+		Mag: 5
+	},
+	mirror: false,
+	shootSound: "Blastershoots",
+	bullet: {
+		type: "BasicBulletType",
+		damage: 100,
+		lifetime: 150,
+		speed: 2,
+		height: 15, 
+		width: 10,
+		frontColor: ffffff, 
+		backColor: 78fdff, 
+		pierce: true,   
+		pierceCap: 5,
+	intervalBullet: {
+		type: LightningBulletType
+		damage: 10
+		collidesAir: false
+		lightning: 5
+		lightningLength: 5
+		lightningLengthRand: 5
+		lightningColor: 78fdff
+		hitSound: spark
+		}
+	shootEffect: {
+		type: "ParticleEffect", 
+		line: true, 
+		sizeFrom: 3,
+		sizeTo: 0, 
+		colorFrom: ffffff, 
+		colorTo: ffffff, 
+		lifetime: 20,
+		particles: 5,
+		cone: 180
+	}, 
+	hitEffect : {
+		type: "ParticleEffect", 
+		line: true, 
+		sizeFrom: 3,
+		sizeTo: 0, 
+		colorFrom: ffffff, 
+		colorTo: da70d6, 
+		lifetime: 20,
+		particles: 5,
+		cone: 360
+	}, 
+	despawnEffect: {
+		type: "ParticleEffect", 
+		line: true, 
+		sizeFrom: 3,
+		sizeTo: 0, 
+		colorFrom: FFFFFF, 
+		colorTo: DA70D6, 
+		lifetime: 20,
+		particles: 4,
+		cone: 360
+		}
+	}
+}
+]

@@ -1,0 +1,24 @@
+type: flying
+name: Builderator
+description: "Five. Hundred. Builds
+Class: [purple]Air [white]|| [lime]Support",
+health: 100
+hitSize: 20
+flying: true
+TargetAir: true
+speed: 2
+engineSize: 2.5
+engineOffset: 11.5
+mineTier: 0
+mineSpeed: 0
+itemCapacity: 0
+buildSpeed: 1
+coreUnitDock: false
+outlineColor: 606060
+research: {
+	parent: blasteroider
+	requirements: [
+		{item: vanil, amount: 1500}
+		{item: cesium, amount: 750}
+	]
+}

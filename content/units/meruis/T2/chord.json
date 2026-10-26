@@ -1,0 +1,139 @@
+type: legs
+name: Chord
+description: Spooder that can steal your soul
+details: fetch me their souls!
+speed: 0.5
+rotateSpeed: 2
+hitSize: 15
+health: 500
+armor: 2
+legCount: 6
+legLength: 15
+legForwardSides: 0.65
+legMoveSpace: 1
+hovering: true
+outlineColor: 303030
+buildSpeed: 0.25
+itemCapacity: 100
+stepSound: walkerStepSmall
+stepSoundVolume: 1.5
+research: {
+	parent: point
+	requirements: [
+		{item: plutonium, amount: 2500}
+		{item: xenon, amount: 1000}
+	]
+	objectives: [
+	multiplier
+	T2_refabricator
+	{
+		type: SectorComplete
+		preset: scorched_line
+	}
+	]
+}
+weapons: [
+{
+name: segment-launcher
+x: 7.5
+y: 4.5
+mirror: true
+reload: 60
+shootSound: shootArtillerySap
+shootSoundVolume: 1.5
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-STAR
+	damage: 125
+	speed: 4
+	lifetime: 50
+	width: 10
+	height: 10
+	shrinkX: 0
+	shrinkY: 0
+	status: slowed_by_xenon
+	statusDuration: 50
+	frontColor: aaaaff
+	backColor: aaaaff
+	fragBullets: 5
+	fragSpread: 5
+	fragRandomSpread: 0
+	fragVelocityMin: 1
+	fragVelocityMax: 1
+	hitSound: explosionDull
+	fragBullet: {
+	        type: BasicBulletType
+		sprite: cool-planets-pack-STAR2
+	        damage: 5
+	        speed: 2
+	        lifetime: 60
+	        width: 5
+	        height: 5
+		shrinkX: 0
+		shrinkY: 0
+		frontColor: aaaaff
+		backColor: aaaaff
+		hitEffect: none
+		despawnEffect: none
+	}
+	hitEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		sizeFrom: 0
+		sizeTo: 50
+		colorFrom: aaaaff 
+		colorTo: aaaaff00
+		lifetime: 60
+		particles: 1
+		length: 0
+	}
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		sizeFrom: 0
+		sizeTo: 5
+		colorFrom: aaaaff
+		colorTo: aaaaff00
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+	despawnEffect: none
+}
+}
+{
+name: chord-cutter
+x: 8.25
+y: 0
+mirror: true
+shoot: {
+	type: ShootPattern
+	shots: 1
+	shotDelay: 4
+}
+top: false
+rotate: true
+reload: 20
+recoil: 1
+shootSound: shootSap
+ejectEffect: none
+shootSoundVolume: 3
+rotateSpeed: 4
+bullet: {
+	type: SapBulletType
+	sapStrength: 0.75
+	length: 70
+	damage: 30
+	shootEffect: none
+	hitColor: aaaaff
+	color: aaaaff
+	despawnEffect: none
+	width: 1
+	lifetime: 20
+	knockback: -2
+	status: slowed_by_xenon
+	statusDuration: 60
+	shootEffect: none
+}
+}
+]

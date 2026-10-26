@@ -1,0 +1,93 @@
+type: naval
+name: Briguette
+description: Ah ship. Here we go again.
+speed: 0.85
+health: 300
+armor: 1
+hitSize: 11
+rotateSpeed: 2
+armor: 2
+buildSpeed: 0
+weapons: [
+{
+name: briguette-artillery
+x: 0
+y: 2
+shootY: 5
+reload: 35
+mirror: false
+alternate: false
+rotate: true
+rotateSpeed: 1.5
+rotationLimit: 220
+shootSound: shootArtillerySmall
+shootSoundVolume: 2
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-STAR2
+	damage: 50
+	speed: 4
+	lifetime: 40
+	width: 6
+	height: 8
+	frontcolor: f7dfb0
+	backcolor: f7dfb0
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh 
+		sizeFrom: 0
+		sizeTo: 2
+		colorFrom: f7dfb0
+		colorTo: ffffff00
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+}
+}
+{
+name: briguette-anti-air
+x: 0
+y: -7.5
+shootY: 5
+reload: 17.5
+mirror: false
+alternate: false
+rotate: true
+rotateSpeed: 5
+shootSound: shootDuo
+targetAir: true
+targetGround: false
+inaccuracy: 7
+bullet: {
+	type: FlakBulletType
+	sprite: cool-planets-pack-CIRCLE
+	damage: 10
+	speed: 6
+	lifetime: 40
+	collidesAir: true
+	colliedsGround: false
+	width: 5
+	height: 2.5
+	shrinkX: 0
+	shrinkY: -2
+	frontcolor: f7dfb0
+	backcolor: f7dfb0
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh 
+		sizeFrom: 0
+		sizeTo: 2
+		colorFrom: f7dfb0
+		colorTo: ffffff00
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+}
+}
+]
+immunities: [
+	slowed_by_vanil
+	cesium_colapse
+]

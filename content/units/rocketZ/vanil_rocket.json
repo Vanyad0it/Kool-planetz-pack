@@ -1,0 +1,114 @@
+type: missile
+controller: MissileAI
+flying: true
+speed: 4
+rotateSpeed: 1.5
+engineSize: 2.5
+engineOffset: 3
+maxRange: 6
+lifetime: 150
+hidden: false
+outlineColor: 606050
+engineColor: fff694
+trailColor: fff694
+trailLength: 18
+missileAccelTime: 30
+lowAltitude: true
+fogRadius: 6
+health: 150
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+abilities: [
+{
+	type: MoveEffectAbility
+	y: -8
+	effect: [
+	{
+		type: ParticleEffect
+		particles: 2
+		lifetime: 30
+		length: 12
+		sizeFrom: 2
+		sizeTo: 0
+		colorFrom: fffacd
+		colorTo: ffffff
+		strokeFrom: 2
+		strokeTo: 1
+		interp: pow3Out
+		spin: 5
+		sizeInterp: pow2In
+		region: cool-planets-pack-STAR
+	}
+	]
+}
+]
+weapons: [
+{
+shootCone: 360
+mirror: false
+reload: 180
+shootOnDeath: true
+shootEffect: none
+x: 0
+y: 0
+despawnHit: true
+despawnEffect: none
+bullet: {
+	type: BombBulletType
+	hitSound: explosion
+	splashDamageRadius: 150
+	splashDamage: 50
+	instantDisappear: true
+	killShooter: true
+	hittable: true
+	collidesAir: true
+	status: slowed_by_vanil
+	statusDuration: 3000
+	hitEffect: {
+		type: multiEffect
+		effects: [
+		{
+		type: ParticleEffect
+		region: cool-planets-pack-STAR
+		lifetime: 60
+		sizeFrom: 1
+		sizeTo: 75
+		colorFrom: fffacd
+		colorTo: ffffff00
+		particles: 1
+		spin: 2
+		length: 0
+		cone: 0
+		}
+		{
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		lifetime: 100
+		sizeFrom: 1
+		sizeTo: 150
+		colorFrom: fffacd
+		colorTo: ffffff00
+		particles: 1
+		length: 0
+		cone: 0
+		}
+		{
+		type: ParticleEffect
+		region: cool-planets-pack-STAR2
+		particles: 15
+		lifetime: 100
+		length: 75
+		sizeFrom: 1
+		sizeTo: 5
+		colorFrom: fffacd
+		colorTo: ffffff00
+		}
+		]
+	}
+}
+}
+]

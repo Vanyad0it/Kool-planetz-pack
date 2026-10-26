@@ -1,0 +1,109 @@
+type: flying
+name: Arrow
+description: "Arrow is definetly straight.
+Class: [purple]Air [white]|| [yellow]Core",
+health: 100
+flying: true
+targetAir: true
+outlineColor: 303030
+rotateSpeed: 5
+speed: 2.5
+range: 175
+hitSize: 10
+engineSize: 3
+engineOffset: 7
+mineTier: 2
+itemCapacity: 25
+trailLength: 5
+mineSpeed: 5
+coreUnitDock: true
+buildSpeed: 0.5
+weapons: [
+{
+x: 0
+y: 1.5
+rotate: false,
+inaccuracy: 1
+reload: 60
+shootSound: shootEclipse
+shoot: {
+	shots: 1
+	shotDelay: 0
+	autoTarget: true,
+	shootEffect: null
+}
+bullet:{ 
+	type: LaserBulletType
+	damage: 50
+	healAmount: 10
+	buildingDamageMultiplier: 0.05
+	weaveMag: 0
+	weaveScale: 0
+	trailLength: 5
+	trailWidth: 1.5
+	height: 30
+	width: 10
+	colors: [606060, ffffff]
+	fragBullets: 2
+	fragRandomSpread: 0
+	fragSpread: 45
+	fragOffsetMax: 0
+	fragVelocityMin: 1
+	fragVelocityMax: 1
+	fragBullet: {
+		type: MissileBulletType
+		sprite: cool-planets-pack-STAR
+		buildingDamageMultiplier: 0
+		damage: 100
+		lifetime: 60
+		speed: 1.5
+		shrinkX: 0
+		shrinkY: 0
+		trailLength: 15
+		trailWidth: 3
+		width: 10
+		height: 10
+		splashDamage: 10
+		splashdamageRadius: 5
+		frontColor: ffffff
+		trailColor: 606060ff
+	}
+	hitEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ParticleEffect
+		particles: 3
+		lifeTime: 15
+		moveX: 0
+		moveY: 0
+		region: cool-planets-pack-CIRCLE
+		colorFrom: d9c99c
+		colorTo: ffffff
+		sizeFrom: 2
+		sizeTo: 0
+		}
+		]
+	}
+	despawnEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ExplosionEffect
+		waveLife: 12
+		waveStroke: 1
+		moveX: 0
+		moveY: 0
+		waveRadBase: 0
+		waveRad: 5
+		waveColor: FFFFFF
+		smokes: 0
+		sparkLen: 1.5
+		sparkStroke: 2
+		sparkColor: FFFFFF
+		}
+		]
+	}
+	} 
+} 
+]
