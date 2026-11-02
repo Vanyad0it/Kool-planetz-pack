@@ -1,0 +1,148 @@
+type: naval
+name: Corvette
+description: "Heh your de-fence goes boom boom :)"
+speed: 0.5
+health: 2500
+armor: 1
+hitSize: 20
+rotateSpeed: 1.5
+armor: 8
+buildSpeed: 0.35
+buildRange: 45
+weapons: [
+{
+name: corvette-anti-air
+x: 0
+shootX: 2.5
+y: -8
+shootY: 5
+reload: 17.5
+mirror: true
+alternate: true
+rotate: true
+rotateSpeed: 5
+inaccuracy: 17
+shootCone: 20
+shootSound: shootScatter
+shoot: {
+	type: ShootPattern
+	shots: 2
+	shotDelay: 6
+}
+bullet: {
+	type: FlakBulletType
+	damage: 25
+	sprite: cool-planets-pack-CIRCLE
+	collidesAir: true
+	collidesGround: false
+	speed: 8
+	lifetime: 20
+	width: 4
+	height: 2
+	shrinkX: 0
+	shrinkY: -1
+	frontColor: ffffaa
+	backColor: ffff00
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh 
+		sizeFrom: 0
+		sizeTo: 2
+		colorFrom: ffffaa
+		colorTo: ffff0000
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+}
+}
+{
+name: corvette-secondary
+x: 8
+y: 0
+shootY: 5
+reload: 17.5
+mirror: true
+alternate: true
+rotate: true
+rotateSpeed: 3
+shootCone: 10
+shootSound: shootDuo
+shoot: {
+	type: ShootPattern
+	shots: 1
+	shotDelay: 17.5
+}
+bullet: {
+	type: BasicBulletType
+	damage: 10
+	sprite: cool-planets-pack-STAR2
+	speed: 8
+	lifetime: 20
+	width: 6
+	height: 6
+	shrinkX: 0
+	shrinkY: 0
+	frontColor: ffffaa
+	backColor: ffff00
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh 
+		sizeFrom: 0
+		sizeTo: 2
+		colorFrom: ffffaa
+		colorTo: ffffaa00
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+}
+}
+{
+name: corvette-launcher
+x: 0
+y: 5
+shootY: 1
+reload: 35
+mirror: false
+alternate: false
+rotate: true
+rotateSpeed: 1
+shootSound: shootArtillerySap
+shootSoundVolume: 1.5
+shootCone: 0
+recoil: 5
+bullet: {
+	type: ArtilleryBulletType
+	sprite: cool-planets-pack-STAR
+	splashDamage: 75
+	splashDamageRadius: 25
+	speed: 4
+	lifetime: 60
+	width: 10
+	height: 10
+	CollidesAir: false
+	frontColor: ffaa00
+	backColor: ffaa00
+	trailColor: ffaa00
+	hitSound: explosionTitan
+	shootEffect: shootBig
+	hitEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		sizeFrom: 0
+		sizeTo: 25
+		colorFrom: ffaa00
+		colorTo: ffaa0000
+		lifetime: 30
+		length: 0
+		cone: 0
+	}
+	despawnEffect: none
+}
+}
+]
+immunities: [
+	slowed_by_vanil
+	cesium_colapse
+]

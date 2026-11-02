@@ -1,0 +1,103 @@
+type: flying
+name: Orion
+description: "Orion-first flying unit!
+Class: [purple]Air [white]|| [yellow]Core",
+health: 125
+flying: true
+targetAir: true
+outlineColor: 303030
+rotateSpeed: 3
+speed: 3.0
+range: 200
+hitSize: 8
+engineSize: 2.75
+engineOffset: 6.5
+mineTier: 1
+itemCapacity: 20
+trailLength: 5
+mineSpeed: 5,
+coreUnitDock: true
+buildSpeed: 0.5
+buildRange: 240
+research: {
+	parent: core-alpha
+	alwaysUnlocked: true
+}
+weapons: [
+{
+x: 0
+y: 1.5
+rotate: false
+inaccuracy: 1
+reload: 60
+shootSound: Orionshoots
+shoot: {
+	shots: 1
+	shotDelay: 0
+	autoTarget: true,
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		colorFrom: e0dc80
+		colorTo: ffffff00
+		lightColor: 122424
+		moveX: 0
+		moveY: 0
+		sizeFrom: 1
+		sizeTo: 5
+		particles: 1
+	}
+}
+bullet: { 
+	type: BasicBulletType
+	damage: 50
+	speed: 5
+	buildingDamageMultiplier: 0.05
+	weaveMag: 0
+	weaveScale: 0
+	trailLength: 5
+	trailWidth: 1.5
+	height: 30
+	width: 10
+	backColor: b8ab8a
+	trailColor: d9c99c
+	frontColor: ffffff
+	hitEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ParticleEffect
+		particles: 3
+		lifeTime: 15
+		moveX: 0
+		moveY: 0
+		region: cool-planets-pack-CIRCLE
+		colorFrom: d9c99c
+		colorTo: ffffff
+		sizeFrom: 2
+		sizeTo: 0
+		}
+		]
+	}
+	despawnEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ExplosionEffect
+		waveLife: 12
+		waveStroke: 1
+		moveX: 0
+		moveY: 0
+		waveRadBase: 0
+		waveRad: 5
+		waveColor: FFFFFF
+		smokes: 0
+		sparkLen: 1.5
+		sparkStroke: 2
+		sparkColor: FFFFFF
+		}
+		]
+	}
+	} 
+} 
+]

@@ -1,0 +1,48 @@
+type: flying
+name: Barricator
+description: "SHIELD PROTEKTION INABLED
+Class: [purple]Air [white]|| [lime]Support",
+health: 100
+hitSize: 10
+flying: true,
+TargetAir: true,
+speed: 2.5
+engineSize: 0
+engineOffset: 0
+mineTier: 0
+mineSpeed: 0
+itemCapacity: 0
+buildSpeed: 0,
+coreUnitDock: false
+outlineColor: 606060
+research: {
+	parent: support_fabric
+	requirements: [
+		{item: vanil, amount: 1500}
+		{item: xenon, amount: 300}
+	]
+}
+engines: [
+{
+x: 6
+y: -4.4
+rotation: -90
+radius: 2.5
+}
+{
+x: -6
+y: -4.4
+rotation: -90
+radius: 2.5
+}
+]
+abilities: [
+{
+	type: ForceFieldAbility
+	radius: 75
+	regen: 0.5
+	max: 500
+	cooldown: 250
+	sides: 4
+}
+]

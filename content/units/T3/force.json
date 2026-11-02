@@ -1,0 +1,128 @@
+type: tank,
+name: "Force",
+description: "BOMBOCLAAAAAAAAT!!!!!!!!!!
+Class: [orange]Tank [white]|| [red]Attack"
+omniMovement: false
+rotateSpeed: 1.25
+health: 2500,
+armor: 15,
+speed: 0.5,
+range: 250
+hitSize: 20,
+rotate: false,
+faceTarget: false,
+buildSpeed: 0,
+itemCapacity: 50
+flying: false,
+outlineColor: 303030,
+treadPullOffset: 20,
+research: [
+	parent: "vector",
+	requirements:
+		{"item": "vanil", "amount": 150},
+		{"item": "plutonium", "amount": 30}
+]
+weapons: [
+{
+	name: "forced-bomb",
+	top:true, 
+	x: 0,
+	shootX: 0,
+	shootY: 5
+	y: -5,
+	reload: 120,
+	inaccuracy: 0
+	rotate: true,
+	rotateSpeed: 2,
+	shoot: {
+		type: "ShootPatern", 
+		shots: 1,
+		shotDelay: 0,
+	},
+	mirror: false,
+	shootSound: "BEEG Artillery",
+	soundVolume: 15
+	bullet: {
+		type: "BasicBulletType",
+		damage: 100,
+		lifetime: 60,
+		speed: 2.5,
+		height: 10, 
+		width: 10,
+		frontColor: ffb752, 
+		backColor: ffffff,
+		trailColor: ffb752
+		pierce: true,   
+		pierceCap: 5,
+		fragSpread: 5
+		fragBullets: 5
+		fragOffsetMax: 0
+		fragVelocityMin: 1
+		fragVelocityMax: 1
+		fragRandomSpread: 0
+		fragBullet: {
+			type: BasicBulletType
+			damage: 60
+			lifetime: 60
+			speed: 2
+			width: 5
+			height: 5
+			sprite: cool-planets-pack-CIRCLE
+			hitEffect: {
+			type: MultiEffect
+			}
+		effects: {
+			type: ExplosionEffect
+			waveLife: 12
+			waveStroke: 1
+			waveRadBase: 0
+			waveRad: 5
+			waveColor: FFFFFF
+			smokes: 0
+			sparkLen: 1.5
+			sparkStroke: 2
+			sparkColor: FFFFFF
+			}
+		}
+	shootEffect: {
+		type: "ParticleEffect", 
+		line: true, 
+		sizeFrom: 3,
+		sizeTo: 0, 
+		colorFrom: ffffff, 
+		colorTo: ffffff, 
+		lifetime: 20,
+		particles: 5,
+		cone: 180
+	}, 
+	hitEffect : {
+		type: "ParticleEffect", 
+		line: true, 
+		sizeFrom: 3,
+		sizeTo: 0, 
+		colorFrom: ffffff, 
+		colorTo: da70d6, 
+		lifetime: 20,
+		particles: 5,
+		cone: 360
+	}, 
+	despawnEffect: {
+		type: "ParticleEffect", 
+		line: true, 
+		sizeFrom: 3,
+		sizeTo: 0, 
+		colorFrom: FFFFFF, 
+		colorTo: DA70D6, 
+		lifetime: 20,
+		particles: 4,
+		cone: 360
+		}
+	sprite: cool-planets-pack-STAR
+	color: ffb752
+	shrinkX: 0
+	shrinkY: 0
+	trailChance: 1
+	trailColor: ffb752
+	}
+}
+]

@@ -1,0 +1,102 @@
+type: missile
+controller: MissileAI
+flying: true
+hitSize: 3
+speed: 5
+rotateSpeed: 2
+engineSize: 2
+engineOffset: 3.25
+maxRange: 6
+lifetime: 70
+hidden: false
+envEnabled: 17
+envDisabled: 0
+outlineColor: 101010
+engineColor: fff694
+trailColor: fff694
+trailLength: 10
+missileAccelTime: 30
+lowAltitude: true
+fogRadius: 4
+health: 100
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+abilities: [
+  {
+              type: MoveEffectAbility
+              y: -8
+              effect: [
+              {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 30
+              length: 12
+              sizeFrom: 2
+              sizeTo: 0
+              colorFrom: ffb700
+              colorTo: ffffff
+              strokeFrom: 2
+              strokeTo: 1
+              interp: pow3Out
+              spin: 5
+              sizeInterp: pow2In
+              region: cool-planets-pack-STAR
+              }
+              ]
+              }
+              ]
+weapons: [
+{
+shootCone: 360
+mirror: false
+reload: 180
+shootOnDeath: true
+shootEffect: none
+x: 0
+y: 0
+despawnHit: true
+despawnEffect: none
+bullet: {
+	type: BombBulletType
+	hitSound: explosionTitan
+	splashDamageRadius: 50
+	splashDamage: 50
+	instantDisappear: true
+	killShooter: true
+	hittable: true
+	collidesAir: true
+	status: cesium_colapse
+	statusDuration: 120
+	hitEffect: {
+		type: multiEffect
+		effects: [
+		{
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		lifetime: 100
+		sizeFrom: 1
+		sizeTo: 50
+		colorFrom: ffffff
+		colorTo: ffffff00
+		particles: 1
+		}
+		{
+		type: ParticleEffect
+		region: cool-planets-pack-STAR2
+		particles: 15
+		lifetime: 100
+		length: 100
+		sizeFrom: 1
+		sizeTo: 5
+		colorFrom: ffffff
+		colorTo: ffffff00
+		}
+		]
+	}
+}
+}
+]

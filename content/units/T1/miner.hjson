@@ -1,0 +1,39 @@
+type: flying
+name: Miner
+description: "Mines bitcoins (not in real life... sadly)
+class: [purple]Air [white]|| [lime]Support",
+health: 100
+flying: true
+speed: 3
+rotateSpeed: 1.5
+hitSize: 8
+engineSize: 0
+engineOffset: 0
+mineTier: 1
+mineSpeed: 3
+trailLength: 5
+trailLength: 0
+itemCapacity: 10
+coreUnitDock: false
+mineItems: [vanil, uranium]
+research: {
+	parent: support_fabric
+	requirements: [
+		{item: cesium, amount: 1500}
+		{item: xenon, amount: 300}
+	]
+}
+engines: [
+{
+x: 5
+y: -1
+rotation: -90
+radius: 2
+}
+{
+x: -5
+y: -1
+rotation: -90
+radius: 2
+}
+]

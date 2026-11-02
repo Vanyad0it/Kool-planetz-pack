@@ -1,0 +1,79 @@
+type: mech
+name: Saw
+description: "Shoots saws.
+Can't fly.
+Class: [cyan]Frozen [white]|| [red]Attack",
+rotateSpeed: 2.5
+hitSize: 12
+speed: 0.5
+range: 225
+mineTier: 1
+mineSpeed: 1.5
+itemCapacity: 25
+health: 250
+mechFrontSway: 0.5
+mechSideSway: 0.2
+buildSpeed: 0.25
+flying: false
+legCount: 2
+legLength: 8
+armor: 1
+outlineColor: 303030
+research: [
+	parent: winter_fabric
+	requirements:
+		{item: ice, amount: 150}
+		{item: ice_cube, amount: 30}
+]
+weapons: [
+{
+name: saw-blade
+top: false
+x: 10
+shootX: 7
+y: 0
+reload: 120
+shoot: {
+	type: ShootPattern 
+	shots: 2
+	shotDelay: 15
+}
+mirror: true,
+shootSound: orionShoots
+bullet: {
+	type: BasicBulletType
+	damage: 60
+	lifetime: 50
+	speed: 4
+	height: 15 
+	width: 8
+	frontColor: ffffff 
+	backColor: aaaaff
+	status: slowed_by_xenon
+	pierce: false
+	pierceCap: 1
+	shootEffect: {
+		type: ParticleEffect 
+		sprite: cool-planets-pack-CIRCLEh
+		sizeFrom: 0
+		sizeTo: 3
+		colorFrom: aaaaff
+		colorTo: 15eeff00
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+	hitEffect: {
+		type: ParticleEffect 
+		sizeFrom: 0
+		sizeTo: 3
+		colorFrom: aaaaff
+		colorTo: aaaaff
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+	despawnEffect: none
+}
+}
+]

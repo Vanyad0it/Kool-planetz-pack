@@ -1,0 +1,93 @@
+type: flying
+name: Declositer
+description: "Lost part of the show...
+Class: [#303030]Lost [white]|| [yellow]Core",
+health: 100
+flying: true
+targetAir: true
+outlineColor: 303030
+speed: 2.0
+range: 150
+engineSize: 2
+engineOffset: 6
+mineTier: 2
+mineSpeed: 4
+itemCapacity: 15
+hitSize: 10
+trailLength: 5
+coreUnitDock: true
+buildSpeed: 1
+weapons: [
+{
+x: 0
+y: 1
+rotate: false,
+inaccuracy: 0
+reload: 35
+shootSound: shootToxopidShotgun
+research: {
+	parent: dpoint
+}
+shoot: {
+	shots: 1
+	shotDelay: 0
+	autoTarget: true,
+	}
+ejectEffect: {
+	type: MultiEffect
+	effects:[
+	{
+	type: ParticleEffect
+	colorFrom: 5cd1a2
+	colorTo: e0dc80
+	lightColor: 122424
+	sizeFrom: 1
+	sizeTo: 0
+	particles: 2
+	cone: 5
+	}
+	]
+}
+bullet:{ 
+	type: "laserBulletType"
+	damage: 100
+	speed: 0
+	lifeTime: 10
+	colors: [cfa251, ffffff]
+	hitEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ExplosionEffect
+		waveLife: 12
+		waveStroke: 1
+		waveRadBase: 0
+		waveRad: 5
+		waveColor: FFFFFF
+		smokes: 0
+		sparkLen: 1.5
+		sparkStroke: 2
+		sparkColor: FFFFFF
+		}
+		]
+	}
+	despawnEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ExplosionEffect
+		waveLife: 12
+		waveStroke: 1
+		waveRadBase: 0
+		waveRad: 5
+		waveColor: FFFFFF
+		smokes: 0
+		sparkLen: 1.5
+		sparkStroke: 2
+		sparkColor: FFFFFF
+		}
+		]
+	}
+	} 
+} 
+]
