@@ -1,0 +1,112 @@
+type: mech
+name: Multiplier
+description: "Shoots some lil' rockets.
+Can't fly... What did you expect from this big 'OI mech?
+Class: [blue]Mech [white]|| [red]Attack",
+health: 750
+rotateSpeed: 1.5
+hitSize: 14
+speed: 0.5
+range: 200
+mineTier: 1
+mineSpeed: 2
+itemCapacity: 75
+mechFrontSway: 0.5
+mechSideSway: 0.75
+buildSpeed: 0.25
+flying: false
+armor: 5
+outlineColor: 303030
+research: {
+	parent: adder
+	requirements: [
+		{item: vanil, amount: 1250}
+		{item: uranium, amount: 750}
+		{item: plutonium, amount: 500}
+		{item: xenon, amount: 500}
+	]
+	objectives: [
+	T2_refabricator
+	{
+		type: OnSector
+		preset: scorched_line
+	}
+	]
+}
+weapons: [
+{
+name: missile-launcher
+top: false 
+x: 15.5
+shootY: 15
+y: -1.5
+reload: 70
+inaccuracy: 0
+shoot: {
+	type: ShootPattern 
+	shots: 1
+	shotDelay: 0
+}
+recoil: 5
+mirror: true
+shootSound: MissileLaunches
+shootSoundVolume: 2
+bullet: {
+	type: MissileBulletType
+	damage: 100
+	lifetime: 150
+	homingPower: 0.025
+	speed: 2
+	height: 15 
+	width: 10
+	frontColor: ffffff
+	backColor: 0df0ff
+	status: slowed_by_xenon
+	statusDuration: 75
+	pierce: true
+	pierceCap: 2
+	shootEffect: none
+	hitEffect: {
+		type: ParticleEffect 
+		line: true
+		sizeFrom: 3
+		sizeTo: 0
+		colorFrom: ffffff
+		colorTo: c2c7f0
+		lifetime: 20
+		particles: 5
+		cone: 360
+	}
+	despawnEffect: {
+		type: ParticleEffect 
+		line: true
+		sizeFrom: 3
+		sizeTo: 0
+		colorFrom: ffffff
+		colorTo: c2c7f0
+		lifetime: 20
+		particles: 4
+		cone: 360
+		}
+	}
+}
+]
+abilities: [
+{
+	type: RepairFieldAbility
+	reload: 240
+	amount: 25
+	range: 60
+	activeEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		sizeFrom: 1
+		sizeTo: 60
+		colorFrom: aaffaa
+		colorTo: aaffaa00
+		lifetime: 30
+		particles: 1
+		length: 0
+	}
+}
+]

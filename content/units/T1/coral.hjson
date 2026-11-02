@@ -1,0 +1,100 @@
+type: naval
+name: Briguette
+description: How does it even floats bro
+speed: 0.5
+health: 500
+armor: 2
+hitSize: 15
+rotateSpeed: 2
+armor: 2
+buildSpeed: 0.25
+buildRange: 60
+outlineColor: 608060
+weapons: [
+{
+name: coral-launcher
+x: 4
+y: 1.5
+shootY: 5
+reload: 17.5
+mirror: true
+alternate: false
+rotate: true
+rotateSpeed: 1.5
+inaccuracy: 1
+shootSound: shootArtillery
+shoot: {
+	type: ShootPattern 
+	shots: 1
+	shotDelay: 0
+}
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-CIRCLE
+	damage: 25
+	speed: 4
+	lifetime: 40
+	width: 6
+	height: 8
+	frontcolor: aaaaff
+	backcolor: aaaaff
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh 
+		sizeFrom: 0
+		sizeTo: 2
+		colorFrom: f7dfb0
+		colorTo: ffffff00
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+}
+}
+{
+name: coral-anti-air
+x: 0
+y: -5
+shootY: 5
+reload: 8.5
+mirror: true
+alternate: false
+rotate: true
+rotateSpeed: 5
+inaccuracy: 15
+shootSound: shootScatter
+shoot: {
+	type: ShootPatern
+	shots: 2
+	shotDelay: 5
+	autoTarget: true
+}
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-CIRCLE
+	damage: 25
+	speed: 4
+	lifetime: 40
+	width: 6
+	height: 8
+	frontcolor: aaaaff
+	backcolor: aaaaff
+	colidesAir: true
+	colidesGround: false
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh 
+		sizeFrom: 0
+		sizeTo: 2
+		colorFrom: f7dfb0
+		colorTo: ffffff00
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+}
+}
+]
+immunities: [
+	slowed_by_xenon
+]

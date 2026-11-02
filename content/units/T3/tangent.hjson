@@ -1,0 +1,92 @@
+type: legs
+name: Tangent
+description: Can shoot homing rockets and has 2 AA cannons on top.
+details: "Random shit! Go!"
+//Vects, i saw your sprite to that shii
+speed: 0.5
+rotateSpeed: 1.5
+hitSize: 18
+health: 750
+armor: 5
+legCount: 6
+legLength: 18
+legForwardSides: 0.75
+legMoveSpace: 1
+hovering: true
+outlineColor: 303030
+itemCapacity: 100
+range: 250
+stepSound: walkerStepSmall
+stepSoundVolume: 3
+weapons: [
+{
+name: tangent-launcher
+x: 8.75
+shootX: -0.5
+shootY: 8
+y: 9
+recoil: 5
+mirror: true
+reload: 150
+shootSound: MissileLaunches
+shootSoundVolume: 1.5
+bullet: {
+	maxRange: 200
+	length: 250
+	colors: [ff8080, ffaaaa, ffffff]
+	type: BasicBulletType
+	spawnUnit: tangent_rocket
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		sizeFrom: 0
+		sizeTo: 5
+		colorFrom: ffaaaa
+		colorTo: ffaaaa00
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+	despawnEffect: none
+}
+}
+{
+name: tangent-anti-air
+x: 5
+y: -8
+mirror: true
+shoot: {
+	type: ShootPattern
+	shots: 1
+	shotDelay: 4
+}
+top: false
+rotate: true
+reload: 17.5
+rotateSpeed: 3
+recoil: 1
+shootSound: shootDuo
+ejectEffect: none
+shootSoundVolume: 1
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-STAR2
+	length: 70
+	damage: 15
+	speed: 15
+	height: 10
+	width: 10
+	shrinkX: 0
+	shrinkY: 0
+	collidesAir: true
+	collidesGround: true
+	frontColor: ffffaa
+	backColor: ffffaa
+	despawnEffect: none
+	lifetime: 20
+	status: slowed_by_vanil
+	statusDuration: 60
+	shootEffect: none
+}
+}
+]

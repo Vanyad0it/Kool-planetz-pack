@@ -1,0 +1,142 @@
+type: mech
+name: Exponentiator
+description: "Rapidly shoots bulletz like spread
+Will do everything, BUT fly
+Class: [blue]Mech [white]|| [red]Attack",
+rotateSpeed: 1.35
+hitSize: 22.5
+speed: 0.5
+range: 150
+mineTier: 2
+mineSpeed: 2
+itemCapacity: 125
+health: 2000
+mechFrontSway: 0.4
+mechSideSway: 0.8
+buildSpeed: 0.25
+flying: false
+armor: 5
+outlineColor: 303030
+stepSound: mechStep
+research: {
+	parent: multiplier
+	requirements: [
+		{item: vanil, amount: 5000}
+		{item: uranium, amount: 3750}
+		{item: plutonium, amount: 2500}
+		{item: xenon, amount: 2500}
+		{item: cesium, amount: 2500}
+	]
+	objectives: [
+	grid-builderM
+	{
+		type: OnSector
+		preset: outpost-alpha
+	}
+	]
+}
+weapons: [
+{
+name: spread-launcher
+top: false 
+x: 20
+shootX: 0
+shootY: 15
+y: -1
+reload: 35
+inaccuracy: 20
+shoot: {
+	type: ShootPattern 
+	shots: 4
+	shotDelay: 5
+}
+recoil: 7
+mirror: true,
+shootSound: shootScepter
+bullet: {
+	type: BasicBulletType
+	sprite: cool-planets-pack-CIRCLE
+	damage: 150
+	lifetime: 60
+	speed: 4
+	height: 15 
+	width: 5
+	frontColor: 0df3ff 
+	backColor: 0df3ff
+	trailColor: 0df3ff
+	status: confused
+	statusDuration: 120
+	pierce: true   
+	pierceCap: 3
+	shootEffect: {
+		type: ParticleEffect 
+		line: true 
+		sizeFrom: 3
+		sizeTo: 0 
+		colorFrom: ffffff
+		colorTo: c2c7f0
+		lifetime: 20
+		particles: 15
+		cone: 180
+	}
+	hitEffect : {
+		type: ParticleEffect
+		line: true 
+		sizeFrom: 3
+		sizeTo: 0 
+		colorFrom: ffffff 
+		colorTo: c2c7f0
+		lifetime: 20
+		particles: 5
+		cone: 360
+	}
+	despawnEffect: {
+		type: ParticleEffect
+		line: true
+		sizeFrom: 3
+		sizeTo: 0
+		colorFrom: ffffff
+		colorTo: c2c7f0
+		lifetime: 20
+		particles: 4
+		cone: 360
+		}
+	}
+}
+]
+abilities: [
+{
+	type: ShieldRegenFieldAbility
+	reload: 70
+	amount: 10
+	max: 100
+	range: 60
+	activeEffect: {
+		type: MultiEffect
+		effects: [
+		{
+			type: ParticleEffect
+			region: cool-planets-pack-CIRCLEh
+			sizeFrom: 1
+			sizeTo: 60
+			colorFrom: ffffaa
+			colorTo: ffffaa00
+			lifetime: 30
+			particles: 1
+			length: 0
+		}
+		{
+			type: ParticleEffect
+			region: cool-planets-pack-STAR
+			sizeFrom: 1
+			sizeTo: 20
+			colorFrom: ffffaa
+			colorTo: ffffaa00
+			lifetime: 50
+			particles: 1
+			length: 0
+		}
+		]
+	}
+}
+]

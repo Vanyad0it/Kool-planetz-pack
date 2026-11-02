@@ -1,0 +1,46 @@
+type: flying
+name: Laserator
+description: "Revenge is a dish best served frozen...
+Class: [#303030]Lost [white]|| [yellow]Core",
+details: I think Vects gotta take pills too
+health: 150
+flying: true
+targetAir: true
+outlineColor: 303030,
+speed: 2.0
+rotateSpeed: 2
+range: 200
+engineSize: 2
+engineOffset: 8
+mineTier: 1
+mineSpeed: 1
+itemCapacity: 5
+hitSize: 10
+coreUnitDock: false
+weapons: [
+{
+x: 0
+shootY: 0
+y: 0
+rotate: false,
+inaccuracy: 0
+reload: 70
+shootSound: shootToxopidShotgun
+research: {
+	parent: declositer
+}
+shoot: {
+	shots: 1
+	shotDelay: 0
+	autoTarget: true
+}
+bullet:{ 
+	type: laserBulletType
+	damage: 200
+	speed: 0
+	lifeTime: 10
+	drawSize: 200
+	colors: [303030ff, ffffff]
+	}
+}
+]

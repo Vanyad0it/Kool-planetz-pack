@@ -1,0 +1,97 @@
+type: naval
+name: Pyrette
+description: That shii gonna be cooking something
+speed: 0.75
+health: 1000
+armor: 1
+hitSize: 13
+rotateSpeed: 2
+armor: 5
+buildSpeed: 0.25
+buildRange: 60
+weapons: [
+{
+name: pyrette-flame
+x: 0
+y: 4.75
+shootY: 6
+mirror: false
+alternate: false
+rotate: true
+rotateSpeed: 1.5
+rotationLimit: 270
+shootSound: shootSublimate
+continuous: true
+alwaysContinuous: true
+targetAir: true
+targetGround: true
+targetHealing: false
+recoil: 0
+bullet: {
+	type: ContinuousFlameBulletType
+	damage: 5
+	height: 8
+	length: 50
+	width: 2
+	colors: [aaaaff60, aabbff80, 80ccffaa, 80eeff, ffffff]
+	pierceCap: 0
+	status: slowed_by_xenon
+	statusDuration: 10
+	drawFlare: false
+	flareColor: 15eeff
+	bloom: false
+	hitColor: aaaaff
+	}
+}
+{
+name: pyrette-cooker
+x: 0
+y: -7
+shootY: 7
+mirror: false
+alternate: false
+rotate: true
+rotateSpeed: 5
+reload: 10
+shootSound: shootFlame
+targetAir: false
+targetGround: true
+targetHealing: true
+recoil: 0
+bullet: {
+	type: BasicBulletType
+	damage: 50
+	healAmount: 1
+	lifetime: 10
+	speed: 5
+	height: 8
+	length: 5
+	width: 5
+	frontColor: ffffff00
+	backColor: ffffff00
+	collidesAir: false
+	collidesGround: true
+	collidesTeam: true
+	pierce: true
+	pierceCap: 4
+	collidesAir: false
+	shootEffect: {
+		type: ParticleEffect
+		sprite: cool-planets-pack-CIRCLE
+		sizeFrom: 3
+		sizeTo: 0
+		colorFrom: 15eeff
+		colorTo: aaaaff80
+		particles: 10
+		length: 80
+		cone: 5
+	}
+	hitEffect: none
+	despawnEffect: none
+}
+}
+]
+immunities: [
+	slowed_by_vanil
+	cesium_colapse
+]

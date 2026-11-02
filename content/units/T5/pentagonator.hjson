@@ -1,0 +1,163 @@
+type: mech
+name: Pentagonator
+description: "BOMBOCLAAAAAAAAAAAAAAAAAAAAT
+Class: [blue]Mech [white]|| [red]Attack",
+rotateSpeed: 1
+hitSize: 35
+speed: 0.3
+range: 250
+itemCapacity: 150
+health: 15000
+mechFrontSway: 1.5
+mechSideSway: 2
+buildSpeed: 0.2
+flying: false
+legCount: 2
+legLength: 8
+armor: 10
+outlineColor: 303030
+stepSound: mechStepHeavy
+stepSoundVolume: 1.5
+research: {
+	parent: tetrator
+	requirements: [
+		{item: vanil, amount: 50000}
+		{item: uranium, amount: 37500}
+		{item: plutonium, amount: 25000}
+		{item: xenon, amount: 10000}		
+		{item: cesium, amount: 10000}
+		{item: radium, amount: 7500}
+	]
+}
+weapons: [
+{
+name: de-heavy-machinegun
+top: false 
+x: 29
+shootX: 0
+shootY: 15
+y: 0
+reload: 70
+recoil: 20
+shoot: {
+	type: ShootPattern
+	shots: 1
+	shotDelay: 0
+}
+mirror: true
+shootSound: shootTank
+bullet: {
+	type: ArtilleryBulletType
+	sprite: cool-planets-pack-STAR
+	splashDamage: 700
+	splashDamageRadius: 70
+	lifetime: 80
+	speed: 4
+	height: 25 
+	width: 25
+	frontColor: aaffaa
+	backColor: 60ff60
+	status: spectral_burn
+	statusDuration: 30
+	pierce: true
+	pierceCap: 1
+	shrinkX: 0
+	shrinkY: 0
+	fragBullets: 20
+	fragSpread: 18
+	fragRandomSpread: 10
+	fragOffsetMax: 10
+	fragVelocityMin: 1
+	fragVelocityMax: 1
+	hitSound: explosionTitan
+	fragBullet: {
+		type: BasicBulletType
+		sprite: cool-planets-pack-CIRCLE
+		damage: 50
+		lifetime: 70
+		speed: 0.75
+		height: 1
+		width: 1
+		shrinkX: 0
+		shrinkY: 0
+		frontColor: ffffff00
+		backColor: ffffff00
+		status: slowed_by_vanil
+		statusDuration: 1200
+		pierce: false
+		pierceCap: 1
+		hitEffect: none
+		despawnEffect: none
+	}
+	shootEffect: {
+		type: ParticleEffect 
+		sprite: cool-planets-pack-CIRCLEh
+		sizeFrom: 1
+		sizeTo: 5
+		colorFrom: aaffaa
+		colorTo: 80ff8000
+		lifetime: 60
+		particles: 0
+		length: 0
+	} 
+	hitEffect: {
+		type: MultiEffect
+		effects: [
+		{
+			type: ParticleEffect
+			region: cool-planets-pack-CIRCLEh
+			sizeFrom: 0
+			sizeTo: 70
+			colorFrom: aaffaa
+			colorTo: 80ff8000
+			lifetime: 70
+			particles: 1
+			length: 0
+		}
+		{
+			type: ParticleEffect
+			sprite: cool-planets-pack-CIRCLE
+			sizeFrom: 0
+			sizeTo: 10
+			colorFrom: aaffaa
+			colorTo: 80ff8000
+			lifetime: 70
+			particles: 10
+			length: 60
+		}
+		]
+	}
+	despawnEffect: {
+		type: MultiEffect
+		effects: [
+		{
+			type: ParticleEffect
+			region: cool-planets-pack-CIRCLEh
+			sizeFrom: 0
+			sizeTo: 70
+			colorFrom: aaffaa
+			colorTo: 80ff8000
+			lifetime: 70
+			particles: 1
+			length: 0
+		}
+		{
+			type: ParticleEffect
+			region: cool-planets-pack-CIRCLE
+			sizeFrom: 0
+			sizeTo: 3
+			colorFrom: aaffaa
+			colorTo: 80ff8000
+			lifetime: 70
+			particles: 1
+			length: 60
+		}
+		]
+	}
+}
+}
+]
+immunities: [
+	cesium_colapse
+	slowed_by_vanil
+]

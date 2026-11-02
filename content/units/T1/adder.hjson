@@ -1,0 +1,87 @@
+type: mech
+name: Adder
+description: "Shoots some lil' bullets.
+Can't fly.
+And also love cookies =)
+Class: [blue]Mech [white]|| [red]Attack",
+health: 150
+rotateSpeed: 2.5
+hitSize: 10
+speed: 0.5
+range: 200
+mineTier: 1
+mineSpeed: 1
+itemCapacity: 15
+mechFrontSway: 0.5
+mechSideSway: 0.2
+buildSpeed: 0.5
+buildRange: 60
+flying: false
+armor: 1
+outlineColor: 303030
+research: {
+	parent: mech_fabric
+	requirements: [
+		{item: vanil, amount: 150}
+		{item: plutonium, amount: 30}
+	]
+	objectives: [
+	{
+		type: OnSector
+		preset: cliff
+	}
+	]
+}
+weapons: [
+{
+name: vanil-launcher
+top: false 
+x: 8
+shootY: 5
+y: -2
+reload: 35
+shoot: {
+	type: ShootPattern 
+	shots: 1
+	shotDelay: 0
+}
+recoil: 3
+mirror: true
+shootSound: shootSpectre
+bullet: {
+	type: BasicBulletType
+	damage: 25
+	lifetime: 40
+	speed: 4
+	height: 15 
+	width: 8
+	frontColor: ffffff 
+	backColor: f7dfb0 
+	status: slowed_by_vanil
+	statusDuration: 40
+	pierce: false
+	shootEffect: {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh 
+		sizeFrom: 0
+		sizeTo: 3
+		colorFrom: f7dfb0 
+		colorTo: ffffff00
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+	hitEffect : {
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh 
+		sizeFrom: 1
+		sizeTo: 5
+		colorFrom: f7dfb0 
+		colorTo: ffffff00
+		lifetime: 10
+		particles: 1
+		length: 0
+	}
+}
+}
+]

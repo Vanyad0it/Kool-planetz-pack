@@ -1,0 +1,91 @@
+type: flying
+name: Defrozetter
+description: Frozen
+health: 100
+hitSize: 10
+flying: true
+TargetAir: true
+speed: 3.0
+engineSize: 1.5
+engineOffset: 7
+range: 225
+buildSpeed: 0.5
+coreUnitDock: false
+outlineColor: 606080
+weapons: [{
+x: 0
+y: 1.25
+rotate: false
+inaccuracy: 0
+reload: 60
+shootSound: Sniper
+shoot: {
+	shots: 1
+	shotDelay: 0
+	autoTarget: true,
+	}
+ejectEffect: {
+	type: MultiEffect
+	effects:[
+	{
+	type: ParticleEffect
+	colorFrom: 66fa6e
+	colorTo: 66fa6e
+	lightColor: 66fa6e
+	sizeFrom: 1
+	sizeTo: 0
+	particles: 2
+	cone: 5
+	}
+	]
+}
+bullet:{ 
+	type:"BasicBulletType"
+	damage: 50
+	speed: 5
+	weaveMag: 0
+	weaveScale: 0
+	width: 10
+	height: 20
+	trailLength: 7
+	trailWidth: 3
+	backColor: 75a8ff
+	trailColor: 75a8ff
+	frontColor: ffffff
+	hitEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ExplosionEffect
+		waveLife: 12
+		waveStroke: 1
+		waveRadBase: 0
+		waveRad: 5
+		waveColor: FFFFFF
+		smokes: 0
+		sparkLen: 1.5
+		sparkStroke: 2
+		sparkColor: FFFFFF
+		}
+		]
+	}
+	despawnEffect: {
+		type: MultiEffect
+		effects:[
+		{
+		type: ExplosionEffect
+		waveLife: 12
+		waveStroke: 1
+		waveRadBase: 0
+		waveRad: 5
+		waveColor: FFFFFF
+		smokes: 0
+		sparkLen: 1.5
+		sparkStroke: 2
+		sparkColor: FFFFFF
+		}
+		]
+	}
+	} 
+} 
+]
