@@ -1,0 +1,22 @@
+type: liquidRouter
+name: Liquid Router
+floating: true
+size: 1
+squareSprite: false
+health: 120
+solid: false
+connectedPower: false
+consumesPower: false
+research: {
+	parent: liquid_pipe 
+	requirements: [
+		{item: vanil, amount: 10} 
+		{item: uranium, amount: 10}
+	]
+}
+requirements: [
+	{item: vanil, amount: 2} 
+	{item: uranium, amount: 2}
+]
+category: liquid
+liquidCapacity: 20

@@ -1,0 +1,21 @@
+type: liquidJunction
+floating: true
+squareSprite: false
+connectedPower: false
+consumesPower: false
+research: {
+	parent: liquid_pipe 
+	requirements: [
+		{item: vanil, amount: 10} 
+		{item: uranium, amount: 10}
+	]
+}
+size: 1
+health: 120
+category: liquid
+requirements: [
+	{item: vanil, amount: 2}
+	{item: uranium, amount: 2}
+]
+solid: false 
+   

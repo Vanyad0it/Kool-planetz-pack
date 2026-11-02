@@ -1,0 +1,8 @@
+type: Floor
+name: Vanil floor
+color: 000000
+variants: 2
+attributes: {
+	water: 0.1
+	heat: -0.5
+}

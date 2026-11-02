@@ -1,0 +1,21 @@
+type: wall
+name: Large tar wall
+description: Lot of tar
+size: 2
+health: 8000
+category: defense
+research: {
+	parent: tar-wall 
+	requirements: [
+		{item: tar, amount: 250}
+	]
+	objectives: [
+	{
+		type: SectorComplete
+		preset: border
+	}
+	]
+}
+requirements: [
+	{item: tar, amount: 60}
+] 

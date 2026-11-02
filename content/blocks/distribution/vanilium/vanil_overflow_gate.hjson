@@ -1,0 +1,16 @@
+type: overflowGate
+name: Vanil overflow gate
+size: 1
+health: 120
+research: {
+	parent: vanil_router 
+	requirements: [
+		{item: vanil, amount: 10}
+		{item: uranium, amount: 5}
+	]
+}
+requirements: [
+	{item: vanil, amount: 3}
+	{item: uranium, amount: 1}
+]
+speed: 0.04

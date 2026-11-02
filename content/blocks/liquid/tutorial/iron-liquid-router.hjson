@@ -1,0 +1,19 @@
+type: liquidRouter,
+floating: true, 
+size: 1,
+squareSprite: false
+health: 120,
+solid: false,
+connectedPower: false
+consumesPower: false
+research: {
+	parent: liquid_transporter 
+	requirements: [
+		{item: iron, amount: 10}
+	]
+}
+requirements: [
+	{item: iron, amount: 2}
+], 
+category: liquid,
+liquidCapacity: 20

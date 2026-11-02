@@ -1,0 +1,17 @@
+type: Duct
+name: Ice transporter
+description: man already know you waht this does (and you also read it wrong (maybe))
+health: 55
+squareSprite: true
+bridgeReplacement: ice-bridge 
+junctionReplacement: ice-junction
+speed: 12
+requirements: [
+	{item: ice, amount: 1}
+]
+research: {
+parent: core-degree
+requirements: [
+	{item: ice, amount: 10}
+]
+}

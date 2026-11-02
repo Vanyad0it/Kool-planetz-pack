@@ -1,0 +1,23 @@
+type: liquidRouter
+name: Liquid Container
+floating: true 
+size: 2
+squareSprite: false
+health: 500
+solid: false
+connectedPower: false
+consumesPower: false
+buildTime: 240
+research: {
+	parent: vanil-liquid-router 
+	requirements: [
+		{item: vanil, amount: 1000} 
+		{item: uranium, amount: 500}
+	]
+}
+requirements: [
+	{item: vanil, amount: 100}
+	{item: uranium, amount: 50}
+]
+category: liquid
+liquidCapacity: 2000

@@ -1,0 +1,28 @@
+type: drill
+name: Vanil drill
+description: Drills resources under itself to mine them
+details: That is gonna be used a lotta on this planet
+size: 2
+health: 250
+tier: 1
+category: production 
+research: {
+	parent: core-alpha
+	requirements: [
+		{item: vanil, amount: 50}
+	]
+}
+drillEffect: {
+	type: ParticleEffect
+	region: cool-planets-pack-STARh 
+	sizeFrom: 2
+	sizeTo: 0
+	colorFrom: d3d3d3
+	colorTo: ffffff
+	particles: 2
+}
+rptateSpeed: 4
+requirements: [
+	{item: vanil, amount: 15}
+]
+drillTime: 720

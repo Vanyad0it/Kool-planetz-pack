@@ -1,0 +1,33 @@
+type: OverdriveProjector
+name: Speeder projectah
+description: Speeds up buildings in a small radius, requires energy
+health: 100
+size: 2
+research: [
+	parent: vanil_healr
+	requirements: [
+		{item: vanil, amount: 2500}
+		{item: xenon, amount: 1600}
+]
+consumes:
+{
+	power: 1
+	items: {
+		items: [
+			{item: radium, amount: 1}
+		]
+		booster: true
+		optional: true
+	}
+}
+requirements: [
+	{item: vanil, amount: 100}
+	{item: uranium, amount: 15}
+]
+phaseRangeBoost: 50
+itemCapacity: 10
+reload: 120
+phaseBoost: 2.5
+range: 75
+speedBoost: 1.75
+category: effect

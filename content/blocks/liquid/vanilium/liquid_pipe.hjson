@@ -1,0 +1,28 @@
+type: conduit
+name: Liquid Pipe
+floating: true
+health: 100
+size: 1
+connectedPower: false
+consumesPower: false
+research: {
+	parent: vanil_conveyor
+	requirements: [
+		{item: vanil, amount: 500}
+	]
+	objectives: [
+	{
+		type: OnSector
+		preset: river-side
+	}
+	]
+}
+bridgeReplacement: xenon-liquid-bridge
+junctionReplacement: vanil-liquid-junction
+requirements: [
+	{item: vanil, amount: 2}
+]
+moveSpeed: 0.7,
+liquidPressure: 1
+liquidCapacity: 10 
+category: liquid

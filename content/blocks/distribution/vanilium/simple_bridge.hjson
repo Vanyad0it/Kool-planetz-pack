@@ -1,0 +1,17 @@
+type: ItemBridge
+name: Simplified vanil bridge
+description: No uranium = No problem
+health: 50
+range: 2
+transportTime: 2
+hasPower: false
+requirements: [
+	{item: vanil, amount: 2}
+]
+category: distribution
+research: {
+	parent: vanil-bridge
+	requirements: [
+		{item: vanil, amount: 50}
+	]
+}

@@ -1,0 +1,21 @@
+name: "Сore [Alpha]",
+type: "CoreBlock",
+hasItem: true,
+itemCapacity: 1750,
+alwaysUnlocked: true, 
+health: 1500,
+size: 3,
+unitCapModifier: 10,
+requirements: [
+	{"item": "uranium", "amount": 500},
+	{"item": "vanil", "amount": 750}
+	]
+buildTime: 450, 
+unitType: "orion", 
+category: "effect", 
+research: {
+	planet: "vanilium", 
+	root: true
+	name: "vanilium", 
+	requiresUnlock: false
+}

@@ -1,0 +1,22 @@
+type: CoreBlock
+name: "Сore [Angle]"
+hasItem: true
+itemCapacity: 2500
+alwaysUnlocked: true 
+health: 2000
+size: 3
+squareSprite: false
+unitCapModifier: 10
+requirements: [
+	{item: ice, amount: 2500},
+	{item: ice_cube, amount:750}
+	]
+buildTime: 750, 
+unitType: pointer 
+category: effect 
+research: {
+planet: neon-blue 
+root: true
+name: Neon blue 
+requiresUnlock: false
+}

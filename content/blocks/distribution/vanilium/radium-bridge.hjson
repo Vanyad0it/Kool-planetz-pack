@@ -1,0 +1,25 @@
+type: ItemBridge
+name: Radium bridge
+description: there's no way it is not gon 
+health: 100
+range: 50
+transportTime: 5
+hasPower: false
+requirements: [
+	{item: radium, amount: 20}
+	{item: vanil, amount: 50}
+	{item: uranium, amount: 50}
+	{item: plutonium, amount: 25}
+	{item: xenon, amount: 25}
+]
+category: distribution
+research: {
+	parent: vanil-bridge
+	requirements: [
+		{item: radium, amount: 2000}
+		{item: vanil, amount: 5000}
+		{item: uranium, amount: 5000}
+		{item: plutonium, amount: 2500}
+		{item: xenon, amount: 2500}
+	]
+}

@@ -1,0 +1,17 @@
+type: Router
+name: Vanil router
+description: Spread resources on 3 lines
+health: 15
+size: 1
+speed: 0.09
+requirements:[
+	{item: vanil, amount: 2}
+]
+connectedPower: false
+consumesPower: false
+research: {
+	parent: vanil_conveyor
+	requirements: [
+		{item: vanil, amount: 25}
+	]
+}

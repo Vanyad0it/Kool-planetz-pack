@@ -1,0 +1,20 @@
+type: wall
+name: Large radium wall
+description: There's NO WAY you gon' break it
+size: 2
+health: 8000
+absorbLasers: true
+lightningChance: 1
+lightningColor: aaffaa
+lightninglength: 5
+lightningDamage: 34
+category: defense
+research: {
+	parent: vanilium-wall-large 
+	requirements: [
+		{item: radium, amount: 12000}
+	]
+}
+requirements: [
+	{item: radium, amount: 80}
+] 

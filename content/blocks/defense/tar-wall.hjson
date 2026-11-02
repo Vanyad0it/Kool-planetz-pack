@@ -1,0 +1,21 @@
+type: wall
+name: Tar wall
+description: Tar...
+size: 1
+health: 2000
+category: defense
+research: {
+	parent: dpoint
+	objectives: [
+	{
+		type: SectorComplete
+		preset: border
+	}
+	]
+	requirements: [
+		{item: tar, amount: 100}
+	]
+}
+requirements: [
+	{item: tar, amount: 15}
+] 

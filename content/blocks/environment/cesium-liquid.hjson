@@ -1,0 +1,14 @@
+type: Floor
+name: Liquid Cesium
+color: ffaaaa
+speedMultiplier: 0.2
+variants: 0
+cacheLayer: water
+drownTime: 200
+isLiquid: true
+liquidDrop: cesium_liquid
+liquidMultiplier: 0.75
+status: cesium_colapse
+shallow: true
+supportsOverlay: true
+placeableOn: true

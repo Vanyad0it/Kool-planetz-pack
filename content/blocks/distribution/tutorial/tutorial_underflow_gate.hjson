@@ -1,0 +1,15 @@
+type: overflowGate
+name: Stone underflow gate
+size: 1
+invert: true
+health: 120 
+research: {
+	parent: tutorial_overflow_gate 
+	requirements: [
+		{item: tutorial_item, amount: 50}
+	]
+}
+requirements: [
+	{item: tutorial_item, amount: 5}
+]
+speed: 0.04

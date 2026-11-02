@@ -1,0 +1,23 @@
+type: StorageBlock
+name: Small container
+description: Stores resources. Can be docked to a core. Resources can be unloaded using Xenon unloader
+health: 100
+size: 1
+buildTime: 60
+requirements:[
+	{item: vanil, amount: 150}
+]
+research: {
+	parent: core-alpha
+	requirements: [
+		{item: vanil, amount: 600}
+	]
+	objectives: [
+	{
+		type: OnSector
+		preset: river-side
+	}
+	]
+}
+itemCapacity: 100
+category: effect

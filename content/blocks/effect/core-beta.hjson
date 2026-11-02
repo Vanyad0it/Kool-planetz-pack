@@ -1,0 +1,27 @@
+type: CoreBlock
+name: "Сore [Beta]"
+hasItem: true
+itemCapacity: 3500
+alwaysUnlocked: true 
+health: 3000
+size: 4
+unitCapModifier: 15
+research: {
+	planet: vanilium
+	root: true
+	requiresUnlock: true
+	parent: core-alpha
+	requirements: [
+		{item: uranium, amount: 5000}
+		{item: vanil, amount: 5000}
+		{item: plutonium, amount: 750}
+	]
+}
+requirements: [
+	{item: uranium, amount: 1750}
+	{item: vanil, amount: 1750}
+	{item: plutonium, amount: 250}
+]
+buildTime: 1200
+unitType: photon 
+category: effect 
