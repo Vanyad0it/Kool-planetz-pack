@@ -1,0 +1,7 @@
+type: Floor
+name: Xenon floor
+color: aaaaff
+variants: 2
+attributes: {
+	water: 1.0
+}
