@@ -1,8 +1,0 @@
-type: Floor,
-name: Cesium floor
-color: c7b891
-variants: 2
-attributes: {
-	heat: 0.1
-	water: 0.75
-}
