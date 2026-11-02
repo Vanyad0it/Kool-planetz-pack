@@ -1,0 +1,17 @@
+type: SwitchBlock
+name: Shard switch
+description: Is it important to tell about it?
+details: 
+health: 250
+size: 1
+buildTime: 30
+category: logic
+requirements: [
+	{item: ice, amount: 50}
+]
+research: {
+	parent: shard_processor
+	requirements: [
+		{item: ice, amount: 200}
+	]
+}

@@ -1,0 +1,23 @@
+type: GenericCrafter
+name: Magma combiner
+category: crafting
+description: outputs magma. 99% efficient
+size: 2
+hasLiquids: true
+liquidCapacity: 30
+consumes: {
+	power: 0.25
+	items: [
+		{item: tutorial_item, amount: 2}
+	]
+}
+outputLiquid: {liquid: "magma", amount: 1}
+requirements: [
+		{item: tutorial_item, amount: 2}
+]
+reseaarch: {
+	parent: stone-generator
+	requirements: [
+		{item: tutorial_item, amount: 2}
+	]
+}

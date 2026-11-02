@@ -1,0 +1,69 @@
+name: Radium incubator
+category: crafting
+description: "Makes [#82ff82]Radium [white]by combining all your life savings",
+health: 150
+size: 4
+type: genericCrafter
+outputItem: {item: "radium", amount: 2}
+hasPower: true
+hasItem: false
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDeafult
+}
+{
+type: DrawPistons
+suffix: -piston
+sinMag: 2
+sinScl: 10
+sides: 4
+}
+{
+type: DrawGlowRegion
+suffix: -glow
+color: ff9a63
+}
+]
+}
+consumes: {
+	items: {
+		items: [
+			{item: vanil, amount: 2}
+			{item: uranium, amount: 2}
+			{item: plutonium, amount: 1}
+			]
+	}
+	power: 2
+	liquid: {
+		liquid:cesium_liquid
+		amount: 0.33
+		optional: false
+	}
+}
+requirements: [
+	{item: vanil, amount: 100}
+	{item: uranium, amount: 50}
+	{item: plutonium, amount: 25}
+	{item: xenon, amount: 10}
+	{item: cesium, amount: 40}
+	]
+research: {
+	parent: vanil-liquifider
+	requirements: [
+		{item: vanil, amount: 1000}
+		{item: uranium, amount: 500}
+		{item: plutonium, amount: 250}
+		{item: xenon, amount: 100}
+		{item: cesium, amount: 400}
+	]
+	objectives: [
+	xenon
+	cesium
+	{
+		type: SectorComplete
+		preset: outpost-alpha
+	}
+	]
+}

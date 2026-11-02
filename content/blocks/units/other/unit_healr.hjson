@@ -1,0 +1,35 @@
+type: RepairTower
+name: Unit healer
+description: Consumes power to go heal nearby units
+category: units
+buildTime: 120
+size: 1
+health: 300
+range: 100
+hasPower: true
+hasLiquids: false
+healAmount: 0.25
+consumes: {
+ 	power: 1
+}
+research: {
+	parent: vanil_healr
+	requirements: [
+		{item: vanil, amount: 2500}
+		{item: uranium, amount: 1500}
+		{item: cesium, amount: 1000}
+	]
+	objectives: [
+	adder
+	delta
+	{
+		type: OnSector
+		preset: cliff
+	}
+	]
+}
+requirements: [
+	{item: vanil, amount: 25}
+	{item: uranium, amount: 15}
+	{item: cesium, amount: 10}
+]

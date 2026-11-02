@@ -1,0 +1,138 @@
+type: ContinuousLiquidTurret
+name: Elipser
+description: Shoots flaming lazurs at enemies
+details: IMMA FIRIN' MAH LAZUR!!!!
+size: 2
+range: 150
+health: 500
+rotateSpeed: 1.5
+liquidConsumed: 0.75
+liquidCapacity: 100
+squareSprite: true
+category: turret
+consumes: {
+	power: 5
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -sideR
+mirror: false
+under: false
+progress: warmup
+
+moveX: 2.5
+moveY: 2.75
+moveRot: -45
+}
+{
+type: RegionPart
+suffix: -sideL
+mirror: false
+under: false
+progress: warmup
+
+moveX: -2.5
+moveY: 2.75
+moveRot: 45
+}
+{
+type: RegionPart
+suffix: -elipseL
+mirror: false
+under: true
+progress: warmup
+
+moveX: -4
+moveY: -6
+moveRot: -90
+}
+{
+type: RegionPart
+suffix: -elipseR
+mirror: false
+under: true
+progress: warmup
+
+moveX: 4
+moveY: -6
+moveRot: 90
+}
+]
+}
+loopSound: shootSublimate
+loopSoundVloume: 10
+shootY: 2
+recoil: 0
+ammoTypes: {
+	vanil_liquid: {
+		type: ContinuousFlameBulletType
+		length: 150
+		width: 7.5
+		damage: 5
+		colors: [8f845b60, b0a060aa, fff0bb, fff0bb, ffffff]
+		pierceCap: 1
+		status: slowed_by_vanil
+		statusDuration: 10
+		flareColor: b0a060
+		hitColor: b0a060
+	}
+	xenon_liquid: {
+		type: ContinuousFlameBulletType
+		rangeChange: 25
+		length: 175
+		width: 5
+		damage: 1
+		buildingDamageMultiplier: 0.3
+		pierceCap: 2
+		colors: [aaaaff60, aabbff80, 80ccffaa, 80eeff, ffffff]
+		status: confused
+		statusDuration: 10
+		flareColor: 80eeff
+		hitColor: 20ccf5
+	}
+	cesium_liquid: {
+		type: ContinuousFlameBulletType
+		rangeChange: -50
+		length: 100
+		width: 10
+		damage: 10
+		pierceCap: 0
+		colors: [ffaaaa60, ffaa8080, ffffaa, ffffff]
+		status: cesium_colapse
+		statusDuration: 10
+		buildingDamageMultiplier: 0.1
+		flareColor: ffaa44
+		hitColor: ffaa44
+	}
+}
+requirements: [
+ 	{item: vanil, amount: 260}
+	{item: plutonium, amount: 100}
+	{item: xenon, amount: 50}
+]
+research: {
+	parent: latern
+	requirements: [
+ 		{item: vanil, amount: 2500}
+		{item: plutonium, amount: 1500}
+		{item: xenon, amount: 750}
+	]
+	objectives: [
+	spire
+	RBMK-generator
+	vanil_liquid
+	cesium_liquid
+	xenon_liquid
+	{
+		type: OnSector
+		preset: cesium-pathV1
+	}
+	{
+		type: SectorComplete
+		preset: the-oceat
+	}
+	]
+}

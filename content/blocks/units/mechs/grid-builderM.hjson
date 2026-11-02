@@ -1,0 +1,62 @@
+name: Mech builder
+type: UnitAssembler
+description: "makes T3, T4 and T5 mechs by combining [orange]liqified cesium [white]and T1/T2 [green]mechs",
+health: 450
+buildTime: 1000
+size: 6
+category: units
+research: {
+	parent: T2_refabricator
+	objectives: [
+	cesium_liquid
+	cool-planets-pack-multiplier
+	]
+	}
+requirements:[
+	{item: vanil, amount: 1000}
+	{item: uranium, amount: 1000}
+	{item: plutonium, amount: 500}
+	{item: xenon, amount: 250}
+	{item: cesium, amount: 250}
+]
+squareSprite: true
+itemCapacity: 600
+consumes: {
+	power: 6
+	liquids: {
+		liquids: [
+			cesium_liquid/2
+		]
+	}
+}
+droneType: noctaly
+droneConstructTime: 300
+areaSize: 12
+plans: [
+{
+unit: cool-planets-pack-exponentiator
+requirements: [
+	cool-planets-pack-adder/4
+	cool-planets-pack-battery_small/4
+]
+time: 3600
+}
+{
+unit: cool-planets-pack-tetrator
+requirements: [
+	cool-planets-pack-multiplier/2
+	cool-planets-pack-cesium-wall/4
+	cool-planets-pack-spread/2
+]
+time: 7200
+}
+{
+unit: cool-planets-pack-pentagonator
+requirements: [
+	cool-planets-pack-adder/6
+	cool-planets-pack-multiplier/2
+	cool-planets-pack-radium-wall-large/4
+]
+time: 12000
+}
+]

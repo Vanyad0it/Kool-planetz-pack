@@ -1,0 +1,55 @@
+name: Cryolite incubator
+category: crafting
+description: Makes Xenon form Uranium and liquified vanil
+health: 150
+consumesPower: false
+size: 3
+type: genericCrafter
+outputItem: {item: "cryolite", amount: 1}
+hasPower: true
+hasItem: true
+consumesPower: false
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDeafult
+}
+{
+type: DrawGlowRegion
+suffix: -glow
+top: true
+color: 0000ff
+}
+]
+}
+
+consumes: {
+	items: {
+		items: [
+			{item: ice, amount: 1}
+			]
+	}
+	liquids: {
+		liquids: [
+			{liquid: xenon_liquid, amount: 0.5}
+			]
+	}
+}
+requirements: [
+	{item: ice, amount: 25}
+	{item: ice_cube, amount: 50}
+	]
+research: {
+	parent: buran-combiner
+	requirements: [
+		{item: ice_cube, amount: 250}
+		{item: ice, amount: 500}
+		]
+	objectives: [
+	{
+		type: SectorComplete
+		preset: lakeTestSector
+	}
+	]
+}

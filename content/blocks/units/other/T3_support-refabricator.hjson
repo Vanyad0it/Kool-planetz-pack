@@ -1,0 +1,46 @@
+name: T2 refabricator
+type: Reconstructor
+description: "T1+recources+energy=T2
+dud' it's simple"
+health: 400
+constructTime: 1500
+size: 4
+category: units
+research: {
+	parent: T2_refabricator
+	objectives: [
+	{
+		type: SectorComplete
+		preset: the-oceat
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 125}
+		{item: plutonium, amount: 90}
+		{item: uranium, amount: 100}
+		{item: xenon, amount: 75}
+	]
+}
+ItemCapacity: 600
+liquidCapacity: 50
+requirements:
+	[
+	{item: vanil, amount: 125}
+	{item: plutonium, amount: 90}
+	{item: uranium, amount: 100}
+	{item: xenon, amount: 75}
+]
+consumes: {
+	power: 3
+	items: [
+		{item: plutonium, amount: 125}
+		{item: xenon, amount: 75}
+	]
+	liquid: {
+		liquid: xenon_liquid
+		amount: 0.1
+	}
+}
+upgrades: [
+	[multiplier, exponentiator]
+]

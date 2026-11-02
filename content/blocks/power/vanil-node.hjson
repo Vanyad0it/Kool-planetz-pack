@@ -1,0 +1,26 @@
+type: PowerNode
+name: "Vanil node"
+size: 1
+description: "Transports energy from point A to B.
+Very simple"
+health: 20
+squareSprite: false
+research: {
+	parent: vanil-generator
+	requirements:[
+		{item: vanil, amount: 500}
+		{item: uranium, amount: 50}
+	]
+}
+requirements:[
+	{item: vanil, amount: 10}
+	{item: uranium, amount: 1}
+]
+laserRange: 10
+maxNodes: 5
+autolink: True
+hasPower: true
+laserScale: 0.5
+laserColor1: 60ff60
+laserColor2: 00aa00
+category: power

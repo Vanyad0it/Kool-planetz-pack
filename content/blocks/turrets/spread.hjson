@@ -1,0 +1,218 @@
+type: ItemTurret
+name: Spread
+description: "              [red]!Trade offer!
+  [yellow]I recive[white]:                        [green]You recive[white]:
+all of ur resources               8 innacurate shots
+                                    [brown](only 1 will hit the target)"
+details: Boy that shii has every bullet type you need
+category: turret
+targetAir: false
+targetGround: true
+buildTime: 150
+rotateSpeed: 2
+size: 2
+health: 250
+reload: 120
+shootSound: BEEG Artillery
+shootSoundVolume: 2
+range: 225
+inaccuracy: 50
+ammoPerShot: 5
+maxAmmo: 50
+autoTarget: true
+research: {
+	parent: splash 
+	requirements: [
+		{item: vanil, amount: 5000} 
+		{item: plutonium, amount: 2500}
+		]
+}
+coolant: {
+type: ConsumeCoolant
+allowLiquid: true
+amount: 0.5
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -rails
+progress: recoil
+outline: true
+under: true
+
+moveX: 0
+moveY: 10
+moveRot: 0
+}
+]
+}
+recoil: 10
+shake: 10
+shoot: {
+	type: ShootPattern
+	shots: 8
+	shotDelay: 0
+	progress: recoil
+	heatProgress: recoil
+	shootEWffect: {
+		type: ParticleEffect
+		sprite: cool-planets-pack-CIRCLh 
+		sizeFrom: 1
+		sizeTo: 3
+		colorFrom: ffffff
+		colorTo: ffffff
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+	hitEffect: {
+		type: ParticleEffect
+		sprite: cool-planets-pack-CIRCLh 
+		sizeFrom: 1
+		sizeTo: 3
+		colorFrom: ffffff
+		colorTo: ffffff
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+	despawnEffect: none
+}
+shootY: -4
+requirements: [
+	{item: vanil, amount: 100}
+	{item: plutonium, amount: 25}
+]
+ammoTypes: {
+	vanil: {
+		type: BasicBulletType
+		sprite: cool-planets-pack-CIRCLE		
+		damage: 100
+		speed: 4
+		buildingDamageMultiplier: 0.5
+		ammoMultiplier: 2
+		lifetime: 60
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: slowed_by_vanil
+		statusDuration: 1200
+		splashDamage: 5
+		splashDamageRadius: 10
+		frontColor: fffacd
+	}
+	cesium: {
+		type: BasicBulletType
+		sprite: cool-planets-pack-ROCKETv1
+		damage: 150
+		reloadMultiplier: 0.8
+		buildingDamageMultiplier: 0.25
+		ammoMultiplier: 1
+		rangeChange: -100
+		range: 0.5
+		speed: 2
+		lifetime: 60
+		height: 15
+		width: 15
+		trailLength: 10
+		trailWidth: 5
+		splashDamage: 10
+		splashDamageRadius: 20
+		frontColor: ffa020
+		trailColor: ffa020
+		shrinkX: 0
+		shrinkY: 0
+		status: cesium_colapse
+		statusDuration: 180
+		pierce: true
+		pierceCap: 2
+	}
+	xenon: {
+		type: BasicBulletType
+		sprite: cool-planets-pack-STAR
+		damage: 50
+		speed: 6
+		buildingDamageMultiplier: 0.75
+		reloadMultiplier: 0.75
+		ammoMultiplier: 5
+		rangeChange: -50
+		lifetime: 30
+		height: 10
+		width: 10
+		splashDamage: 2
+		splashDamageRadius: 2
+		frontColor: 15eeff
+		shrinkX: 0
+		shrinkY: 0
+		status: slowed_by_xenon
+		statusDuration: 600
+		pierce: true
+		pierceCap: 1
+	}
+	plutonium: {
+		type: MissileBulletType
+		sprite: cool-planets-pack-STAR
+		homingPower: 0.025
+		damage: 10
+		speed: 2
+		reloadMultiplier: 0.5
+		buildingDamageMultiplier: 0.75
+		ammoMultiplier: 1
+		lifetime: 120
+		height: 10
+		width: 10
+		splashDamage: 10
+		splashDamageRadius: 10
+		frontColor: aaaaaa
+		backColor: 808080
+		trailColor: aaaaaa
+		shrinkX: 0
+		shrinkY: 0
+		status: spectral_burn
+		statusDuration: 120
+		pierce: true   
+		pierceCap: 1
+	}
+	radium: {
+		type: BasicBulletType
+		sprite: cool-planets-pack-STAR2
+		damage: 250
+		speed: 1
+		reloadMultiplier: 0.25
+		buildingDamageMultiplier: 0.1
+		ammoMultiplier: 5
+		lifetime: 240
+		height: 10
+		width: 10
+		splashDamage: 10
+		splashDamageRadius: 10
+		frontColor: aaffaa
+		backColor: 80ff80
+		trailColor: aaffaa
+		shrinkX: 0
+		shrinkY: 0
+		status: radiumation
+		statusDuration: 60
+		pierce: true
+		pierceCap: 1
+	}
+	tungsten: {
+		type: BasicBulletType
+		sprite: cool-planets-pack-CIRCLE
+		damage: 0
+		speed: 1
+		buildingDamageMultiplier: 99999999
+		lifetime: 99999999
+		reloadMultiplier: 99999999
+		ammoMultiplier: 10
+		status: you_legit_dont_know_what_to_do_bro
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		frontColor: aaaaaa
+	}
+}

@@ -1,0 +1,69 @@
+type: ItemTurret
+name: Solvent
+category: turret
+size: 2,
+health: 300
+targetAir: true
+targetGround: false
+reload: 17.5
+shootSound: Blastershoots
+colidesGround: false
+rotateSpeed: 5
+range: 400
+inaccuracy: 50
+ammoPerShot: 1
+maxAmmo: 25
+autoTarget: false
+research: {
+	parent: splash 
+	requirements: [
+		{item: vanil, amount: 75} 
+		{item: uranium, amount: 75}
+		]
+}
+shoot: {
+	type: ShootPattern 
+	shots: 2
+	shotDelay: 0
+
+	}
+requirements: [
+	{item: vanil, amount: 20}
+	{item: uranium, amount: 20}
+	]
+ammoTypes: {
+	uranium: {
+		type: MissileBulletType
+		sprite: cool-planets-pack-CIRCLE
+		homingPower: 0.05
+		damage: 30
+		speed: 5
+		lifetime: 75
+		height: 2
+		width: 5
+		shrinkX: 0
+		shrinkY: -1
+		collidesGround: false
+		frontColor: f0e060
+		backColor: f0e060
+		trailColor: f0e060
+		}
+	plutonium: {
+		type: MissileBulletType
+		sprite: cool-planets-pack-CIRCLE
+		rangeChange: 50
+		reloadMultiplier: 0.66
+		homingPower: 0.1
+		damage: 50
+		speed: 5
+		lifetime: 150
+		height: 2
+		width: 5
+		shrinkX: 0
+		shrinkY: -1
+		collidesGround: false
+		frontColor: aaaaaa
+		backColor: aaaaaa
+		trailColor: aaaaaa
+		}
+	}

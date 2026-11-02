@@ -1,0 +1,36 @@
+name: Uran combiner
+category: crafting
+description: Factory that mixes uranium and vanil
+health: 150
+size: 2
+type: genericCrafter
+outputItem: {item: "plutonium", amount: 1}
+hasPower: false
+hasItem: true
+consumesPower: false
+consumes: {
+	items: {
+		items: [
+			{item: uranium, amount: 1}
+			{item: vanil, amount: 1}
+			]
+	}
+}
+requirements: [
+	{item: uranium, amount: 25}
+	{item: vanil, amount: 50}
+	]
+research: {
+	parent: core-alpha
+	requirements: [
+		{item: uranium, amount: 250}
+		{item: vanil, amount: 500}
+		]
+	objectives: [
+	{
+		type: OnSector
+		preset: "cliff"
+	}
+	]
+		
+}

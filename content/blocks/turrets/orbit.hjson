@@ -1,0 +1,159 @@
+type: ItemTurret
+name: Orbit
+description: "[red]Half[white]-[green]Map [white]Express is waiting for ya [yellow]=)"
+category: turret
+buildTime: 750
+targetAir: false
+targetGround: true
+size: 4
+health: 1000
+reload: 60
+shootSound: Sniper
+rotateSpeed: 2
+range: 450
+inaccuracy: 1
+ammoPerShot: 1
+ammoCapacity: 5
+autoTarget: true
+research: {
+	parent: spread 
+	requirements: [
+		{item: vanil, amount: 1000} 
+		{item: plutonium, amount: 500}
+		]
+}
+coolant: {
+type: ConsumeCoolant,
+allowLiquid: true,
+amount: 0.33
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -orbiter
+mirror: false
+under: true
+progress: reload
+
+moveX: 0
+moveY: 6.5
+moveRot: 0
+}
+]
+}
+shoot: {
+	type: ShootPattern
+	shots: 1
+	shotDelay: 0
+}
+shootEffect: {
+	type: ParticleEffect
+	sprite: cool-planets-pack-STAR 
+	sizeFrom: 0
+	sizeTo: 5
+	colorFrom: ffffff
+	colorTo: ffffff00 
+	lifetime: 20
+	particles: 1
+	length: 50
+	cone: 0
+}
+hitEffect: {
+	type: ParticleEffect
+	sprite: cool-planets-pack-STARh 
+	sizeFrom: 0
+	sizeTo: 5
+	colorFrom: ffffff 
+	colorTo: ffffff00 
+	lifetime: 60
+	particles: 1
+	length: 0
+}
+requirements: [
+	{item: vanil, amount: 30}
+	{item: plutonium, amount: 10}
+]
+recoil: 5
+ammoTypes: {
+	plutonium: {
+		type: BasicBulletType
+		sprite: cool-planets-pack-STAR
+		damage: 25,
+		speed: 4,
+		buildingDamageMultiplier: 0
+		ammoMultiplier: 1
+		lifetime: 120,
+		height: 10
+		width: 15
+		shrinkX: 0
+		shrinkY: 0
+		splashDamage: 2,
+		splashDamageRadius: 2,
+		frontColor: aba7a7
+		}
+	cesium: {
+		type: BasicBulletType
+		sprite: cool-planets-pack-CIRCLE
+		damage: 25
+		reloadMultiplier: 0.5
+		speed: 2
+		buildingDamageMultiplier: 0
+		lifetime: 240
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		splashDamage: 10
+		splashDamageRadius: 5
+		frontColor: fca308
+		status: cesium_colapse 
+		statusDuration: 60
+		pierce: true   
+		pierceCap: 4
+		}
+	radium: {
+		type: MissileBulletType
+		homingPower: 0.025
+		damage: 150
+		reloadMultiplier: 0.25
+		speed: 1
+		buildingDamageMultiplier: 0
+		rangeChange: 50
+		lifetime: 480,
+		height: 12.5,
+		width: 12.5,
+		sprite: cool-planets-pack-CIRCLE
+		shrinkX: 0
+		shrinkY: 0
+		splashDamage: 10,
+		splashDamageRadius: 5,
+		frontColor: 7dffb5
+		backColor: 7dffb5
+		trailColor: 7dffb5
+		pierce: true,   
+		pierceCap: 4,
+		fragSpread: 5
+		fragRandomSpread: 0
+		fragBullets: 5
+		fragOffsetMax: 1
+		fragVelocityMin: 1
+		fragVelocityMax: 1.1
+		fragBullet: {
+			type: BasicBulletType
+			sprite: cool-planets-pack-STAR
+			buildingDamageMultiplier: 0
+			damage: 50
+			lifetime: 70
+			speed: 1
+			width: 10
+			height: 10
+			splashDamage: 5
+			splashDamageRadius: 5
+			shrinkX: 0
+			shrinkY: 0
+			frontColor: 7dffb5
+		}
+	}
+}

@@ -1,0 +1,153 @@
+type: ConsumeGenerator
+name: Radium generator
+description: Outputs a LOTTA powah. It cannot explode if noth enough coolant is poured in, but it's fragile
+details: do NOT let it explode bro PLEASEE!!!!!!!!!
+size: 4
+hasLiquids: true
+canOverdrive: false
+itemDuration: 175
+baseExplosiveness: 0
+buildTime: 1500
+health: 10000
+consumes: {
+	items: [
+		{item: radium, amount: 1}
+	]
+	liquids: [
+	{
+		liquid: cesium_liquid
+		amount: 0.5
+		optional: false
+	}
+	{
+		liquid: vanil_liquid
+		amount: 0.25
+		optional: false
+	}
+	]
+}
+powerProduction: 175
+itemDuration: 300
+category: power
+requirements: [
+	{item: radium, amount: 1000}	
+	{item: vanil, amount: 1000}
+	{item: uranium, amount: 750}
+	{item: plutonium, amount: 500}
+	{item: xenon, amount: 500}
+	{item: cesium, amount: 500}
+]
+research: {
+	parent: plutonium-reactor
+	requirements: [
+		{item: radium, amount: 10000}	
+		{item: vanil, amount: 10000}
+		{item: uranium, amount: 7500}
+		{item: plutonium, amount: 5000}
+		{item: xenon, amount: 5000}
+		{item: cesium, amount: 5000}
+	]
+	objectives: [
+	radium-combiner
+	{
+	type: SectorComplete
+	preset: outpost-alpha
+	}
+	]
+}
+destroySound: explosionReactorNeoplasm
+destroyBullet: {
+	type: BasicBulletType
+	damage: 0
+	speed: 0
+	lifetime: 1200
+	despawnEffect: none
+	frontColor: ffffff00
+	backColor: ffffff00
+	intervalBullets: 5
+	bulletInterval: 1
+	intervalBullet: {
+		type: lightningBulletType
+		damage: 10
+		healAmount: -10
+		lightningLength: 20
+		collidesTeam: true
+		lightningColor: aaffaa
+		sound: explosionQuad
+	}		
+	fragBullets: 1
+	fragSpread: 0
+	fragRandomSpread: 0
+	fragVelocityMin: 0
+	fragVelocityMax: 0
+	fragBullet: {
+		type: BasicBulletType
+		splashDamage: 10000
+		healAmount: -5000
+		splashDamageRadius: 250
+		speed: 0
+		lifeTime: 1
+		collidesTeam: true
+		frontColor: aaffaa00
+		backColor: aaffaa00
+		hitSound: explosionQuad
+		hitSoundVolume: 2
+	}
+}
+destroyEffect: {
+	type: MultiEffect
+	effects: [
+	{
+	type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		lifetime: 600
+		length: 0
+		sizeFrom: 1
+		sizeTo: 400
+		colorFrom: 80ff80
+		colorTo: aaffaa00
+		particles: 1
+	}
+	{
+		type: ParticleEffect
+		region: cool-planets-pack-STAR
+		lifetime: 100
+		length: 0
+		sizeFrom: 1
+		sizeTo: 500
+		colorFrom: 80ff80
+		colorTo: aaffaa00
+		particles: 1
+	}
+	{
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLE
+		lifetime: 1500
+		length: 300
+		sizeFrom: 1
+		sizeTo: 50
+		colorFrom: 80ff80
+		colorTo: aaffaa00
+		particles: 250
+		cone: 360
+	}
+	]
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidRegion
+suffix: -liquid_cesium
+drawLiquid: cesium_liquid
+}
+{
+type: DrawLiquidRegion
+suffix: -liquid_vanil
+drawLiquid: vanil_liquid
+}
+]
+}

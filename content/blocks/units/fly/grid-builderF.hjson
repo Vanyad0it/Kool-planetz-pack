@@ -1,0 +1,61 @@
+name: Fly builder
+type: UnitAssembler
+description: "makes T3, T4 and T5 mechs by combining [orange]liqified cesium [white]and T1/T2 [green]mechs",
+health: 450
+buildTime: 1000
+size: 6
+category: units
+research: {
+	parent: T2_refabricator
+	objectives: [
+	cesium_liquid
+	cool-planets-pack-electron
+	]
+	}
+requirements:[
+	{item: vanil, amount: 750}
+	{item: uranium, amount: 1250}
+	{item: plutonium, amount: 750}
+	{item: xenon, amount: 175}
+	{item: cesium, amount: 250}
+]
+squareSprite: true
+itemCapacity: 600
+consumes: {
+	power: 6
+	liquids:{
+		liquids:[
+			cesium_liquid/2
+		]
+	}
+}
+droneType: noctaly
+droneConstructTime: 300
+areaSize: 12
+plans: [
+{
+unit: cool-planets-pack-neutron
+requirements: [
+	cool-planets-pack-offensive/4
+	cool-planets-pack-vanil-node/8
+]
+time: 3600
+}
+{
+unit: cool-planets-pack-artemis
+requirements: [
+	cool-planets-pack-electron/2
+	cool-planets-pack-xenon_unloader/4
+]
+time: 7200
+}
+{
+unit: cool-planets-pack-pentagonator
+requirements: [
+	cool-planets-pack-offensive/6
+	cool-planets-pack-electron/4
+	cool-planets-pack-radium-wall-large/4
+]
+time: 12000
+}
+]

@@ -1,0 +1,50 @@
+type: battery
+name: Large vanil battery
+squareSprite: true
+size: 3
+fullLightColor: ffffffff,
+emptyLightColor: ff0000ff,
+hasPower: true,
+outputsPower: true,
+consumesPower: true,
+hasItems: false,
+canOverdrive: false
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawGlowRegion
+suffix: -top
+color: 80ff80
+}
+]
+}
+
+consumes: {
+	powerBuffered: 75000
+}
+category: power
+requirements: [
+	{item: vanil, amount: 250}
+	{item: plutonium, amount: 100}
+	{item: xenon, amount: 25}
+]
+research: {
+	parent: battery_small,
+	objectives: [
+	xenon
+	elipser
+	{
+		type: SectorComplete
+		preset: scorched_line
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 2500}
+		{item: plutonium, amount: 1000}
+		{item: xenon, amount: 500}
+	]
+}

@@ -1,0 +1,29 @@
+type: LogicBlock
+name: Shard processor
+description: Can do simple commands, but its very slow
+details: Shards are garbage not gonna lie
+health: 200
+size: 1
+range: 100
+buildTime: 60
+category: logic
+requirements: [
+	{item: ice, amount: 100}
+	{item: ice_cube, amount: 50}
+]
+research: {
+	parent: core-degree
+	objectives: [
+	{
+		type: SectorComplete
+		preset: corpus
+	}
+	]
+	requirements: [
+		{item: ice, amount: 500}
+		{item: ice_cube, amount: 200}
+	]
+}
+instructionsPerTick: 1
+planet: neon-blue
+root: true

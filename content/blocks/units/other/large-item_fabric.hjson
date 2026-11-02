@@ -1,0 +1,38 @@
+type: Constructor
+name: BEEG item builder
+description: Builds LARGER blocks
+details: Only needed to create T5 units. Nice!
+size: 3
+health: 2500
+buildTime: 300
+category: units
+hidden: true
+research: {
+	parent: item_fabric
+	objectives: [
+	{
+		type: SectorComplete 
+		preset: prelude_pass
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 10000}
+		{item: uranium, amount: 7500}
+		{item: plutonium, amount: 500}
+		{item: xenon, amount: 2500}
+		{item: cesium, amount: 1750}
+	]
+}
+consumes: {
+	power: 5
+}
+requirements: [
+	{item: vanil, amount: 400}
+	{item: uranium, amount: 350}
+	{item: plutonium, amount: 200}
+	{item: xenon, amount: 200}
+	{item: cesium, amount: 175}
+]
+minBlockSize: 1
+maxBlockSize: 2
+category: units

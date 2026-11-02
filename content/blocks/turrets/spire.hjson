@@ -1,0 +1,93 @@
+type: PowerTurret
+name: Spire
+description: Consumes power to go pew pew with its powerful laser
+details: Prob one of the most annoying turrets in this mod.
+category: turret
+buildTime: 100
+size: 2
+health: 300
+reload: 120
+rotateSpeed: 1
+range: 150
+inaccuracy: 0
+autoTarget: true
+research: {
+	parent: spread
+	requirements: [
+		{item: vanil, amount: 250}, 
+		{item: uranium, amount: 150}
+		{item: xenon, amount: 100}
+		]
+}
+consumes: {
+  power: 2
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -sideR
+mirror: false
+under: false
+
+moveX: 5.5
+moveY: -2
+moveRot: -45
+}
+{
+type: RegionPart
+suffix: -sideL
+mirror: false
+under: false
+
+moveX: -5.5
+moveY: -2
+moveRot: 45
+}
+]
+}
+shoot: {
+	type: ShootPattern
+	shots: 1
+	firstShotDelay: 20
+}
+requirements: [
+	{item: vanil, amount: 150}
+	{item: uranium, amount: 75}
+	{item: xenon, amount: 25}
+]
+shootY: 0
+recoil: 5
+shootSound: LazurShoots
+shootType: {
+	type: LaserBulletType
+	lifetime: 100
+	healAmount: 20
+	damage: 100
+	drawSize: 150
+	status: slowed_by_vanil
+	statusDuration: 300
+	rotate: false
+	cooldownTime: 200,
+	colors: [80ff80, ffffff]
+	chargeEffect: {
+		type: ParticleEffect
+		particles: 1
+		region: cool-planets-pack-STAR
+		length: 0
+		moveX: 0
+		moveY: 0
+		moveRot: 45
+		lifetime: 20
+		cone: 40
+		sizeFrom: 0
+		sizeTo: 10
+		spin: 10
+		colorFrom: 80ff80
+		colorTo: aaffaa
+	}
+	chargeTime: 20
+	chargeSound: LazurCharge
+	moveWhileCharging: false
+}

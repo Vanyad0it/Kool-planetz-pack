@@ -1,0 +1,116 @@
+type: ItemTurret
+name: Thunder
+description: Really cool Anti Air turret
+category: turret
+size: 3
+health: 750
+reload: 15
+targetAir: true
+targetGround: false
+shootSound: shootTank
+colidesGround: false
+rotateSpeed: 5
+range: 250
+inaccuracy: 5
+ammoPerShot: 1
+autoTarget: true
+research: {
+	parent: anti_fuse 
+	requirements: [
+		{item: ice, amount: 1000}
+	]
+}
+coolant: {
+type: ConsumeCoolant
+allowLiquid: true
+amount: 0.15
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -holder
+mirror: false
+under: true
+
+moveX: 0
+moveY: 0
+moveRot: 0
+}
+{
+type: RegionPart
+suffix: -recoil
+mirror: false
+under: false
+x: 2.5
+y: -12.675
+outline: false
+
+moveX: 0
+moveY: 0
+moveRot: 125
+}
+{
+type: RegionPart
+suffix: -bullets
+mirror: false
+under: true
+x: 0
+y: 0
+outline: false
+
+moveX: 0
+moveY: 0
+moveRot: 15
+progress: recoil
+heatProgress: recoil
+}
+]
+}
+category: turret
+shoot: {
+	type: ShootPattern
+	shots: 1
+	shotDelay: 0
+	}
+requirements: [
+	{item: ice, amount: 100}
+]
+ammoTypes: {
+	ice: {
+		type: BasicBulletType
+		sprite: cool-planets-pack-STAR
+		ammoMultiplier: 5
+		damage: 30
+		speed: 14
+		lifetime: 17
+		height: 15
+		width: 15
+		shrinkX: 0
+		shrinkY: 0
+		collidesGround: false
+		trailLength: 10
+		trailWidth: 2
+		trailColor: 00f2ff
+		frontColor: ffffff
+		backColor: 00f2ff
+	}
+	ice_cube: {
+		type: MissileBulletType
+		sprite: cool-planets-pack-STAR
+		ammoMultiplier: 1
+		homingPower: 0.05
+		damage: 80
+		speed: 3.5
+		lifetime: 68
+		height: 10
+		width: 20
+		collidesGround: false
+		reloadMultiplier: 0.75
+		trailLength: 20
+		trailWidth: 2
+		trailColor: 0055ff
+		frontColor: 7070ff
+	}
+}

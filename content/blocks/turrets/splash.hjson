@@ -1,0 +1,119 @@
+type: ItemTurret
+name: Splash
+category: turret
+size: 3
+health: 300
+reload: 75
+shootSound: Orionshoots
+rotateSpeed: 2
+range: 175
+inaccuracy: 10
+ammoPerShot: 1
+maxAmmo: 10
+autoTarget: true
+research: {
+	parent: core-alpha 
+	requirements: [
+		{item: vanil, amount: 100}, 
+		{item: uranium, amount: 50}
+	]
+}
+coolant: {
+type: ConsumeCoolant
+allowLiquid: true
+amount: 0.1
+}
+shoot: {
+	type: ShootPattern 
+	shots: 1
+	shotDelay: 0
+}
+recoil: 5
+requirements: [
+	{item: vanil, amount: 30}
+	{item: uranium, amount: 10}
+	]
+ammoTypes: {
+	vanil: {
+		type: BasicBulletType
+		damage: 50
+		speed: 3.5
+		lifetime: 45
+		ammoMultiplier: 1
+		height: 52
+		width: 20
+		splashDamage: 5
+		splashDamageRadius: 20
+		frontColor: ffffff
+		backColor: fffacd
+		hitEffect: {
+			type: ParticleEffect
+			region: cool-planets-pack-CIRCLEh
+			sizeFrom: 1
+			sizeTo: 20
+			colorFrom: f0e68c
+			colorTo: f0e68c00
+			length: 0
+			lifetime: 20
+		}
+		despawnEffect: none
+	}
+	plutonium: {
+		type: MissileBulletType
+		sprite: cool-planets-pack-CIRCLE
+		damage: 150
+		speed: 7.0
+		lifetime: 22.5
+		height: 55
+		width: 15
+		splashDamage: 20
+		splashDamageRadius: 50
+		frontColor: ffffff
+		backColor: aba7a7
+		hitEffect: {
+			type: ParticleEffect
+			region: cool-planets-pack-CIRCLEh
+			sizeFrom: 1
+			sizeTo: 50
+			colorFrom: aba7a7
+			colorTo: aba7a700
+			length: 0
+			lifetime: 20
+		}
+		despawnEffect: none
+	}
+	radium: {
+		type: BasicBulletType
+		damage: 100
+		speed: 1
+		lifetime: 150
+		ammoMultiplier: 5
+		height: 40
+		width: 25
+		splashDamage: 50
+		splashDamageRadius: 250
+		frontColor: 878484
+		backColor: 82ff8a
+		intervalBullet: {
+			type: LightingBulletType
+			damage: 25
+			lifetime: 10
+			collidesAir: false
+			lightning: 5
+			lightningLength: 5
+			lightningLengthRand: 5
+			lightningColor: 82ff8a
+		}
+		hitEffect: {
+			type: ParticleEffect
+			region: cool-planets-pack-CIRCLEh
+			sizeFrom: 1
+			sizeTo: 20
+			colorFrom: 82ff8a
+			colorTo: 82ff8a00
+			length: 0
+			lifetime: 20
+		}
+		despawnEffect: none
+	}
+}

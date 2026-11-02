@@ -1,0 +1,49 @@
+type: genericCrafter
+name: Vanil liquifider
+category: crafting
+description: Makes liquified vanil by heating it up
+health: 150
+size: 1
+outputLiquid: vanil_liquid/1
+hasPower: true
+hasItem: false
+hasLiquids: true
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDeafult
+}
+{
+type: DrawLiquidRegion
+suffix: -liquid
+drawLiquid: vanil_liquid
+top: true
+}
+]
+}
+consumes: {
+	items: {
+		items: [
+			{item: vanil, amount: 2}
+			]
+	}
+	power: 0.25
+}
+requirements: [
+	{item: vanil, amount: 25}
+	{item: plutonium, amount: 10}
+	]
+research: {
+	parent: xenon-combiner,
+	requirements: [
+		{item: vanil, amount: 5000}
+		{item: plutonium, amount: 2500}
+	]
+	objectives: [
+	{
+		type: OnSector
+		preset: cesium-pathV1
+	}
+	]
+}

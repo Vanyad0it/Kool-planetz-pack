@@ -1,0 +1,32 @@
+type: Constructor
+name: Item builder
+description: Builds blocks by combining items (tax not included)
+size: 2
+health: 500
+buildTime: 120
+category: units
+research: {
+	parent: mech_fabric
+	objectives: [
+	{
+		type: SectorComplete 
+		preset: outpost-alpha
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 400}
+		{item: uranium, amount: 200}
+		{item: plutonium, amount: 200}
+	]
+}
+consumes: {
+	power: 3
+}
+requirements: [
+	{item: vanil, amount: 50}
+	{item: uranium, amount: 25}
+	{item: plutonium, amount: 25}
+]
+minBlockSize: 1
+maxBlockSize: 1
+category: units

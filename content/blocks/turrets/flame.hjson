@@ -1,0 +1,62 @@
+type: ContinuousLiquidTurret
+name: Flame
+description: Fires flame by consuming magma. vary uncontrolable
+size: 2
+range: 150
+health: 500
+rotateSpeed: 0.5
+loopSound: shootSublimate
+liquidConsumed: 0.25
+squareSprite: true
+category: turret
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -sideR
+mirror: false
+under: false
+progress: warmup
+
+moveX: 2.5
+moveY: 0
+moveRot: 0
+}
+{
+type: RegionPart
+suffix: -sideL
+mirror: false
+under: false
+progress: warmup
+
+moveX: -2.5
+moveY: 0
+moveRot: 0
+}
+]
+}
+ammoTypes: {
+	magma: {
+		type: ContinuousFlameBulletType
+		length: 150
+		width: 5
+		damage: 2.5
+		colors: [ff000060, ffaaaa80, ffaaaabb, ffaaaa]
+		pierceCap: 4
+		statusDuration: 10
+		flareColor: ffaaaa
+		hitColor: ffaaaa
+	}
+}
+requirements: [
+ 	{item: tutorial_item, amount: 260}
+	{item: iron, amount: 100}
+]
+research: {
+	parent: bell
+	requirements: [
+ 		{item: tutorial_item, amount: 2500}
+		{item: iron, amount: 1500}
+	]
+}

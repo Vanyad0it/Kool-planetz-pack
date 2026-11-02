@@ -1,0 +1,58 @@
+type: UnitFactory
+name: Building support fabric
+description: "Same as Mech fabric, but gives you shield, miner or cargo boi"
+size: 2
+health: 250
+category: units
+research: {
+	parent: fly_fabric
+	objectives: [
+	{
+		type: SectorComplete
+		preset: scorched_line
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 200}
+		{item: uranium, amount: 200}
+		{item: plutonium, amount: 200}
+	]
+}
+requirements: [
+	{item: vanil, amount: 50}
+	{item: xenon, amount: 10}
+]
+plans: [
+{
+	unit: barricator
+	time: 900
+	requirements: [
+		{item: vanil, amount: 30}
+		{item: xenon, amount: 5}
+	]
+}
+{
+	unit: regenerator
+	time: 1200
+	requirements: [
+		{item: uranium, amount: 20}
+		{item: xenon, amount: 10}
+	]
+}
+{
+	unit: blasteroider
+	time: 600
+	requirements: [
+		{item: vanil, amount: 50}
+		{item: cesium, amount: 25}
+	]
+}
+{
+	unit: miner
+	time: 1500
+	requirements: [
+		{item: cesium, amount: 40}
+		{item: xenon, amount: 10}
+	]
+}
+]

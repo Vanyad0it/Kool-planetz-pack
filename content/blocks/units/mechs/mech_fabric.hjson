@@ -1,0 +1,45 @@
+type: UnitFactory
+name: Building mech fabric
+description: "It recive: your resources
+You recive: Epik mech(s) that shoots"
+size: 2,
+health: 500,
+consumesPower: false
+category: units
+research: {
+	parent: buran-combiner
+	objectives: [
+	{
+		type: OnSector
+		preset: cliff
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 400}
+		{item: uranium, amount: 200}
+		{item: plutonium, amount: 120}
+	]
+}
+requirements: [
+	{item: vanil, amount: 100}
+	{item: uranium, amount: 50}
+	{item: plutonium, amount: 30}
+]
+plans: [
+{
+	unit: adder
+		time: 750
+		requirements: [
+			{item: vanil, amount: 10}
+			{item: plutonium, amount: 20}
+	]
+}
+{
+	unit: point
+		time: 750
+		requirements: [
+			{item: vanil, amount: 25}
+			{item: xenon, amount: 30}
+	]
+}
+]

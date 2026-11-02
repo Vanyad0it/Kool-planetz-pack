@@ -1,0 +1,35 @@
+type: ConsumeGenerator
+name: Stone generator
+description: "generates energy by melting rocks. Drops magma as a deffect that is going to melt it if you don't drain it"
+size: 2
+hasLiquids: false
+canOverdrive: true
+itemDuration: 175
+baseExplosiveness: 1000
+squareSprite: false
+consumes: {
+	items: [
+		{item: tutorial_item, amount: 0.1}
+	]
+}
+outputLiquid: {liquid: "magma", amount: 0.25}
+powerProduction: 4
+category: power
+requirements: [
+	{item: tutorial_item, amount: 10}
+	{item: iron, amount: 10}
+]
+research: {
+	parent: tutorial_conveyor
+	objectives: [
+	{
+		type: OnSector
+		preset: cliff
+	}
+	]
+	requirements: [
+		{item: tutorial_item, amount: 500}
+		{item: iron, amount: 250}
+
+	]
+}

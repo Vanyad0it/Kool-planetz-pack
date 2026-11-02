@@ -1,0 +1,33 @@
+type: ThermalGenerator
+name: Land input generator
+description: Can be placed on cesium tiles to generate electricity.
+size: 2
+buildTime: 120
+hasLiquids: false
+canOverdrive: false
+powerProduction: 1.25
+category: power
+requirements: [
+	{item: vanil, amount: 200}
+	{item: plutonium, amount: 150}
+	{item: xenon, amount: 50}
+]
+attribute: heat
+baseEfficiency: 1.0
+minEfficiency: 0.1
+boostScale: 0.112
+research: {
+	parent: vanil-generator
+	requirements: [
+		{item: vanil, amount: 1500}
+		{item: plutonium, amount: 1000}		
+		{item: xenon, amount: 750}
+	]
+	objectives: [
+	cesium
+	{
+		type: SectorComplete
+		preset: cesium-pathV1
+        }
+	]
+}

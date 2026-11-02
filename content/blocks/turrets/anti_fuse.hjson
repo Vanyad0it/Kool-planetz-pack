@@ -1,0 +1,82 @@
+type: "ItemTurret",
+name: "Anti-Fuse",
+category: "turret"
+size: 2,
+health: 300,
+reload: 15,
+shootSound: "shootSpectre",
+rotateSpeed: 3,
+range: 200,
+inaccuracy: 1,
+ammoPerShot: 1,
+autoTarget: true
+research: {
+	parent: "core-degree", 
+	requirements: [
+		{"item": "ice", "amount" : 250}
+		]
+},
+coolant: {
+type: ConsumeCoolant,
+allowLiquid: true,
+amount: 0.21,
+},
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -sideR
+mirror: false
+under: false
+
+moveX: 2
+moveY: 0
+moveRot: -20
+}
+{
+type: RegionPart
+suffix: -sideL
+mirror: false
+under: false
+
+moveX: -2
+moveY: 0
+moveRot: 20
+}
+{
+type: ShapePart
+layer: 100
+progress: warmup
+rotateSpeed: -2
+sides: 4
+hollow: true
+color: abfbff
+stroke: 0
+strokeTo: 0.75
+radius: 4
+y: -4
+}
+]
+}
+category: "turret", 
+shoot: {
+	type: "ShootPattern", 
+	shots: 2,
+	shotDelay: 5,
+	},
+requirements: [
+	{"item": "ice", "amount": 50}
+	],
+ammoTypes: {
+	ice: {
+		type: "BasicBulletType",
+		damage: 30,
+		speed: 6,
+		lifetime: 40,
+		height: 15,
+		width: 10,
+		frontColor: ffffff,
+		backColor: b8fbff
+		}
+}

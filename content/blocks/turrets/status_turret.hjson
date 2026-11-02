@@ -1,0 +1,174 @@
+type: ItemTurret
+name: Status Turret
+description: Deliver resource for statuses. ONLY sandbox
+buildVisibility: sandboxOnly
+category: turret
+targetAir: true
+targetGround: true
+buildTime: 1
+rotateSpeed: 999
+size: 2
+health: 999999
+reload: 60
+shootSound: shootDuo
+range: 20
+inaccuracy: 0
+ammoPerShot: 1
+ammoCapacity: 2
+research: {
+	parent: core-shard
+	requirements: [
+		{item: copper, amount: 1}
+	]
+}
+requirements: [
+	{item: copper, amount: 1}
+]
+shoot: {
+	type: ShootPattern
+	shots: 8
+	shotDelay: 0
+	shootY: -5
+	progress: recoil
+	heatProgress: recoil
+	hitEffect : {
+		type: ParticleEffect
+		sprite: cool-planets-pack-CIRCLh 
+		sizeFrom: 1
+		sizeTo: 3
+		colorFrom: ffffff 
+		colorTo: ffffff 
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+	despawnEffect: none
+}
+ammoTypes: {
+	copper: {
+		type: BasicBulletType
+		damage: 0
+		speed: 4
+		lifetime: 50
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: slowed_by_vanil
+		statusDuration: 1200
+		frontColor: fffacd
+		collidesTeam: true
+		}
+	lead: {
+		type: BasicBulletType
+		damage: 0
+		speed: 4
+		lifetime: 50
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: slowed_by_xenon
+		statusDuration: 1200
+		frontColor: fffacd
+		collidesTeam: true
+		}
+	scrap: {
+		type: BasicBulletType
+		damage: 0
+		speed: 4
+		lifetime: 50
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: cesium_colapse
+		statusDuration: 1200
+		frontColor: fffacd
+		collidesTeam: true
+		}
+	coal: {
+		type: BasicBulletType
+		damage: 0
+		speed: 4
+		lifetime: 50
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: confused
+		statusDuration: 1200
+		frontColor: fffacd
+		collidesTeam: true
+		}
+	graphite: {
+		type: BasicBulletType
+		damage: 0
+		speed: 4
+		lifetime: 50
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: spectral_burn
+		statusDuration: 1200
+		frontColor: fffacd
+		collidesTeam: true
+		}
+	pyratite: {
+		type: BasicBulletType
+		damage: 0
+		speed: 4
+		lifetime: 50
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: radiumation
+		statusDuration: 1200
+		frontColor: fffacd
+		collidesTeam: true
+		}
+	blast-compound: {
+		type: BasicBulletType
+		damage: 0
+		speed: 4
+		lifetime: 50
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: adrenalin
+		statusDuration: 1200
+		frontColor: fffacd
+		collidesTeam: true
+		}
+	surge-alloy: {
+		type: BasicBulletType
+		damage: 0
+		speed: 4
+		lifetime: 50
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: lethal_adrenalin
+		statusDuration: 1200
+		frontColor: fffacd
+		collidesTeam: true
+		}
+	tungsten: {
+		type: BasicBulletType
+		damage: 0
+		speed: 4
+		lifetime: 50
+		height: 10
+		width: 10
+		shrinkX: 0
+		shrinkY: 0
+		status: you_legit_dont_know_what_to_do_bro
+		statusDuration: 1200
+		frontColor: fffacd
+		collidesTeam: true
+		}
+}

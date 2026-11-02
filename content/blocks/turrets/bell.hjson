@@ -1,0 +1,97 @@
+type: ItemTurret
+name: Bell
+description: Bells.
+details: "If seriuos, This turret shoots by consuming items. SLIGTHLY better than spire"
+category: turret
+buildTime: 100
+size: 2
+health: 300
+reload: 50
+rotateSpeed: 2
+range: 100
+inaccuracy: 0
+autoTarget: true
+research: {
+	parent: tutorial-turret
+	requirements: [
+		{item: tutorial_item, amount: 250} 
+		{item: iron, amount: 150}
+	]
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -sideR
+mirror: false
+under: false
+progress: warmup
+x: 6.5
+y: 0
+
+moveX: 0
+moveY: 0
+moveRot: -45
+}
+{
+type: RegionPart
+suffix: -sideL
+mirror: false
+under: false
+progress: warmup
+x: -6.5
+y: 0
+
+moveX: 0
+moveY: 0
+moveRot: 45
+}
+{
+type: RegionPart
+suffix: -center
+mirror: false
+under: false
+progress: warmup
+x: 0
+y: 0
+
+moveX: 0
+moveY: -8
+moveRot: 0
+}
+]
+}
+shoot: {
+	type: ShootPattern
+	shots: 1
+	shotDelay: 0
+}
+requirements: [
+	{item: tutorial_item, amount: 25}
+	{item: iron, amount: 15}
+]
+shootY: 2
+recoil: 5
+shootSound: shootToxopidShotgun
+ammoTypes: {
+	iron: {
+		type: ShrapnelBulletType
+		damage: 100
+		ammoMultiplier: 1
+		healAmount: 20
+		lifetime: 40
+		drawSize: 150
+		status: spectral_burn
+		statusDuration: 60
+		rotate: false,
+		cooldownTime: 200
+		serrations: 4
+		serrationSpacing: 16
+		serrationLenScl: 20
+		serrationWidth: 5
+		hitLarge: true
+		fromColor: ffffff
+		toColor: 808080
+	}
+}

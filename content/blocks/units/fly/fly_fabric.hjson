@@ -1,0 +1,37 @@
+type: UnitFactory
+name: Building air fabric
+description: "Same as Mech fabric, but gives you [black]not [white]armored annoying piece of shii",
+size: 2
+health: 500
+consumesPower: false
+category: units
+research: {
+	parent: mech_fabric 
+	objectives: [
+	{
+		type: SectorComplete 
+		preset: scorched_line
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 200}
+		{item: uranium, amount: 200}
+		{item: plutonium, amount: 200}
+	]
+}
+requirements: [
+	{item: vanil, amount: 50}
+	{item: uranium, amount: 50}
+	{item: plutonium, amount: 50}
+]
+plans: [
+{
+	unit: offensive
+		time: 500
+		requirements: [
+			{item: uranium, amount: 15},
+			{item: vanil, amount: 5},
+			{item: plutonium, amount: 10}
+	]
+}
+]

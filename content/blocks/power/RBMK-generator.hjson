@@ -1,0 +1,108 @@
+type: NuclearReactor
+name: Uranium reactor
+description: "Using uranium as [orange]fuel[white], and liquified vanil as [cyan]coolant[white]. [red]Goes kaboom if not enough liquified vanil is poured in reactor[white]!"
+details: Chernobyl reactor powered in nowdays... YECOOL
+size: 2
+squareSprite: false
+requirements: [
+	{item: vanil, amount: 150}
+	{item: uranium, amount: 100}
+	{item: plutonium, amount: 50}
+]
+research: {
+	parent: vanil-generator
+	requirements: [
+		{item: vanil, amount: 1000}
+		{item: uranium, amount: 750}
+		{item: plutonium, amount: 500}
+	]
+	objectives: [
+	vanil_liquid
+	{
+	type: SectorComplete
+	preset: scorched_line
+	}
+	]
+}
+hasPower: true
+hasItems: true
+outputsPower: true
+itemCapacity: 20
+liquidCapacity: 30
+consumes: {
+	liquid: vanil_liquid/0.25
+	items: [
+		{item: uranium, amount: 1}
+	]
+}
+fuelItem: uranium
+itemDuration: 500
+powerProduction: 15
+explosionPuddleLiquid: vanil_liquid
+explosionMinWarmup: 12000
+explosionDamage: 100
+explosionRadius: 250
+explosionShake: 100
+coolantPower: 0.1
+category: power
+destroySound: blockExplodeElectricBig
+destroyEffect: {
+	type: MultiEffect
+	effects: [
+	{
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		lifetime: 100
+		length: 0
+		sizeFrom: 1
+		sizeTo: 100
+		colorFrom: ffffaa
+		colorTo: ffffaa00
+		particles: 1
+	}
+	{
+		type: ParticleEffect
+		region: cool-planets-pack-STAR
+		lifetime: 100
+		length: 0
+		sizeFrom: 1
+		sizeTo: 50
+		colorFrom: ffffaa
+		colorTo: ffffaa00
+		particles: 1
+	}
+	{
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLE
+		lifetime: 300
+		length: 125
+		sizeFrom: 1
+		sizeTo: 25
+		colorFrom: ffffaa
+		colorTo: ffffaa00
+		particles: 10
+	}
+	]
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawGlowRegion
+suffix: -kaboom
+color: 00ff00
+}
+{
+type: DrawRegion
+suffix: -top
+}
+{
+type: DrawLiquidTile
+suffix: -liquid
+drawLiquid: vanil_liquid
+}
+]
+}

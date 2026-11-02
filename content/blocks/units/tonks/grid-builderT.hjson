@@ -1,0 +1,63 @@
+name: Tank builder
+type: UnitAssembler
+description: Same as Mech builder, but tanks.
+health: 450
+buildTime: 1200
+size: 6
+category: units
+research: {
+	parent: T2_refabricator
+	objectives: [
+	cesium_liquid
+	cool-planets-pack-vector
+	]
+	}
+requirements:[
+	{item: vanil, amount: 1250}
+	{item: uranium, amount: 500}
+	{item: plutonium, amount: 750}
+	{item: xenon, amount: 500}
+	{item: cesium, amount: 150}
+]
+squareSprite: true
+itemCapacity: 600
+consumes: {
+	power: 6
+	liquids:{
+		liquids:[
+			cesium_liquid/2
+		]
+	}
+}
+droneType: noctaly
+droneConstructTime: 300
+areaSize: 12
+plans: [
+{
+unit: cool-planets-pack-force
+requirements: [
+	cool-planets-pack-delta/2
+	cool-planets-pack-vanilium-wall/4
+	cool-planets-pack-vanil-router/8
+]
+time: 3600
+}
+{
+unit: cool-planets-pack-tense
+requirements: [
+	cool-planets-pack-vector/2
+	cool-planets-pack-cesium-wall/4
+	cool-planets-pack-vanil_distributor/6
+]
+time: 7200
+}
+{
+unit: cool-planets-pack-pentagonator
+requirements: [
+	cool-planets-pack-adder/6
+	cool-planets-pack-multiplier/2
+	cool-planets-pack-radium-wall-large/4
+]
+time: 12000
+}
+]

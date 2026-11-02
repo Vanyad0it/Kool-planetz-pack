@@ -1,0 +1,43 @@
+name: Cesium liquifider
+category: crafting
+description: Makes liquified xenon from one xenon
+health: 50
+size: 2
+type: genericCrafter
+outputLiquid: xenon_liquid/1
+hasPower: true
+hasLiquids: true
+consumesPower: false
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDeafult
+}
+{
+type: DrawLiquidRegion
+suffix: -liquid
+drawLiquid: xenon_liquid
+top: true
+}
+]
+}
+consumes: {
+	items: {
+		items: [
+			{item: xenon, amount: 1}
+			]
+	}
+	power: 2
+},
+requirements: [
+	{"item": "cesium", "amount": 25},
+	{"item": "plutonium", "amount": 10}
+	]
+research: {
+	parent: "vanil-liquifider",
+	requirements: [
+		{"item": "plutonium", "amount": 250},
+		{"item": "cesium", "amount": 100}
+		]
+}

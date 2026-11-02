@@ -1,0 +1,32 @@
+type: heatCrafter
+name: Plutonium heating decomposer
+category: crafting
+description: Works like a particle accelerator to produce plutonium from heat
+health: 1000
+size: 2
+outputItem: {item: "plutonium", amount: 1}
+hasPower: false
+hasItem: false
+consumesPower: false
+heatRequirement: 20.0
+requirements: [
+	{item: vanil, amount: 100}
+	{item: uranium, amount: 75}
+	{item: cesium, amount: 25}
+]
+research: {
+	parent: buran-combiner
+	requirements: [
+		{item: vanil, amount: 5000}
+		{item: uranium, amount: 3750}
+		{item: cesium, amount: 1250}
+	]
+	objectives: [
+	heat-creator
+	{
+		type: OnSector
+		preset: prelude_pass
+	}
+	]
+		
+}

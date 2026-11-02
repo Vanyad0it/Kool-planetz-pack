@@ -1,0 +1,24 @@
+type: PowerNode
+name: "Iced node"
+size: 1
+description: "Transports energy from point A to B.
+Very simple"
+health: 20
+squareSprite: false
+research: {
+	parent: "ice-generator"
+	requirements:[
+		{"item": "ice", "amount": 50}
+	]
+}
+requirements:[
+	{"item": "ice", "amount": 10}
+]
+laserRange: 20
+maxNodes: 3
+autolink: True
+hasPower: true
+laserScale: 0.5
+laserColor1: 8080ff
+laserColor2: 0000ff
+category: power

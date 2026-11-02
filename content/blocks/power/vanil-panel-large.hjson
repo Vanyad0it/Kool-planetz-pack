@@ -1,0 +1,28 @@
+type: SolarGenerator
+name: Large vanil panel
+description: Man i love solar energy
+size: 2
+buildTime: 20
+hasLiquids: false
+canOverdrive: false
+powerProduction: 0.66
+category: power
+requirements: [
+	{item: vanil, amount: 150}
+	{item: xenon, amount: 50}
+	{item: cesium, amount: 100}
+]
+research: {
+	parent: vanil-panel-small
+	requirements: [
+		{item: vanil, amount: 5000}
+		{item: xenon, amount: 1000}
+		{item: cesium, amount: 2000}
+	]
+	objectives: [
+	{
+		type: SectorComplete
+		preset: the-oceat
+	}
+	]
+}

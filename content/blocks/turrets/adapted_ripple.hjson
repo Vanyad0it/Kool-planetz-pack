@@ -1,0 +1,191 @@
+type: ItemTurret
+name: Refabricated Ripple
+description: "Normal ripple couldn't whitstand the [cyan]coldness [white]of this planet, so [blue]blue [white]team refabricated it"
+category: turret
+buildTime: 300
+targetAir: false
+targetGround: true
+size: 3
+health: 750
+reload: 60
+shootSound: shootArtillery
+rotateSpeed: 3
+range: 250
+inaccuracy: 10
+ammoPerShot: 2
+autoTarget: true
+research: {
+	parent: anti_fuse
+	requirements: [
+		{item: ice, amount: 1000}
+	]
+	objectives: [
+	{
+		type: SectorComplete
+		preset: lakeTestSector
+	}
+	]
+}
+coolant: {
+type: ConsumeCoolant
+allowLiquid: true
+amount: 0.3
+}
+recoil: 5
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -opener
+mirror: false
+under: false
+outline: true
+x: 9.675
+y: -4.18
+
+moveX: 0
+moveY: 0
+moveRot: 60
+}
+{
+type: RegionPart
+suffix: -bullets
+mirror: false
+under: true
+outline: false
+
+moveX: 0
+moveY: 0
+moveRot: 35
+progress: recoil
+heatProgress: recoil
+}
+]
+}
+category: turret
+shoot: {
+	type: ShootPattern 
+	shots: 4
+	shotDelay: 0
+	progress: recoil
+	hitEffect: {
+		type: ParticleEffect 
+		sprite: cool-planets-pack-CIRCLEh
+		sizeFrom: 1
+		sizeTo: 20
+		colorFrom: aaaaff
+		colorTo: 8080ff00
+		lifetime: 70
+		particles: 0
+		length: 0
+	}
+	despawnEffect: {
+		type: ParticleEffect 
+		sprite: cool-planets-pack-CIRCLEh
+		sizeFrom: 1
+		sizeTo: 20
+		colorFrom: aaaaff
+		colorTo: 8080ff00
+		lifetime: 70
+		particles: 0
+		length: 0
+	}
+}
+velocityRnd: 0.12
+requirements: [
+	{item: ice, amount: 100}
+]
+ammoTypes: {
+	ice: {
+		type: ArtilleryBulletType
+		sprite: cool-planets-pack-CIRCLE
+		splashDamage: 50
+		splashDamageRadius: 20
+		speed: 2
+		lifetime: 100
+		height: 10
+		width: 10
+		traillehgth: 5
+		frontColor: aaccff
+		backColor: aaccff
+		shootEffect: {
+			type: ParticleEffect
+			particles: 1
+			length: 8
+			width: 5
+			lifetime: 60
+			cone: 20
+			baseRotation: 180
+			region: cool-planets-pack-ROCKETv1
+			sizeFrom: 3
+			sizeTo: 3
+			colorFrom: b8fbff
+			colorTo: ffffff00
+			zeroFrom: false
+			speed: 4
+			spin: 1
+		}
+	}
+	ice_cube: {
+		type: ArtilleryBulletType
+		sprite: cool-planets-pack-STAR2
+		homingPower: 0.025
+		splashDamage: 50
+		splashDamageRadius: 20
+		speed: 2
+		lifetime: 100
+		height: 10
+		width: 10
+		traillehgth: 5
+		frontColor: 3030ff
+		backColor: 6060ff
+		shootEffect: {
+			type: ParticleEffect
+			particles: 1
+			length: 8
+			width: 5
+			lifetime: 60
+			cone: 20
+			baseRotation: 180
+			region: cool-planets-pack-ROCKETv1
+			sizeFrom: 3
+			sizeTo: 3
+			colorFrom: 0000ff
+			colorTo: ffffff00
+			zeroFrom: false
+			speed: 4
+			spin: 1
+		}
+	}
+	cryolite: {
+		type: ArtilleryBulletType
+		sprite: cool-planets-pack-STAR
+		splashDamage: 100
+		splashDamageRadius: 20
+		speed: 4
+		lifetime: 50
+		height: 15
+		width: 15
+		traillehgth: 5
+		frontColor: 80aaff
+		backColor: 80aaff
+		shootEffect: {
+			type: ParticleEffect
+			particles: 1
+			length: 8
+			width: 5
+			lifetime: 60
+			cone: 20
+			baseRotation: 180
+			region: cool-planets-pack-ROCKETv1
+			sizeFrom: 3
+			sizeTo: 3
+			colorFrom: 80aaff
+			colorTo: ffffff00
+			zeroFrom: false
+			speed: 4
+			spin: 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+type: PowerNode
+name: Huge Vanil Power Block
+size: 2
+description: "Short name: HVPB. Transfers power to a LONG distances"
+details: Definetly inspired by Orbit
+health: 750
+squareSprite: false
+research: {
+	parent: vanil-node
+	requirements:[
+		{item: vanil, amount: 5000}
+		{item: uranium, amount: 1500}
+		{item: plutonium, amount: 750}
+		{item: cesium, amount: 500}		
+	]
+}
+requirements:[
+	{item: vanil, amount: 100}
+	{item: uranium, amount: 50}
+	{item: plutonium, amount: 25}
+	{item: cesium, amount: 10}
+]
+laserRange: 50
+maxNodes: 2
+autolink: True
+hasPower: true
+laserScale: 1
+laserColor1: 60ff60
+laserColor2: 00aa00
+category: power

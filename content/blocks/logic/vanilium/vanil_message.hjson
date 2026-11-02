@@ -1,0 +1,18 @@
+type: MessageBlock
+name: Vanil message block
+description: You can type some shii in it OR you can type something from vanil processor
+health: 250
+size: 1
+buildTime: 15
+category: logic
+requirements: [
+	{item: vanil, amount: 50}
+	{item: uranium, amount: 25}
+]
+research: {
+	parent: vanil_processor
+	requirements: [
+		{item: vanil, amount: 200}
+		{item: uranium, amount: 100}
+	]
+}

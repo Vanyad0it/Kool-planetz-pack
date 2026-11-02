@@ -1,0 +1,41 @@
+type: battery
+name: Small vanil battery
+size: 1
+squareSprite: false
+fullLightColor: ffffffff
+emptyLightColor: ff0000ff
+hasPower: true,
+outputsPower: true,
+consumesPower: true,
+hasItems: false,
+canOverdrive: false
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawGlowRegion
+suffix: -top
+color: 80ff80
+}
+]
+}
+consumes: {
+	powerBuffered: 1000
+}
+category: power
+requirements: [
+	{"item": "vanil", "amount": 10}
+]
+research: {
+	parent: "node",
+	objectives: [
+	spire
+	{
+		type: "SectorComplete",
+		preset: "cliff"
+	}
+	]
+}

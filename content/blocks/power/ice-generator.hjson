@@ -1,0 +1,25 @@
+type: ConsumeGenerator
+name: "Shard generator"
+description: "generates 180 energy/sec from burning ice. Also drops water as a deffect"
+size: 2
+hasLiquids: false
+canOverdrive: false
+itemDuration: 250
+baseExplosiveness: 0
+consumes: {
+	items: [
+		{"item": "ice", "amount": 1}
+	]
+}
+outputLiquid: water/0.1
+powerProduction: 3
+category: power
+requirements: [
+	{"item": "ice", "amount": 40}
+]
+research: {
+	parent: "ice-duct"
+	requirements: [
+		{"item": "ice", "amount": 100}
+	]
+}

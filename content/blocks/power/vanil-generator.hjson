@@ -1,0 +1,32 @@
+type: ConsumeGenerator
+name: "Vanil generator"
+description: "generates 180 energy/sec from burning poor vanil =("
+size: 2
+hasLiquids: false
+canOverdrive: false
+itemDuration: 175
+baseExplosiveness: 0
+consumes: {
+	items: [
+		{"item": "vanil", "amount": 1}
+	]
+}
+powerProduction: 3
+category: power
+requirements: [
+	{"item": "vanil", "amount": 10}
+	{"item": "uranium", "amount": 5}
+]
+research: {
+    parent: "vanil_conveyor"
+    objectives: [
+        {
+            type: "SectorComplete",
+            preset: "cliff"
+        }
+    ]
+},
+research: [
+	{"item": "vanil", "amount": 100}
+	{"item": "uranium", "amount": 50}
+]

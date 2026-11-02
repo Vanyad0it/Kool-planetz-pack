@@ -1,0 +1,46 @@
+type: genericCrafter
+name: Oxygen condenser
+category: crafting
+description: Extracts Oxygen out of thin air
+health: 150
+size: 2
+outputLiquid: {liquid: "oxygen_gas", amount: 0.5}
+hasPower: true,
+hasItem: true,
+consumes: {
+	power: 1
+}
+requirements: [
+	{item: ice, amount: 50}
+	{item: ice_cube, amount: 25}	
+	]
+research: {
+	parent: ice-incubator
+	requirements: [
+		{item: ice, amount: 1000}
+		{item: ice_cube, amount: 500}
+	]
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawParticles
+type: DrawParticles
+colorFrom: ffffff00
+colorTo: ffffffff
+alpha: 0.4
+blending: additive
+particleSize: 1
+reverse: false
+particleRad: 13
+particles: 64
+fadeMargin: 1
+rotateScl: 7
+particleLife: 60
+}
+]
+}

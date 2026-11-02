@@ -1,0 +1,42 @@
+type: genericCrafter
+name: Vanil soldifier
+category: crafting
+description: Makes Vanil by frozing liquified version of it
+health: 150
+size: 3
+outputItem: {item: "vanil", amount: 3}
+hasPower: true
+hasItem: false
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDeafult
+}
+{
+type: DrawGlowRegion
+suffix: -liquid
+top: true
+color: fff4e0
+}
+]
+}
+consumes: {
+	liquids: {
+		liquids: [
+			vanil_liquid/0.3
+			]
+	}
+	power: 1
+},
+requirements: [
+	{item: vanil, amount: 50}
+	{item: xenon, amount: 5}
+	]
+research: {
+	parent: vanil-liquifider
+	requirements: [
+		{item: vanil, amount: 5000}
+		{item: xenon, amount: 500}
+	]
+}

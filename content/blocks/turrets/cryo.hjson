@@ -1,0 +1,77 @@
+type: ContinuousLiquidTurret
+name: Cryo
+description: Now that is shimpl
+size: 2
+range: 125
+health: 500
+rotateSpeed: 2
+loopSound: shootSublimate
+liquidConsumed: 0.5
+squareSprite: false
+category: turret
+consumes: {
+	power: 2
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -sideR
+mirror: false
+under: false
+progress: warmup
+
+moveX: 3.3
+moveY: 0
+moveRot: 0
+}
+{
+type: RegionPart
+suffix: -sideL
+mirror: false
+under: false
+progress: warmup
+
+moveX: -3.3
+moveY: 0
+moveRot: 0
+}
+]
+}
+shootY: 0
+ammoTypes: {
+	oxygen_gas: {
+		type: ContinuousFlameBulletType
+		length: 125
+		width: 5
+		damage: 5
+		colors: [ffffff60, ffffff]
+		pierceCap: 4
+		status: oxygenized
+		statusDuration: 10
+		flareColor: ffffff60
+		hitColor: ffffff
+	}
+}
+requirements: [
+ 	{item: ice, amount: 260}
+	{item: ice_cube, amount: 100}
+	{item: xenonp, amount: 50}
+]
+research: {
+	parent: refabricated_ripple
+	requirements: [
+ 		{item: ice, amount: 2500}
+		{item: ice_cube, amount: 1500}
+		{item: xenonp, amount: 750}
+	]
+	objectives: [
+	ice-generator
+	oxygen
+	{
+		type: SectorComplete
+		preset: corpus
+	}
+	]
+}

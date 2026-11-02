@@ -1,0 +1,16 @@
+type: MessageBlock
+name: Shard message
+description: Type something in it i don't care
+health: 250
+size: 1
+buildTime: 15
+category: logic
+requirements: [
+	{item: ice, amount: 10}
+]
+research: {
+	parent: shard_processor
+	requirements: [
+		{item: ice, amount: 50}
+	]
+}

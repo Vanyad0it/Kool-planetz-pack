@@ -1,0 +1,144 @@
+type: NuclearReactor
+name: Plutonium reactor
+description: "[white]Same as uranium reactor, but more power and more kaboom if not enough [orange]cesium [white]is put into the reactor"
+details: if it explodes, just restart the whole sector bro
+size: 3
+squareSprite: true
+research: RBMK-generator
+buildTime: 600
+health: 1500
+requirements: [
+	{item: vanil, amount: 500}
+	{item: uranium, amount: 250}
+	{item: plutonium, amount: 100}
+	{item: cesium, amount: 100}	
+]
+research: {
+	parent: plutonium-reactor
+	requirements: [	
+		{item: vanil, amount: 2500}
+		{item: uranium, amount: 1500}
+		{item: plutonium, amount: 1000}
+		{item: xenon, amount: 500}
+	]
+	objectives: [
+	cesium
+	cesium_liquid
+	latern
+	{
+	type: SectorComplete
+	preset: cesium-pathV1
+	}
+	]
+}
+hasPower: true
+hasItems: true
+outputsPower: true
+itemCapacity: 20
+liquidCapacity: 100
+consumes: {
+	liquid: cesium_liquid/0.75
+	items: [
+		{item: plutonium, amount: 1}
+	]
+}
+fuelItem: plutonium
+itemDuration: 1200
+powerProduction: 75
+explosionPuddleLiquid: cesium_liquid
+explosionMinWarmup: 120000
+explosionShake: 1000
+coolantPower: 0.1
+category: power
+destroyBullet: {
+	type: BasicBulletType
+	damage: 0
+	speed: 0
+	lifetime: 120
+	despawnEffect: none
+	intervalBullets: 5
+	bulletInterval: 8
+	frontColor: ffffff00
+	backColor: ffffff00
+	intervalBullet: {
+		type: lightningBulletType
+		damage: 1
+		healAmount: -1
+		lightningLength: 20
+		collidesTeam: true
+		lightningColor: a0a0a0
+	}		
+	fragBullets: 1
+	fragSpread: 0
+	fragRandomSpread: 0
+	fragVelocityMin: 0
+	fragVelocityMax: 0
+	fragBullet: {
+		type: BasicBulletType
+		splashDamage: 750
+		splashDamageRadius: 250
+		speed: 0
+		lifeTime: 1
+		frontColor: ffffff00
+		backColor: ffffff00
+		hitSoundVolume: 2
+	}
+}
+destroySound: explosionTitan
+destroyEffect: {
+	type: MultiEffect
+	effects: [
+	{
+	type: ParticleEffect
+		region: cool-planets-pack-CIRCLEh
+		lifetime: 100
+		length: 0
+		sizeFrom: 1
+		sizeTo: 250
+		colorFrom: aaaaaa
+		colorTo: ffffff00
+		particles: 1
+	}
+	{
+		type: ParticleEffect
+		region: cool-planets-pack-STAR
+		lifetime: 100
+		length: 0
+		sizeFrom: 1
+		sizeTo: 50
+		colorFrom: aaaaaa
+		colorTo: ffffff00
+		particles: 1
+	}
+	{
+		type: ParticleEffect
+		region: cool-planets-pack-CIRCLE
+		lifetime: 300
+		length: 250
+		sizeFrom: 1
+		sizeTo: 25
+		colorFrom: aaaaaa
+		colorTo: ffffff00
+		particles: 125
+		cone: 360
+	}
+	]
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawGlowRegion
+suffix: -boom
+color: 00ff00
+}
+{
+type: DrawLiquidTile
+suffix: -liquid
+drawLiquid: cesium_liquid
+}
+]
+}

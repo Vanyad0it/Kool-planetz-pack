@@ -1,0 +1,31 @@
+type: UnitAssemblerModule
+name: Basic upgrader
+description: "Comes as a pair to Grid builders. Deal -25%"
+details: also can be used as a loader to theese builders
+health: 500
+size: 2
+consumes: {
+	power: 2
+}
+category: units
+research: {
+	parent: T3_grid-builderM
+	requirements: [
+		{item: vanil, amount: 5000}
+		{item: uranium, amount: 5000}
+		{item: plutonium, amount: 2500}
+		{item: xenon, amount: 1750}
+	]
+	objectives: [
+	{
+		type: OnSector
+		preset: prelude_pass
+	}
+	]
+}
+requirements: [
+	{item: vanil, amount: 500}
+	{item: uranium, amount: 500}
+	{item: plutonium, amount: 250}
+	{item: xenon, amount: 175}
+]

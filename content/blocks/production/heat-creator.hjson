@@ -1,0 +1,33 @@
+type: heatProducer
+name: Plutonium heating accelerator
+category: crafting
+description: Works like a particle accelerator to produce heat 
+details: Unlike normal heater from erekir, this one accelerates particles and smashing them together. This definetly consumes much less power tho the explosion is MUCH more dangerous
+health: 500
+size: 2
+heatOutput: 10.0
+hasPower: true
+hasItem: false
+consumesPower: true
+buildTime: 240
+consumes: {
+	power: 0.5
+}
+requirements: [
+	{item: uranium, amount: 25}
+	{item: vanil, amount: 50}
+]
+research: {
+	parent: buran-combiner
+	requirements: [
+		{item: uranium, amount: 250}
+		{item: vanil, amount: 500}
+		]
+	objectives: [
+	{
+		type: OnSector
+		preset: prelude_pass
+	}
+	]
+		
+}

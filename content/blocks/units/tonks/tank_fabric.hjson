@@ -1,0 +1,36 @@
+type: UnitFactory
+name: Building tank fabric
+description: "Same as Mech fabric, but gives you armored TONKZ instead of mechs"
+size: 2
+health: 500
+consumesPower: false
+category: units
+research: {
+	parent: mech_fabric 
+	objectives: [
+	{
+		type: SectorComplete 
+		preset: cliff
+	}
+	]
+	requirements: [
+		{"item": vanil, amount: 200},
+		{item: uranium, amount: 200}
+		{item: plutonium, amount: 200}
+	]
+},
+requirements: [
+	{"item": "vanil", "amount": 50}
+	{"item": "uranium", "amount": 50}
+	{"item": "plutonium", "amount": 50}
+],
+plans: [
+{
+	unit: delta
+		time: 800,
+		requirements: [
+			{item: vanil, amount: 25},
+			{item: plutonium, amount: 10}
+	]
+}
+]

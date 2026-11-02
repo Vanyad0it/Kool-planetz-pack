@@ -1,0 +1,79 @@
+type: ContinuousTurret
+name: Perelis
+description: They're hiding something from you...
+category: turret
+buildTime: 120
+size: 1
+health: 300
+rotateSpeed: 3
+range: 150
+autoTarget: true
+healTargeting: true
+targetTeam: true
+targetAir: false
+targetGround: true
+consumes: {
+	power: 3
+}
+shoot: {
+	type: ShootPattern
+	shots: 1
+	firstShotDelay: 20
+}
+loopSound: shootSublimate
+requirements: [
+	{item: tar, amount: 25}
+]
+shootType: {
+	type: PointLaserBulletType
+	damage: 10
+	healPercent: 200
+	collidesAir: false
+	collidesTeam: true
+	length: 100
+	width: 2
+	colors: [aaffaa, ffffff, ffffff00]
+}
+
+shootY: 0
+recoil: 0
+
+drawer: {
+type: DrawTurret
+parts: [
+	{
+type: RegionPart
+suffix: -sideL
+mirror: false
+under: false
+moveX: -1
+moveY: 0
+moveRot: 20
+}
+{
+type: RegionPart
+suffix: -sideR
+mirror: false
+under: false
+moveX: 1
+moveY: 0
+moveRot: -20
+}
+]
+}
+research: {
+	parent: vanil_healr
+	requirements: [
+		{item: vanil, amount: 2500}
+		{item: uranium, amount: 1500}
+		{item: cesium, amount: 1000}
+	]
+	objectives: [
+	adder
+	delta
+	{
+		type: OnSector
+		preset: cliff
+	}
+	]
+}

@@ -1,0 +1,35 @@
+type: PowerNode
+name: BEEG One-line Vanilo-radium Power-tranfer Block
+size: 3
+description: "If you can't afford it, i guess bro"
+details: That shii is BEEG
+health: 2000
+squareSprite: false
+powerCapacity: 1000
+research: {
+	parent: vanil-node
+	requirements: [
+		{item: radium, amount: 25000}
+		{item: vanil, amount: 25000}
+		{item: uranium, amount: 10000}
+		{item: plutonium, amount: 5000}
+		{item: xenon, amount: 1000}
+		{item: cesium, amount: 2500}
+	]
+}
+requirements: [
+	{item: radium, amount: 100}
+	{item: vanil, amount: 1000}
+	{item: uranium, amount: 750}
+	{item: plutonium, amount: 500}
+	{item: xenon, amount: 250}
+	{item: cesium, amount: 250}
+]
+laserRange: 150
+maxNodes: 1
+autolink: True
+hasPower: true
+laserScale: 2
+laserColor1: aaffaa
+laserColor2: 003000
+category: power

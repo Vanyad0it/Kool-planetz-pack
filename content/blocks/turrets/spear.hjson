@@ -1,0 +1,127 @@
+type: ItemTurret
+name: Spear
+description: Shoots lasers at enemies. No energy needed.
+details: "They forgot about you. they are ignoring you. they definetly want [REDACTED]"
+category: turret
+size: 3
+health: 1500
+reload: 35
+shootSound: shootToxopidShotgun
+rotateSpeed: 2
+range: 150
+inaccuracy: 0
+ammoPerShot: 1
+autoTarget: true
+research: {
+	parent: dpoint
+	requirements: [
+		{item: tar, amount: 150}
+		]
+}
+coolant: {
+type: ConsumeCoolant
+allowLiquid: true
+amount: 1
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -sideR
+mirror: false
+under: false
+
+moveX: 25
+moveY: 2
+moveRot: -90
+}
+{
+type: RegionPart
+suffix: -sideL
+mirror: false
+under: false
+
+moveX: -25
+moveY: 2
+moveRot: 90
+}
+{
+type: ShapePart
+layer: 100
+progress: warmup
+rotateSpeed: 0
+sides: 360
+hollow: true
+color: ffffff
+stroke: 0
+strokeTo: 0.5
+radius: 4
+x: 8.5
+y: -6.5
+}
+{
+type: ShapePart
+layer: 100
+progress: warmup
+rotateSpeed: 0
+sides: 360
+hollow: true
+color: ffffff
+stroke: 0
+strokeTo: 0.5
+radius: 4
+x: -8.5
+y: -6.5
+}
+{
+type: ShapePart
+layer: 100
+progress: warmup
+rotateSpeed: 4
+sides: 4
+hollow: true
+color: ffffff
+stroke: 0
+strokeTo: 0.5
+radius: 4
+x: 8.5
+y: -6.5
+}
+{
+type: ShapePart
+layer: 100
+progress: warmup
+rotateSpeed: -4
+sides: 4
+hollow: true
+color: ffffff
+stroke: 0
+strokeTo: 0.5
+radius: 4
+x: -8.5
+y: -6.5
+}
+]
+}
+shootY: 0
+shoot: {
+	type: ShootPattern 
+	shots: 1
+	shotDelay: 0
+	}
+requirements: [
+	{item: tar, amount: 50}
+]
+ammoTypes: {
+	tar: {
+		type: LaserBulletType
+		damage: 200
+		lifetime: 20
+		height: 150
+		width: 10
+		splashDamage: 50
+		splashDamageRadius: 50
+		colors: [404040, ffffff]
+	}
+}

@@ -1,0 +1,37 @@
+type: UnitFactory
+name: Building navel fabric
+description: "Please don't do the 'Brithan' move" 
+size: 2
+health: 250
+category: units
+research: {
+	parent: mech_fabric 
+	objectives: [
+	T2_refabricator
+	{
+		type: SectorComplete 
+		preset: the-oceat
+	}
+	]
+	requirements: [
+		{item: vanil, amount: 2500}
+		{item: uranium, amount: 2000}
+		{item: plutonium, amount: 1000}
+		{item: cesium, amount: 500}
+	]
+}
+requirements: [
+	{item: vanil, amount: 50}
+	{item: xenon, amount: 10}
+]
+plans: [
+{
+	unit: briguette
+		time: 600
+		requirements: [
+			{item: vanil, amount: 50}
+			{item: xenon, amount: 25}
+			{item: cesium, amount: 25}
+	]
+}
+]

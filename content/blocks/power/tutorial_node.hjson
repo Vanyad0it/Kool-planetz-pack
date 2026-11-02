@@ -1,0 +1,24 @@
+type: PowerNode
+name: Iron node
+size: 1
+description: "Transports energy from point A to B.
+Very simple"
+health: 20
+squareSprite: false
+research: {
+	parent: stone-generator
+	requirements: [
+		{item: iron, amount: 50}
+	]
+}
+requirements: [
+	{item: iron, amount: 10}
+]
+laserRange: 20
+maxNodes: 3
+autolink: True
+hasPower: true
+laserScale: 0.5
+laserColor1: ffffff
+laserColor2: 808080
+category: power

@@ -1,0 +1,43 @@
+name: Cesium liquifider
+category: crafting
+description: Makes liquified cesium by heating it up
+details: It doesn't consume much energy because Cesium's melt temperature is low. Dug
+health: 150
+size: 3
+type: genericCrafter
+outputLiquid: cesium_liquid/1
+hasPower: true
+hasLiquids: true
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDeafult
+}
+{
+type: DrawLiquidRegion
+suffix: -liquid
+drawLiquid: cesium_liquid
+top: true
+}
+]
+}
+consumes: {
+	items: {
+		items: [
+			{"item": "cesium", "amount": 1},
+			]
+	}
+	power: 0.75
+},
+requirements: [
+	{"item": "cesium", "amount": 25},
+	{"item": "plutonium", "amount": 10}
+	]
+research: {
+	parent: "vanil-liquifider",
+	requirements: [
+		{"item": "plutonium", "amount": 250},
+		{"item": "cesium", "amount": 100}
+		]
+}

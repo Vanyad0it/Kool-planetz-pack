@@ -1,0 +1,114 @@
+type: ItemTurret
+name: Ballistic
+description: Homing orckets. now you've seen all
+details: just a better version of Orbit
+category: turret
+targetAir: false
+targetGround: true
+buildTime: 150
+rotateSpeed: 1
+size: 3
+health: 2500
+reload: 300
+shootSound: RocketLaunches
+shootSoundVolume: 2
+range: 600
+inaccuracy: 0
+ammoPerShot: 15
+maxAmmo: 16
+autoTarget: true
+research: {
+	parent: orbit
+	requirements: [
+		{item: vanil, amount: 5000}
+		{item: uranium, amount: 2500}
+		{item: plutonium, amount: 2500}
+		{item: cesium, amount: 2500}
+	]
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -sideL
+outline: true
+under: false
+progress: warmup
+
+moveX: -4
+moveY: 0
+moveRot: 0
+}
+{
+type: RegionPart
+suffix: -sideR
+outline: true
+under: false
+progress: warmup
+
+moveX: 4
+moveY: 0
+moveRot: 0
+}
+{
+type: RegionPart
+suffix: -back
+outline: true
+under: true
+progress: recoil
+
+moveX: 0
+moveY: -6
+moveRot: 0
+}
+]
+}
+recoil: 0
+shootY: 0
+shoot: {
+	type: ShootPattern
+	shots: 1
+	shotDelay: 0
+	firstShotDelay: 60
+	progress: recoil
+	heatProgress: recoil
+	hitEffect : {
+		type: ParticleEffect
+		sprite: cool-planets-pack-CIRCLh 
+		sizeFrom: 1
+		sizeTo: 3
+		colorFrom: ffffff 
+		colorTo: ffffff 
+		lifetime: 20
+		particles: 1
+		length: 0
+	}
+	despawnEffect: none
+}
+requirements: [
+	{item: vanil, amount: 250}
+	{item: uranium, amount: 200}
+	{item: plutonium, amount: 150}
+	{item: cesium, amount: 100}
+]
+ammoTypes: {
+	vanil: {
+		ammoMultiplier: 2
+		rangeChange: -100
+		colors: [fffacd, ffffff]
+		spawnUnit: vanil_rocket
+	}
+	cesium: {
+		ammoMultiplier: 1
+		maxRange: 200
+		colors: [ffffaa, ffffff]
+		spawnUnit: cesium_rocket
+	}
+	xenon: {
+		ammoMultiplier: 5
+		rangeChange: 100
+		colors: [15eeff, ffffff]
+		spawnUnit: xenon_rocket
+	}
+}

@@ -1,0 +1,26 @@
+name: "Ice cube incubator",
+category: "crafting",
+description: "Makes ice cubes by combining them",
+health: 150,
+size: 3,
+type: "genericCrafter",
+outputItem: {"item": "ice_cube", "amount": 1},
+hasPower: true,
+hasItem: true,
+consumes: {
+	items: {
+		items: [
+			{"item": "ice", "amount": 2},
+			]
+	}
+	power: 1
+},
+requirements: [
+	{"item": "ice", "amount": 25}
+	]
+research: {
+	parent: "core-degree",
+	requirements: [
+		{"item": "ice", "amount": 250},
+		]
+}

@@ -1,0 +1,26 @@
+type: SolarGenerator
+name: Vanil panel
+description: Man i love solar energy
+size: 1
+buildTime: 5
+hasLiquids: false
+canOverdrive: false
+powerProduction: 0.125
+category: power
+requirements: [
+	{item: vanil, amount: 50}
+	{item: cesium, amount: 10}
+]
+research: {
+	parent: vanil-generator
+	requirements: [
+		{item: vanil, amount: 500}
+		{item: cesium, amount: 100}
+	]
+	objectives: [
+	{
+		type: SectorComplete
+		preset: cesium-pathV1
+	}
+	]
+}

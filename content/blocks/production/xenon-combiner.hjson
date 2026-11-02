@@ -1,0 +1,65 @@
+name: Xenon combiner
+category: crafting
+description: Makes Xenon form Uranium and liquified vanil
+health: 150
+consumesPower: false
+size: 2
+type: genericCrafter
+outputItem: {item: "xenon", amount: 1}
+hasPower: true
+hasItem: true
+consumesPower: false
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDeafult
+}
+{
+type: DrawGlowRegion
+suffix: -top
+top: true
+color: 15eeff
+}
+{
+type: DrawFlame
+flameRadius: 1
+flameRadiusIn: 0.5
+flameRadiusScl: 3.5
+flameRadiusMag: 1.5
+flameRadiusInMag: 1.2
+flameColor: aaaaff
+}
+]
+}
+
+consumes: {
+	items: {
+		items: [
+			{item: uranium, amount: 1}
+			]
+	}
+	liquids: {
+		liquids: [
+			{liquid: vanil_liquid, amount: 0.25}
+			]
+	}
+}
+requirements: [
+	{item: uranium, amount: 25}
+	{item: vanil, amount: 50}
+	]
+research: {
+	parent: buran-combiner
+	requirements: [
+		{item: uranium, amount: 250}
+		{item: vanil, amount: 500}
+		]
+	objectives: [
+	liquid-extractor
+	{
+		type: SectorComplete
+		preset: cliff
+	}
+	]
+}

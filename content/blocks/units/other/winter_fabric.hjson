@@ -1,0 +1,48 @@
+type: "UnitFactory",
+name: "Winter Builder",
+description: "MMMMMMMMMMMMMMMMMMMM... ICEEEE",
+size: 3,
+health: 500,
+category: "units",
+research: {
+	parent: "ice-incubator", 
+	objectives: [
+	{
+		type: "SectorComplete", 
+		preset: "lakeTestSector"
+	}
+	]
+	requirements: [
+		{"item": "ice", "amount": 400},
+		{"item": "ice_cube", "amount": 200}
+	]
+}
+requirements: [
+	{item: ice, amount: 100}
+	{item: ice_cube, amount: 50}
+]
+plans: [
+{
+	unit: saw
+		time: 1200
+		requirements: [
+			{item: ice, amount: 50}
+			{item: ice_cube, amount: 25}
+	]
+}
+{
+	unit: coral
+		time: 1500
+		requirements: [
+			{item: ice, amount: 100}
+			{item: cryolite, amount: 50}
+	]
+}
+{
+	unit: defrozetter
+		time: 600
+		requirements: [
+			{item: ice, amount: 25}
+	]
+}
+]

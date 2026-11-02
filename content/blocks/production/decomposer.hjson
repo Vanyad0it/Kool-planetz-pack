@@ -1,0 +1,46 @@
+type: GenericCrafter
+name: Water decomposer
+category: crafting
+description: It gives you Hydrogen and Oxygen
+size: 3
+hasLiquids: true
+liquidCapacity: 30
+rotate: true
+consumes: {
+	power: 1.5
+	liquid: {
+		liquid: water
+		amount: 0.5
+		optional: false
+	}
+}
+outputLiquids: [
+	{liquid: "hydrogen", amount: 0.3}
+	{liquid: "oxygen_gas", amount: 0.2}
+]
+liquidOutputDirections: [2, 4]
+requirements: [
+	{item: vanil, amount: 50}
+	{item: xenon, amount: 5}
+	]
+research: {
+	parent: vanil-liquifider
+	requirements: [
+		{item: vanil, amount: 5000}
+		{item: xenon, amount: 500}
+	]
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawRegion
+suffix: -bottom
+under: true
+top: fasle
+}
+]
+}
